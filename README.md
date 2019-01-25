@@ -2,7 +2,6 @@
 
 Where getting stuff is not that simple as asking for it.
 
-**Graystone map**
 **Graystone Map**
 
 <p align="center">
