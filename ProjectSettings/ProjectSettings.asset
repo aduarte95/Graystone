@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: e1218a30724842b4b9c688dd07a8cbd8
+  productGUID: da199d2b64106b445bfd604ad991a71e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -520,7 +520,11 @@ PlayerSettings:
   webGLCompressionFormat: 1
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    14: MOBILE_INPUT
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
@@ -611,9 +615,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 13e44109-9121-4a1a-a99d-c453104d7357
+  cloudProjectId: 3f5ed1d6-f573-4811-91f2-eca8edea42d7
   framebufferDepthMemorylessMode: 0
-  projectName: Graystone
+  projectName: Graystone (4)
   organizationId: jmhc1995
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
