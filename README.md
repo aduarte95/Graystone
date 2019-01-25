@@ -1,6 +1,6 @@
 @@ -3,6 +3,9 @@
 
-Where getting stuff is not that simple as ask for them.
+Where getting stuff is not that simple as asking for it.
 
 **Graystone map**
 **Graystone Map**
