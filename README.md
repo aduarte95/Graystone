@@ -1,6 +1,6 @@
 # Graystone 🗻
 
-*Where getting stuff is not that simple as asking for it.
+*Where getting stuff is not that simple as asking for it.*
 
 **Graystone Map**
 
