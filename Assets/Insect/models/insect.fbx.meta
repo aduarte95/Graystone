@@ -129,7 +129,12 @@ ModelImporter:
     7400016: Walk_Attack
     9500000: //RootNode
     13700000: Insect
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matInsect__Insect_png
+    second: {fileID: 2100000, guid: 9a406a79bcf66bd41af70ba775ddc553, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -308,7 +313,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -1302,7 +1307,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 1
