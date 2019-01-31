@@ -23,18 +23,8 @@ public class PlayerController : MonoBehaviour
         translation *= Time.deltaTime;
         rotation *= Time.deltaTime;
 
-        //transform.Translate(0, 0, translation);
-        //transform.Rotate(0, rotation, 0);
-
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.left * translation);
-        if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.right *translation);
-        if (Input.GetKey(KeyCode.W))
-            rb.AddForce((new Vector3(0, 0, 1)) * translation);
-        if (Input.GetKey(KeyCode.S))
-            rb.AddForce((new Vector3(0, 0, -1)) * 10);
+        transform.Translate(0, 0, translation);
+        transform.Rotate(0, rotation, 0);
 
         if (translation != 0)
         {
