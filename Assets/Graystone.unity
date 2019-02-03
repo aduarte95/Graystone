@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4227,7 +4227,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 448322192}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1530978119361648, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_Name
@@ -4235,35 +4235,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.81
+      value: 250.07823
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4
+      value: 167.96
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5026607
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.49732503
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.49732503
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5026608
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4279,7 +4279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalScale.y
@@ -4287,7 +4287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 95238694061281862, guid: dbbdea10d9741a147b25b3d4dbcb2b7b,
         type: 3}
@@ -15936,6 +15936,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  acceleration: 5
+  maxSpeed: 10
   rotationSpeed: 75
 --- !u!65 &1896869518
 BoxCollider:
