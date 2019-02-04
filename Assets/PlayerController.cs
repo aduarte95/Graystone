@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     static Animator animator;
     int isWalkingHash = Animator.StringToHash("IsWalking");
     public float speed = 2.0f;
+    public float acceleration = 5.0f;
+    public float maxSpeed = 10.0f;
     public float rotationSpeed = 75.0f;
 
     // Start is called before the first frame update
@@ -29,9 +31,14 @@ public class PlayerController : MonoBehaviour
         if (translation != 0)
         {
             animator.SetBool(isWalkingHash, true);
+            if (speed < maxSpeed)
+            {
+                speed += acceleration * Time.deltaTime;
+            }
         }
         else
         {
+            speed = 2.0f;
             animator.SetBool(isWalkingHash, false);
         }
     }
