@@ -4,23 +4,39 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public float direction = 1;
+    static Animator animator;
+    int isWalkingHash = Animator.StringToHash("IsWalking");
+
+    public float speed = 2.0f;
+    public int direction = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce((new Vector3(0, 0, 1)) * 100);
-    }
+        float translation = direction * speed;
+        translation *= Time.deltaTime;
+        Vector3 move = new Vector3(0, 0, translation); 
+        transform.Translate(move);
 
-    public void CollideWithHorizontal(Collider other)
-    {
-        direction = -direction;
+        if (translation != 0)
+        {
+            animator.SetBool(isWalkingHash, true);
+        }
+
+        RaycastHit[] results = new RaycastHit[16];
+
+        //int cnt = GetComponent<Rigidbody>().Cast(move, results, move.magnitude + 0.01f); //This not work 
+        //if (cnt > 0)
+
+        if (results != null) //with this the alien does not move at all
+        {
+            direction *= -1;
+        }
     }
 }
