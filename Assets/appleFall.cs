@@ -18,6 +18,12 @@ public class appleFall : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        Debug.Log("Hit!");
+        
+    }
 
+    void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("El arbol imprime Hit!");
     }
 }
