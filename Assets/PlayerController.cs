@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
+        
         animator = GetComponent<Animator>();
         
     }
@@ -62,6 +64,11 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool(isWalkingHash, false);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 
 
