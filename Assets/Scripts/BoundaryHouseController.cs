@@ -10,7 +10,7 @@ public class BoundaryHouseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneName = "Kenmare's House";
+        sceneName = "River Scene";
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class BoundaryHouseController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
+		Debug.Log("BOX COLLIDED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         PlayerController player = collider.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
