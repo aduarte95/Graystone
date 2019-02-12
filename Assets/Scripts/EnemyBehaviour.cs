@@ -68,7 +68,6 @@ public class EnemyBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log("No hay algo al frente");
             return false;
         }
     }
