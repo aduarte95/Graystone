@@ -5,27 +5,30 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    static Animator animator;
-    int isWalkingHash = Animator.StringToHash("IsWalking");
-    public float speed = 2.0f;
-    public float acceleration = 5.0f;
-    public float maxSpeed = 10.0f;
-    public float rotationSpeed = 75.0f;
+    protected static Animator animator;
+    protected int isWalkingHash = Animator.StringToHash("IsWalking");
+    protected float speed;
+    protected float acceleration;
+    protected float maxSpeed;
+    protected float rotationSpeed = 75.0f;
     // Start is called before the first frame update
-    private bool ableToMove = true;
+    protected bool ableToMove = true;
     
     
     void Start()
     {
-        
+        setVariables();
         animator = GetComponent<Animator>();
-        
+    }
+
+    virtual public void setVariables()
+    {
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed = 8.0f;
         if (!Front()||  ableToMove ||!Input.GetKey("w")|| !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
         {
             float translation = Input.GetAxis("Vertical") * speed;
