@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Collision");
-            SceneManager.LoadScene(scenesName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(scenesName, LoadSceneMode.Single);
             //SceneManager.MoveGameObjectToScene(collision.gameObject, SceneManager.GetSceneByName(scenesName));
         }
     }
