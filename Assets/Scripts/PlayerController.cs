@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         setVariables();
+        Debug.Log(gameObject.name);
         animator = GetComponent<Animator>();
     }
 
@@ -88,12 +89,10 @@ public class PlayerController : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1.0f, layerMask))
         {
-            Debug.Log("*************************************************Hay algo al frente*******************************************");
             return true;
         }
         else
         {
-            Debug.Log("No hay algo al frente");
             return false;
         }
     }
@@ -101,7 +100,6 @@ public class PlayerController : MonoBehaviour
     
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log( "collide (name) : " + collision.GetComponent<Collider>().gameObject.name );
          speed = 0;
     }
 
@@ -109,18 +107,15 @@ public class PlayerController : MonoBehaviour
     {
         if( Input.GetKey("w") && (other.GetComponent<Collider>().gameObject.name != "Terrain"))
         {
-            Debug.Log( "collide (name) : " + other.GetComponent<Collider>().gameObject.name );
             speed = 0;
             ableToMove = false;
             animator.SetBool(isWalkingHash, false);
-            Debug.Log("Able to move has change");
         }
     }
     
 
     private void OnTriggerExit(Collider col)
     {
-        Debug.Log("No hay obstáculos");
         animator.SetBool(isWalkingHash, true);
         ableToMove = true;
     }
