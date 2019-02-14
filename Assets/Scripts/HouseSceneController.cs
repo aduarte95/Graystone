@@ -15,7 +15,7 @@ public class HouseSceneController : SceneController
 
     public override void setScenePosition()
     {
-        scenePosition = new Vector3(-49.52f, 0.004f, 24.31f);
+        scenePosition = new Vector3(-137.03f, 0.004f, 24.78f);
     }
 
 }

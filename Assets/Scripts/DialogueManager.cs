@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue) {
-        Debug.log("Starting conversation with" + dialogue.name);
+        Debug.Log("Starting conversation with" + dialogue.name);
     }
    
 }

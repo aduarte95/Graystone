@@ -15,6 +15,6 @@ public class H2GController : SceneController
 
     public override void setScenePosition()
     {
-        scenePosition = new Vector3(798.69f, 0.004f, 411.54f);
+        scenePosition = new Vector3(767.86f, 0.004f, 236.72f);
     }
 }
