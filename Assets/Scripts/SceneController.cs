@@ -9,13 +9,14 @@ public class SceneController : MonoBehaviour
     protected Vector3 scenePosition;
     protected const int HOUSE = 0;
     protected const int MAIN = 1;
-    public Camera[] cameras;
+    protected const int PLAYER = 2;
+    public GameObject[] objects;
     protected bool isOn = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        cameras[HOUSE].gameObject.SetActive(false);
+        objects[HOUSE].gameObject.SetActive(false);
         tag = "Player";
         setScenePosition();
     }
@@ -25,7 +26,7 @@ public class SceneController : MonoBehaviour
 
     }
 
-    virtual public void setCamera()
+    virtual public void setObjects()
     {
 
     }
@@ -36,7 +37,7 @@ public class SceneController : MonoBehaviour
         {
             Debug.Log("Collision");
             collision.gameObject.transform.position = scenePosition;
-            setCamera();
+            setObjects();
             //SceneManager.MoveGameObjectToScene(collision.gameObject, SceneManager.GetSceneByName(scenesName));
         }
     }

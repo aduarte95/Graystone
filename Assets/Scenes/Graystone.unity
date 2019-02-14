@@ -17596,10 +17596,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1281082153}
   - component: {fileID: 1281082158}
+  - component: {fileID: 1281082154}
   - component: {fileID: 1281082157}
   - component: {fileID: 1281082156}
   - component: {fileID: 1281082155}
-  - component: {fileID: 1281082154}
   m_Layer: 0
   m_Name: Kenmare's Entrance
   m_TagString: Don't Stop
@@ -17633,9 +17633,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5772434a17a246d45861865a352d5a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameras:
-  - {fileID: 592395549}
-  - {fileID: 534669904}
+  objects:
+  - {fileID: 592395546}
+  - {fileID: 534669902}
+  playerController: {fileID: 1896869516}
 --- !u!54 &1281082155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27541,8 +27542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814b4916fe9c46a46b942bbd58323b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameras:
-  - {fileID: 592395549}
+  objects:
+  - {fileID: 592395546}
 --- !u!54 &1883840159
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27775,6 +27776,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 512426670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1896869516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896869514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c980ccdf878bc48ac02dd1eea2ab54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWalkingHash: 1282839668
+  canRun: -790676322
+  speed: 0
+  acceleration: 0
+  maxSpeed: 0
+  rotationSpeed: 75
+  ableToMove: 1
+  onTheHouse: 0
 --- !u!65 &1896869518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27804,18 +27825,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
---- !u!114 &1896869520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896869514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9383abaff9caac4bac00e2a88769deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1909164842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28470,24 +28479,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471c1eb32c770a54ea8a1c3ffbda1de6, type: 3}
---- !u!1 &1939512199 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1532720079846266, guid: 30387ca0a695569479a60fc3abf9c5c4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1394118720}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1939512200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939512199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8ba45e6a5a0fe4fad9a3ea1df9489b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1954010195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31291,7 +31282,7 @@ GameObject:
   - component: {fileID: 2114497606}
   - component: {fileID: 2114497605}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Kenmare's Exit
   m_TagString: Don't Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31323,9 +31314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cec2d2ba0c8e34081b3833fe8d4df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameras:
-  - {fileID: 592395549}
-  - {fileID: 534669904}
+  objects:
+  - {fileID: 592395546}
+  - {fileID: 534669902}
+  playerController: {fileID: 1896869516}
 --- !u!65 &2114497606
 BoxCollider:
   m_ObjectHideFlags: 0

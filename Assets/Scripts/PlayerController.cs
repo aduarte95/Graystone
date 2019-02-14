@@ -5,31 +5,58 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    protected static Animator animator;
-    protected int isWalkingHash = Animator.StringToHash("IsWalking");
-    protected float speed;
-    protected float acceleration;
-    protected float maxSpeed;
-    protected float rotationSpeed = 75.0f;
+    public static Animator animator;
+    public int isWalkingHash = Animator.StringToHash("IsWalking");
+    public int canRun = Animator.StringToHash("CanRun");
+    public float speed;
+    public float acceleration;
+    public float maxSpeed;
+    public float rotationSpeed = 75.0f;
     // Start is called before the first frame update
-    protected bool ableToMove = true;
+    public bool ableToMove = true;
+    public bool onTheHouse = false;
     
     
     void Start()
     {
-        setVariables();
+        speed = 2.0f;
+        setGraystoneVariables();
         Debug.Log(gameObject.name);
         animator = GetComponent<Animator>();
+        animator.SetBool(canRun, true);
     }
 
-    virtual public void setVariables()
+    public void setOnTheHouse(bool isOnTheHouse)
     {
- 
+        onTheHouse = isOnTheHouse;
+    }
+
+    public void setHouseVariables()
+    {
+        acceleration = 1.0f;
+        maxSpeed = 5.0f;
+    }
+
+    public void setGraystoneVariables()
+    {
+        acceleration = 5.0f;
+        maxSpeed = 10.0f;
+        onTheHouse = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(onTheHouse)
+        {
+            setHouseVariables();
+            animator.SetBool(canRun, false);
+        } else
+        {
+            setGraystoneVariables();
+            animator.SetBool(canRun, true);
+        }
+
         if (!Front()||  ableToMove ||!Input.GetKey("w")|| !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
         {
             float translation = Input.GetAxis("Vertical") * speed;

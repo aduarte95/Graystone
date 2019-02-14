@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class H2GController : SceneController
 {
-    override public void setCamera()
+    public PlayerController playerController;
+
+    override public void setObjects()
     {
-        cameras[MAIN].gameObject.SetActive(isOn);
-        cameras[HOUSE].gameObject.SetActive(!isOn);
+        objects[MAIN].SetActive(isOn);
+        objects[HOUSE].SetActive(!isOn);
+        playerController.setOnTheHouse(false);
     }
 
     public override void setScenePosition()

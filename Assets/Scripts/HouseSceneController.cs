@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class HouseSceneController : SceneController
 {
-    override public void setCamera()
+    public PlayerController playerController;
+
+    override public void setObjects()
     {
-        cameras[HOUSE].gameObject.SetActive(isOn);
-        cameras[MAIN].gameObject.SetActive(!isOn);
+        objects[HOUSE].SetActive(isOn);
+        objects[MAIN].SetActive(!isOn);
+        playerController.setOnTheHouse(true);
     }
 
     public override void setScenePosition()
