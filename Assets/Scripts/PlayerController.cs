@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float acceleration;
     public float maxSpeed;
     public float rotationSpeed = 75.0f;
+    public List<string> inventory = new List<string>();
+    public string weaponEquipped = "";
     // Start is called before the first frame update
     public bool ableToMove = true;
     public bool onTheHouse = false;
@@ -90,10 +92,24 @@ public class PlayerController : MonoBehaviour
                 speed = 2.0f;
                 animator.SetBool(isWalkingHash, false);
             }
+
+            if ((Input.GetMouseButton(0)) && weaponEquipped != "")
+            {
+                Debug.Log("Player attacks");
+                //attack
+            }
         }
         else
         {
             animator.SetBool(isWalkingHash, false);
+        }
+        if (Input.GetKeyDown("space"))
+        {
+            string m = "";
+            for (int i = 0; i < inventory.Count; i++){
+                m += inventory[i];
+            }
+            Debug.Log(m);
         }
     }
 
