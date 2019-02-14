@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class H2GController : SceneController
 {
-    public override void setSceneName()
+    override public void setCamera()
     {
-        scenesName = "Graystone";
+        cameras[MAIN].gameObject.SetActive(isOn);
+        cameras[HOUSE].gameObject.SetActive(!isOn);
+    }
+
+    public override void setScenePosition()
+    {
+        scenePosition = new Vector3(798.69f, 0.004f, 411.54f);
     }
 }

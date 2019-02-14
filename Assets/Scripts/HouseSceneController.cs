@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class HouseSceneController : SceneController
 {
-    public override void setSceneName()
+    override public void setCamera()
     {
-        scenesName = "Kenmare's House";
+        cameras[HOUSE].gameObject.SetActive(isOn);
+        cameras[MAIN].gameObject.SetActive(!isOn);
+    }
+
+    public override void setScenePosition()
+    {
+        scenePosition = new Vector3(-49.52f, 0.004f, 24.31f);
     }
 
 }
