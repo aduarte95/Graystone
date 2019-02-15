@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.42745098}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -624,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: 45.5}
+  m_AnchoredPosition: {x: -276, y: 40}
   m_SizeDelta: {x: 160, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45221725
@@ -660,7 +660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Hehe '
 --- !u!222 &45221726
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1777,12 +1777,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Voice in your head
+  - name: Voice in your head
     sentences:
-    - It seems that you have an uninvited guest at home...
-    - Let's show him some manners!
-    - Use the stick to hit that impolite creature
-    - Good luck ;)
+    - HEEHELE
+    - HIILHI
+    - HOOLLOLO
+    - HULUIL
+  - name: 
+    sentences: []
+  - name: 
+    sentences: []
+  cont: 0
 --- !u!114 &98529376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,7 +1830,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98529375}
         m_MethodName: TriggerDialogue
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16955,7 +16960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -16975,7 +16980,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Hola
 --- !u!222 &1141818881
 CanvasRenderer:
   m_ObjectHideFlags: 0
