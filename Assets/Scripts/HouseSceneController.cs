@@ -5,12 +5,14 @@ using UnityEngine;
 public class HouseSceneController : SceneController
 {
     public PlayerController playerController;
+    public DialogueController dialogueController;
 
     override public void setObjects()
     {
         objects[HOUSE].SetActive(isOn);
         objects[MAIN].SetActive(!isOn);
         playerController.setOnTheHouse(true);
+        dialogueController.setIsOnTheHouse();
     }
 
     public override void setScenePosition()

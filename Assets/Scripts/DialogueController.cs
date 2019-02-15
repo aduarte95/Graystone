@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueController : MonoBehaviour
@@ -8,27 +7,40 @@ public class DialogueController : MonoBehaviour
     const int HOUSE = 0;
     bool isAlienDead = false;
     bool isPlayerPoisoned = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        objectsWithDialogues[HOUSE].TriggerDialogue(0); 
-    }
+    bool isOnTheHouse = false; //House Scene says if player is on scene
+    bool begin = true;
 
     // Update is called once per frame
     void Update()
     {
+        if(begin)
+        {
+            objectsWithDialogues[HOUSE].TriggerDialogue(0);
+            begin = false;
+        }
+
+       /* if (isOnTheHouse)
+        {
+            objectsWithDialogues[HOUSE].TriggerDialogue(1);
+            isOnTheHouse = false;
+        }
+
         if (isPlayerPoisoned)
         {
             isPlayerPoisoned = false; //Just once
-            objectsWithDialogues[HOUSE].TriggerDialogue(1);
+            objectsWithDialogues[HOUSE].TriggerDialogue(2);
         }
 
         if (isAlienDead)
         {
             isAlienDead = false; //Just once
-            objectsWithDialogues[HOUSE].TriggerDialogue(2);
-        }
+            objectsWithDialogues[HOUSE].TriggerDialogue(3);
+        }*/
+    }
+
+    public void setIsOnTheHouse()
+    {
+        isOnTheHouse = true;
     }
 
     //Alien have to change it if he dies.
