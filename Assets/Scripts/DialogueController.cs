@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
-    public Queue<DialogueTrigger> objectsWithDialogues; //Array of objects that have dialog
-    DialogueTrigger houseDialog;
+    public DialogueTrigger[] objectsWithDialogues; //Array of objects that have dialog
+    const int HOUSE = 0;
+    const int ALIEN = 1;
     bool isAlienDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        houseDialog = objectsWithDialogues.Dequeue();
+        objectsWithDialogues[HOUSE].TriggerDialogue(0); 
     }
 
     // Update is called once per frame
@@ -20,14 +21,8 @@ public class DialogueController : MonoBehaviour
         if (isAlienDead)
         {
             isAlienDead = false; //Just once
-
-
+            objectsWithDialogues[HOUSE].TriggerDialogue(1);
         }
-    }
-
-    void dequeueDialog()
-    {
-        objectsWithDialogues.Dequeue().TriggerDialogue();
     }
 
     //Alien have to change it if he dies.
