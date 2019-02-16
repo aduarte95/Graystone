@@ -28485,8 +28485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsWithDialogues:
   - {fileID: 592395550}
+  - {fileID: 1088753741}
   alien: {fileID: 539000740}
   gameController: {fileID: 138790278}
+  player: {fileID: 0}
 --- !u!4 &1743996876
 Transform:
   m_ObjectHideFlags: 0
@@ -31240,6 +31242,7 @@ MonoBehaviour:
   onTheHouse: 0
   isInLake: 1
   attack: 1654612129
+  firstTimeHit: 0
 --- !u!114 &1896869517
 MonoBehaviour:
   m_ObjectHideFlags: 0

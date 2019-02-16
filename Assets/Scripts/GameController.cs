@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     private const int LAKE = 5;
     
     public DialogueController dialogueController;
+    public PlayerController playerController; //Si comio manzana
 
     public bool Begin { get; private set; } = true;
     public bool Next { get; set; } = false;
@@ -47,14 +48,7 @@ public class GameController : MonoBehaviour
                 dialogueController.AlienIsDeadDialogue();
                 objects[APPLE].SetActive(true); //shows next mission
                 objects[LAKE].SetActive(true); //shows next mission lake
-            }
-
-            if (dialogueController.HasEat)
-            {
-                Next = false;
-                dialogueController.AlienIsDeadDialogue();
-                objects[APPLE].SetActive(true); //shows next mission
-                objects[LAKE].SetActive(true); //shows next mission lake
+          
             }
         }
     }
