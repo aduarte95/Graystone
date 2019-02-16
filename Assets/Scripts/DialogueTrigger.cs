@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue[] dialogue;
+    public Dialogue[] dialogues;
     public bool cont;
 
     public void setContinue(bool cont)
@@ -14,6 +14,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue(int i)
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue[i]);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogues[i]);
     }
 }
