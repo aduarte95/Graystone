@@ -18,7 +18,7 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objects[HOUSE].gameObject.SetActive(false);
+        objects[MAIN].gameObject.SetActive(false); //CHANGE
         tag = "Player";
         setScenePosition();
     }
