@@ -27,32 +27,33 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Begin)
-        {
-            dialogueController.Begin();
-            Begin = false;
-        }
+        
+       if(Begin)
+       {
+           dialogueController.Begin();
+           Begin = false;
+       }
 
-        /*CHANGE
-         * if(Next)
-        {
-            if (!objects[INSECT].activeSelf)
-            {
-                Next = false;
-                objects[INSECT].SetActive(true); //Appears enemy
-                dialogueController.AlienAppearsDialogue();
-            } else if (dialogueController.FirstTimeHit == 1)
-            {
-                Next = false;
-                dialogueController.PlayerHits();
-                dialogueController.FirstTimeHit = 2;
-            } else if (dialogueController.IsAlienDead)
-            {
-                Next = false;
-                dialogueController.AlienIsDeadDialogue();
-                objects[APPLE].SetActive(true); //shows next mission
-                objects[LAKE].SetActive(true); //shows next mission lake
-            }
-        }*/
+
+         if(Next)
+       {
+           if (!objects[INSECT].activeSelf)
+           {
+               Next = false;
+               objects[INSECT].SetActive(true); //Appears enemy
+               dialogueController.AlienAppearsDialogue();
+           } else if (dialogueController.FirstTimeHit == 1)
+           {
+               Next = false;
+               dialogueController.PlayerHits();
+               dialogueController.FirstTimeHit = 2;
+           } else if (dialogueController.IsAlienDead)
+           {
+               Next = false;
+               dialogueController.AlienIsDeadDialogue();
+               objects[APPLE].SetActive(true); //shows next mission
+               objects[LAKE].SetActive(true); //shows next mission lake
+           }
+       }
     }
 }

@@ -28,11 +28,11 @@ public class AppleNPC : NPCController
 
     override public bool CanWalk()
     {
-        return player.HasEaten;
+        return false; // DEBUG APPLE NPC player.HasEaten;
     }
     override public void stopWalk()
     {
-        player.HasEaten = false;
+        // DEBUG APPLE NPC player.HasEaten = false;
         canTalk = true;
     }
 }

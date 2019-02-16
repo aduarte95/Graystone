@@ -31,8 +31,8 @@ public class NPCController : MonoBehaviour
         animator.SetBool("IsWalking", true);
         transform.LookAt(targetPosition);
 
-
-        if (Vector3.Distance(transform.position, targetPosition.position) > MinDist)
+        // DEBUG APPLE NPC
+        /*if (Vector3.Distance(transform.position, targetPosition.position) > MinDist)
         {
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
@@ -43,7 +43,7 @@ public class NPCController : MonoBehaviour
             animator.SetBool(isWalkingHash, false);
             MoveSpeed = 0;
             stopWalk();
-        }
+        }*/
     }
 
     virtual public bool CanWalk()
