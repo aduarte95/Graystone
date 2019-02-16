@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public static Animator animator;
     public int isWalkingHash = Animator.StringToHash("IsWalking");
     public int canRun = Animator.StringToHash("CanRun");
+    public float health;
     public float speed;
     public float acceleration;
     public float maxSpeed;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
+        health = 100f;
         speed = 2.0f;
         setGraystoneVariables();
         Debug.Log(gameObject.name);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Slot : MonoBehaviour
 {
     private InventoryController inventory;
+    public string item;
     public int i;
 
     // Start is called before the first frame update
@@ -32,6 +33,15 @@ public class Slot : MonoBehaviour
                 child.GetComponent<Spawn>().SpawnDroppedItem();
                 GameObject.Destroy(child.gameObject);
             }
+        }
+    }
+
+    public void ConsumeItem()
+    {
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Spawn>().SpawnDroppedItem();
+            GameObject.Destroy(child.gameObject);
         }
     }
 }

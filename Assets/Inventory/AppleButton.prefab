@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8476824434073398055}
   - component: {fileID: 5105292442711592998}
   - component: {fileID: 8862217856557202959}
+  - component: {fileID: 5985990478229758257}
   m_Layer: 5
   m_Name: AppleButton
   m_TagString: Untagged
@@ -115,7 +116,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8476824434073398055}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5985990478229758257}
+        m_MethodName: Heal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &8862217856557202959
@@ -130,4 +142,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e396ba66285971b4cb8725aeaad071a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1005425872, guid: 358f352e00914b84ea35cda700cdb6f3, type: 3}
+  item: {fileID: 6987805449751550604, guid: 358f352e00914b84ea35cda700cdb6f3, type: 3}
+--- !u!114 &5985990478229758257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075140603752630042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990be29beb4a67a4b9665671796d1019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 20
