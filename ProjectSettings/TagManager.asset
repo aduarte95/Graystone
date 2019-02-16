@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Don't Stop
+  - Apple
   layers:
   - Default
   - TransparentFX

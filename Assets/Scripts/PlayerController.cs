@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public bool ableToMove = true;
     public bool onTheHouse = false;
-    
+    public int attack= Animator.StringToHash("Hit");
     
     void Start()
     {
@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
         onTheHouse = false;
     }
 
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -58,9 +61,10 @@ public class PlayerController : MonoBehaviour
             setGraystoneVariables();
             animator.SetBool(canRun, true);
         }
-
-        if (!Front()||  ableToMove ||!Input.GetKey("w")|| !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
-        {
+        
+        
+       if (!Front()||  ableToMove ||!Input.GetKey("w")|| !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
+       {
             float translation = Input.GetAxis("Vertical") * speed;
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
             translation *= Time.deltaTime;
@@ -98,6 +102,10 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Player attacks");
                 //attack
             }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                StartCoroutine(Attack());
+            }
         }
         else
         {
@@ -111,7 +119,9 @@ public class PlayerController : MonoBehaviour
             }
             Debug.Log(m);
         }
-    }
+        
+
+   }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -162,5 +172,15 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(isWalkingHash, true);
         ableToMove = true;
     }
+    
+    IEnumerator Attack()
+    {
+       
+        //animator.SetBool(attack, true);
+        animator.SetTrigger("Hit");
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool(attack, false);
+    }
+
 
 }

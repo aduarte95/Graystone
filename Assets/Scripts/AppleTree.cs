@@ -27,7 +27,7 @@ public class AppleTree : MonoBehaviour
             foreach (GameObject apple in list)
             {
                 Debug.Log(apple.GetComponent<Rigidbody>().position.y);
-                if (apple.GetComponent<Rigidbody>().position.y == 8.61f)
+                if (apple.GetComponent<Rigidbody>().position.y == 6.4f)
                 {
                     Debug.Log("Invoke drop");
                     apple.GetComponent<Apple>().DropApple();   
