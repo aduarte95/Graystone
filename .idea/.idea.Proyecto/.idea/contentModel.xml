@@ -215,6 +215,7 @@
             <e p="EasyRoads3D-Surface-Offset.shader" t="Include" />
           </e>
         </e>
+        <e p="GameController.cs" t="Include" />
         <e p="Gems Ultimate Pack" t="Include">
           <e p="Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
@@ -287,6 +288,7 @@
           <e p="HouseSceneController.cs" t="Include" />
           <e p="InventoryController.cs" t="Include" />
           <e p="JamsNPCController.cs" t="Include" />
+          <e p="JeiferPrueba.cs" t="Include" />
           <e p="L2GSceneController.cs" t="Include" />
           <e p="LakeSceneController.cs" t="Include" />
           <e p="NPCController.cs" t="Include" />
