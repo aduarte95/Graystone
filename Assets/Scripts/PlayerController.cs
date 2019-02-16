@@ -17,8 +17,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     public bool ableToMove = true;
     public bool onTheHouse = false;
-    public int attack= Animator.StringToHash("Hit");
-    
+    public bool isInLake = true;
+    public int attack = Animator.StringToHash("Hit");
+
     void Start()
     {
         speed = 2.0f;
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour
     public void setOnTheHouse(bool isOnTheHouse)
     {
         onTheHouse = isOnTheHouse;
+    }
+
+    public void setInLake(bool isInLake)
+    {
+        this.isInLake = isInLake;
     }
 
     public void setHouseVariables()
@@ -52,19 +58,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(onTheHouse)
+        if (onTheHouse)
         {
             setHouseVariables();
             animator.SetBool(canRun, false);
-        } else
+        }
+        else
         {
             setGraystoneVariables();
             animator.SetBool(canRun, true);
         }
-        
-        
-       if (!Front()||  ableToMove ||!Input.GetKey("w")|| !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
-       {
+
+
+        if (!Front() || ableToMove || !Input.GetKey("w") || !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
+        {
             float translation = Input.GetAxis("Vertical") * speed;
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
             translation *= Time.deltaTime;
@@ -114,18 +121,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             string m = "";
-            for (int i = 0; i < inventory.Count; i++){
+            for (int i = 0; i < inventory.Count; i++)
+            {
                 m += inventory[i];
             }
             Debug.Log(m);
         }
-        
 
-   }
+
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+
     }
 
 
@@ -149,33 +157,33 @@ public class PlayerController : MonoBehaviour
             return false;
         }
     }
-    
-    
+
+
     void OnTriggerEnter(Collider collision)
     {
-         speed = 0;
+        speed = 0;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if( Input.GetKey("w") && (other.GetComponent<Collider>().gameObject.name != "Terrain"))
+        if (Input.GetKey("w") && (other.GetComponent<Collider>().gameObject.name != "Terrain"))
         {
             speed = 0;
             ableToMove = false;
             animator.SetBool(isWalkingHash, false);
         }
     }
-    
+
 
     private void OnTriggerExit(Collider col)
     {
         animator.SetBool(isWalkingHash, true);
         ableToMove = true;
     }
-    
+
     IEnumerator Attack()
     {
-       
+
         //animator.SetBool(attack, true);
         animator.SetTrigger("Hit");
         yield return new WaitForSeconds(0.5f);
