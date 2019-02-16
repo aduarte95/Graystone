@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9764,18 +9764,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - name: House
+  - name: 'Team Rocket: '
     sentences:
-    - Hi
-    - Bye
-  - name: House
+    - 'Welcome to Graystone! '
+    - It seems like your house needs some fixes.
+    - "Try to obtain the objects you need from your\r\nneighbors."
+    - But First, they will want some favors from you.
+    - Good luck ;)
+  - name: 'A voice in your mind: '
     sentences:
-    - Alien!
-    - Oh no!
-  - name: House
+    - OH... apparently there's an uninvited guest in your house.
+    - Let's show him some manners!
+    - Defend yourself using "P"...
+  - name: 'A voice in your mind: '
     sentences:
-    - Muerto
-    - '!!'
+    - "WAIT!!..... Grab the stick that's on the table to beat that impolite creature
+      down.\r"
+  - name: 'A voice in your mind: '
+    sentences:
+    - Well.... that went way better than I espected, not bad at all..
+    - 'But that thing touched you... so you''re poisoned now :O '
+    - Easy easy, don't panic, is not serious, you just need to eat an apple :D
+    - I know I know, you don't have those kind of things, you just got here.
+    - There's a village not very far from here, to the west... may be you can find
+      something there
+    - 'But I would go fast if I were you.... you know, poison is not a thing you humans
+      can stand for a very long time.. D:'
+    - "\rGood luck ;)"
   cont: 0
 --- !u!1001 &592915433
 PrefabInstance:
@@ -10244,8 +10259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90.6, y: 0}
-  m_SizeDelta: {x: 518.9, y: 30}
+  m_AnchoredPosition: {x: -79.1, y: -18.5}
+  m_SizeDelta: {x: 541.8, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620571810
 MonoBehaviour:
@@ -28367,6 +28382,7 @@ MonoBehaviour:
   - {fileID: 592395550}
   alien: {fileID: 539000740}
   gameController: {fileID: 138790278}
+  player: {fileID: 0}
 --- !u!4 &1743996876
 Transform:
   m_ObjectHideFlags: 0
@@ -31108,6 +31124,7 @@ MonoBehaviour:
   onTheHouse: 0
   isInLake: 1
   attack: 1654612129
+  firstTimeHit: 0
 --- !u!114 &1896869517
 MonoBehaviour:
   m_ObjectHideFlags: 0
