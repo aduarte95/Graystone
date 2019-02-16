@@ -1,19 +1,48 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
     public DialogueTrigger[] objectsWithDialogues; //Array of objects that have dialog
+    public EnemyBehaviour alien;
     const int HOUSE = 0;
+
     bool isAlienDead = false;
+    public bool IsAlienDead //Alien have to change it if he dies. PROTO
+    {
+        get
+        {
+            return isAlienDead;
+        }
+        set
+        {
+            isAlienDead = value;
+        }
+    }
+
     bool isPlayerPoisoned = false;
+    public bool IsPlayerPoisoned
+    {
+        set
+        {
+            isPlayerPoisoned = value;
+        }
+    }
+
     bool isOnTheHouse = false; //House Scene says if player is on scene
+    public bool IsOnTheHouse
+    {
+        set
+        {
+            isOnTheHouse = value;
+        }
+    }
     bool begin = true;
+    bool first = true;
 
     // Update is called once per frame
     void Update()
     {
-        if(begin)
+        if (begin)
         {
             objectsWithDialogues[HOUSE].TriggerDialogue(0);
             begin = false;
@@ -30,29 +59,12 @@ public class DialogueController : MonoBehaviour
             isPlayerPoisoned = false; //Just once
             objectsWithDialogues[HOUSE].TriggerDialogue(2);
         }
-
-        if (isAlienDead)
+        */
+        if (isAlienDead && first)
         {
-            isAlienDead = false; //Just once
-            objectsWithDialogues[HOUSE].TriggerDialogue(3);
-        }*/
-    }
-
-    public void setIsOnTheHouse()
-    {
-        isOnTheHouse = true;
-    }
-
-    //Alien have to change it if he dies. PROTO
-    public void setAlienDead(bool isAlienDead)
-    {
-        this.isAlienDead = isAlienDead;
-    }
-
-    //PROTO
-    public bool getAlienDead()
-    {
-        return true;
+            first = false;
+            objectsWithDialogues[HOUSE].TriggerDialogue(1);
+        }
     }
 
     //PROTO

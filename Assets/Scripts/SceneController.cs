@@ -37,7 +37,7 @@ public class SceneController : MonoBehaviour
 
     public void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == tag && dialogueController.getAlienDead()) //PROTO alien dead
+        if (collision.gameObject.tag == tag && dialogueController.IsAlienDead) //PROTO alien dead
         {
             
             collision.gameObject.transform.position = scenePosition;

@@ -11,7 +11,7 @@ public class HouseSceneController : SceneController
         objects[HOUSE].SetActive(isOn);
         objects[MAIN].SetActive(!isOn);
         playerController.setOnTheHouse(true);
-        dialogueController.setIsOnTheHouse();
+        dialogueController.IsOnTheHouse = true;
     }
 
     public override void setScenePosition()
