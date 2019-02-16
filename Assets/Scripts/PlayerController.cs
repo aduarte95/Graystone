@@ -127,6 +127,7 @@ public class PlayerController : MonoBehaviour
                 }
 
                 StartCoroutine(Attack());
+                Debug.Log("Pegó");
             }
         }
         else

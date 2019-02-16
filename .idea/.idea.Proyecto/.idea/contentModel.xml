@@ -215,7 +215,7 @@
             <e p="EasyRoads3D-Surface-Offset.shader" t="Include" />
           </e>
         </e>
-        <e p="GameController.cs" t="Include" />
+        <e p="EnemyBehaviourProto.cs" t="Include" />
         <e p="Gems Ultimate Pack" t="Include">
           <e p="Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
@@ -229,7 +229,6 @@
         <e p="MedievalTownExteriors" t="Include">
           <e p="Readme.txt" t="Include" />
         </e>
-        <e p="MinimapScript.cs" t="Include" />
         <e p="Room" t="Include">
           <e p="Settings" t="Include">
             <e p="Note.txt" t="Include" />
@@ -283,6 +282,7 @@
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="EnemyBehaviour.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
           <e p="GraystoneForestBoundaryController.cs" t="Include" />
           <e p="H2GController.cs" t="Include" />
           <e p="HouseSceneController.cs" t="Include" />
@@ -291,6 +291,7 @@
           <e p="JeiferPrueba.cs" t="Include" />
           <e p="L2GSceneController.cs" t="Include" />
           <e p="LakeSceneController.cs" t="Include" />
+          <e p="MinimapScript.cs" t="Include" />
           <e p="NPCController.cs" t="Include" />
           <e p="ObjectVisibilityController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
