@@ -140,7 +140,7 @@ public class JeiferPrueba : MonoBehaviour
 
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1.0f, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 0.5f, layerMask))
         {
             return true;
         }
