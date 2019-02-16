@@ -12,6 +12,8 @@ public class SceneController : MonoBehaviour
     protected const int PLAYER = 2;
     public GameObject[] objects;
     protected bool isOn = true;
+    public DialogueController dialogueController; //PROTO
+    protected string name;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,8 @@ public class SceneController : MonoBehaviour
         tag = "Player";
         setScenePosition();
     }
+
+    
 
     virtual public void setScenePosition()
     {
@@ -33,11 +37,12 @@ public class SceneController : MonoBehaviour
 
     public void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == tag)
+        if (collision.gameObject.tag == tag && dialogueController.getAlienDead()) //PROTO alien dead
         {
-            Debug.Log("Collision");
+            
             collision.gameObject.transform.position = scenePosition;
             setObjects();
+            Debug.Log(name);
             //SceneManager.MoveGameObjectToScene(collision.gameObject, SceneManager.GetSceneByName(scenesName));
         }
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5193,7 +5193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012689552980, guid: 676e107eeafc5524b97910d76516565d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000012689552980, guid: 676e107eeafc5524b97910d76516565d, type: 3}
       propertyPath: m_LocalScale.z
@@ -5207,7 +5207,7 @@ PrefabInstance:
     - target: {fileID: 114000012194588374, guid: 676e107eeafc5524b97910d76516565d,
         type: 3}
       propertyPath: isScaling
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000012194588374, guid: 676e107eeafc5524b97910d76516565d,
         type: 3}
@@ -7665,7 +7665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4527743453445082, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: -2.014
       objectReference: {fileID: 0}
     - target: {fileID: 4527743453445082, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19111,8 +19111,8 @@ MonoBehaviour:
   objects:
   - {fileID: 592395546}
   - {fileID: 534669902}
-  playerController: {fileID: 1896869516}
   dialogueController: {fileID: 1743996875}
+  playerController: {fileID: 1896869516}
 --- !u!54 &1281082155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28417,6 +28417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 592395546}
+  dialogueController: {fileID: 0}
 --- !u!23 &1813363284
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29705,6 +29706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 592395546}
+  dialogueController: {fileID: 0}
 --- !u!54 &1883840159
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33640,8 +33642,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114497603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.14, y: 2.13, z: 4.286}
-  m_LocalScale: {x: 4.1005955, y: 4.02078, z: 1.1083128}
+  m_LocalPosition: {x: 5.14, y: 2.13, z: 3.801}
+  m_LocalScale: {x: 4.1005955, y: 4.02078, z: 2.0523698}
   m_Children: []
   m_Father: {fileID: 79257265}
   m_RootOrder: 8
@@ -33661,6 +33663,7 @@ MonoBehaviour:
   objects:
   - {fileID: 592395546}
   - {fileID: 534669902}
+  dialogueController: {fileID: 1743996875}
   playerController: {fileID: 1896869516}
 --- !u!65 &2114497606
 BoxCollider:

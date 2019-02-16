@@ -43,12 +43,19 @@ public class DialogueController : MonoBehaviour
         isOnTheHouse = true;
     }
 
-    //Alien have to change it if he dies.
+    //Alien have to change it if he dies. PROTO
     public void setAlienDead(bool isAlienDead)
     {
         this.isAlienDead = isAlienDead;
     }
 
+    //PROTO
+    public bool getAlienDead()
+    {
+        return true;
+    }
+
+    //PROTO
     public void setPlayerPoisoned(bool isPlayerPoisoned)
     {
         this.isPlayerPoisoned = isPlayerPoisoned;

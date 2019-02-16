@@ -5,7 +5,6 @@ using UnityEngine;
 public class HouseSceneController : SceneController
 {
     public PlayerController playerController;
-    public DialogueController dialogueController;
 
     override public void setObjects()
     {
@@ -17,7 +16,7 @@ public class HouseSceneController : SceneController
 
     public override void setScenePosition()
     {
-        scenePosition = new Vector3(-49.6f, 0.004f, 24.33f);
+        scenePosition = new Vector3(-49.6f, 0.004f, 24.98f);
     }
 
 }
