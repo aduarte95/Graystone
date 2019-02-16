@@ -33,7 +33,8 @@ public class GameController : MonoBehaviour
             Begin = false;
         }
 
-        if(Next)
+        /*CHANGE
+         * if(Next)
         {
             if (!objects[INSECT].activeSelf)
             {
@@ -51,8 +52,7 @@ public class GameController : MonoBehaviour
                 dialogueController.AlienIsDeadDialogue();
                 objects[APPLE].SetActive(true); //shows next mission
                 objects[LAKE].SetActive(true); //shows next mission lake
-          
             }
-        }
+        }*/
     }
 }
