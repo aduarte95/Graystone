@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool onTheHouse = false;
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
-    public int firstTimeHit = 0; // 0 means never hit at all, 1 means hit for the first time, 2 hit after the first time
-
+    public DialogueController dialogueController;
+    
     void Start()
     {
         speed = 2.0f;
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     public void setFirstHit(int fisrtTimeHit)
     {
-        this.firstTimeHit = fisrtTimeHit;
+        dialogueController.FirstTimeHit = fisrtTimeHit;
     }
 
 
@@ -117,11 +117,11 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.P))
             {
-                if (firstTimeHit == 0)
+                if (dialogueController.FirstTimeHit == 0)
                 {
                     setFirstHit(1);
                 }
-                else if (firstTimeHit == 1)
+                else if (dialogueController.FirstTimeHit == 1)
                 {
                     setFirstHit(2);
                 }
