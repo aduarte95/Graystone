@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c561e499-b237-4038-9ba9-f9ff1fe0c28f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Apple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Apple.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Graystone - Jeifer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Graystone - Jeifer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Graystone - Jeifer.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Graystone - Jeifer.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Graystone.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Graystone.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AppleTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AppleTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JeiferPrueba.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JeiferPrueba.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c561e499-b237-4038-9ba9-f9ff1fe0c28f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AppleTree.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <marker date="1550288901077" expanded="true" signature="6:78" ph="..." />
                 <marker date="1550288901077" expanded="true" signature="118:832" ph="{...}" />
@@ -182,12 +174,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550260858412</updated>
-      <workItem from="1550260897914" duration="21375000" />
+      <workItem from="1550260897914" duration="21981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21375000" />
+    <option name="totallyTimeSpent" value="21981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -552,7 +544,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AppleTree.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <marker date="1550288901077" expanded="true" signature="6:78" ph="..." />
             <marker date="1550288901077" expanded="true" signature="118:832" ph="{...}" />
