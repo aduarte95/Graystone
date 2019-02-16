@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour
             {
                 Next = false;
                 dialogueController.PlayerHits();
+                dialogueController.FirstTimeHit = 2;
             } else if (dialogueController.IsAlienDead)
             {
                 Next = false;
