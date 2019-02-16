@@ -29839,7 +29839,7 @@ MonoBehaviour:
   - {fileID: 592395546}
   - {fileID: 534669902}
   dialogueController: {fileID: 1743996875}
-  playerController: {fileID: 0}
+  playerController: {fileID: 1402130225}
 --- !u!23 &1813363284
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31130,7 +31130,7 @@ MonoBehaviour:
   - {fileID: 592395546}
   - {fileID: 534669902}
   dialogueController: {fileID: 1743996875}
-  playerControler: {fileID: 0}
+  playerControler: {fileID: 1896869516}
 --- !u!54 &1883840159
 Rigidbody:
   m_ObjectHideFlags: 0

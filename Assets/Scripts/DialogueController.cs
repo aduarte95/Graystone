@@ -44,10 +44,10 @@ public class DialogueController : MonoBehaviour
                 gameController.Next = true;
                 currentDialog.Finished = false;
 
-             //CHANGE   if (currentDialog == objectsWithDialogues[HOUSE].dialogues[3]) 
-             //   {
-                    FinishedHouse = true; //If it's last dialogue allows to change scene
-             //   }
+                 if (currentDialog == objectsWithDialogues[HOUSE].dialogues[3]) 
+                 {
+                        FinishedHouse = true; //If it's last dialogue allows to change scene
+                 }
             }
         }
         /* if (isOnTheHouse)
