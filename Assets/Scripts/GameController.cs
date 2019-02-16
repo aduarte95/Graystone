@@ -40,9 +40,12 @@ public class GameController : MonoBehaviour
                 Next = false;
                 objects[INSECT].SetActive(true); //Appears enemy
                 dialogueController.AlienAppearsDialogue();
-            }
-            
-            if(dialogueController.IsAlienDead)
+            } else if (dialogueController.FirstTimeHit == 1)
+            {
+                Next = false;
+                dialogueController.PlayerHits();
+                dialogueController.FirstTimeHit = 2;
+            } else if (dialogueController.IsAlienDead)
             {
                 Next = false;
                 dialogueController.AlienIsDeadDialogue();

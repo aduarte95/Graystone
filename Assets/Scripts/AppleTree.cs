@@ -9,9 +9,6 @@ public class AppleTree : MonoBehaviour
     void Start()
     {
       list = GameObject.FindGameObjectsWithTag("Apple");
-      Debug.Log("************El número es :********" + list.Length);
-      int x = (int)Random.Range(0.0f, 9f);
-      Debug.Log("************El random es :********" + x);
     }
 
     // Update is called once per frame
@@ -25,7 +22,6 @@ public class AppleTree : MonoBehaviour
         if (other.GetComponent<Collider>().gameObject.name == "Player")
         {
             int x = (int)Random.Range(0.0f, 9f);
-            Debug.Log("HIT");
             list[x].GetComponent<Apple>().DropApple();
         }
     }
