@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour
 {
-    
+    private GameObject[] list;
     // Start is called before the first frame update
     void Start()
     {
-        
+      list = GameObject.FindGameObjectsWithTag("Apple");
+      Debug.Log("************El número es :********" + list.Length);
+      int x = (int)Random.Range(0.0f, 9f);
+      Debug.Log("************El random es :********" + x);
     }
 
     // Update is called once per frame
@@ -21,18 +24,9 @@ public class AppleTree : MonoBehaviour
     {
         if (other.GetComponent<Collider>().gameObject.name == "Player")
         {
+            int x = (int)Random.Range(0.0f, 9f);
             Debug.Log("HIT");
-            GameObject[] list = GameObject.FindGameObjectsWithTag("Apple");
-            //GameObject.Find("FP_apple").GetComponent<Apple>().DropApple();
-            foreach (GameObject apple in list)
-            {
-                Debug.Log(apple.GetComponent<Rigidbody>().position.y);
-                if (apple.GetComponent<Rigidbody>().position.y == 6.4f)
-                {
-                    Debug.Log("Invoke drop");
-                    apple.GetComponent<Apple>().DropApple();   
-                }
-            }
+            list[x].GetComponent<Apple>().DropApple();
         }
     }
 

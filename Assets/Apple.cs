@@ -17,8 +17,8 @@ public class Apple : MonoBehaviour
 
     public void DropApple()
     {
-        Instantiate(gameObject, gameObject.transform,true);
-        gameObject.GetComponent<Rigidbody>().useGravity = true;
+        var apple = Instantiate(gameObject, gameObject.transform,true);
+        apple.GetComponent<Rigidbody>().useGravity = true;
         Debug.Log("FALL");
     }
     
