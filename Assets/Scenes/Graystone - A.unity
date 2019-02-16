@@ -1794,6 +1794,7 @@ MonoBehaviour:
   - {fileID: 1892534444}
   - {fileID: 748281828}
   dialogueController: {fileID: 1743996875}
+  playerController: {fileID: 0}
 --- !u!4 &138790279
 Transform:
   m_ObjectHideFlags: 0
@@ -28488,7 +28489,6 @@ MonoBehaviour:
   - {fileID: 1088753741}
   alien: {fileID: 539000740}
   gameController: {fileID: 138790278}
-  player: {fileID: 0}
 --- !u!4 &1743996876
 Transform:
   m_ObjectHideFlags: 0
