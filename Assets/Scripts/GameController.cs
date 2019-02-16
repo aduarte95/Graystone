@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject insect;
+    public GameObject[] objects;
+    private const int INSECT = 0;
+    private const int WOOD = 1;
+    private const int BAKERY = 2;
+    private const int APPLE = 3;
+    private const int ALIEN = 4;
+    private const int LAKE = 5;
+    
     public DialogueController dialogueController;
 
     public bool Begin { get; private set; } = true;
@@ -23,15 +30,14 @@ public class GameController : MonoBehaviour
         {
             dialogueController.Begin();
             Begin = false;
-            //insect.SetActive(true);
         }
 
         if(Next)
         {
-            if (!insect.activeSelf)
+            if (!objects[INSECT].activeSelf)
             {
                 Next = false;
-                insect.SetActive(true); //Appears enemy
+                objects[INSECT].SetActive(true); //Appears enemy
                 dialogueController.AlienAppearsDialogue();
             }
             
@@ -39,6 +45,16 @@ public class GameController : MonoBehaviour
             {
                 Next = false;
                 dialogueController.AlienIsDeadDialogue();
+                objects[APPLE].SetActive(true); //shows next mission
+                objects[LAKE].SetActive(true); //shows next mission lake
+            }
+
+            if (dialogueController.HasEat)
+            {
+                Next = false;
+                dialogueController.AlienIsDeadDialogue();
+                objects[APPLE].SetActive(true); //shows next mission
+                objects[LAKE].SetActive(true); //shows next mission lake
             }
         }
     }
