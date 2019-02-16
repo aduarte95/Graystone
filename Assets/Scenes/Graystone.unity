@@ -480,6 +480,7 @@ MonoBehaviour:
   speed: 2
   direction: 1
   chanceOfCurrency: 0.005
+  dialogueController: {fileID: 1743996875}
 --- !u!65 &43249648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9238,6 +9239,10 @@ MonoBehaviour:
     sentences:
     - Hi!
     - Bye!
+  - name: 'House:'
+    sentences:
+    - Hi! 2
+    - Bye! 2
   cont: 0
 --- !u!1001 &592915433
 PrefabInstance:
@@ -27292,6 +27297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsWithDialogues:
   - {fileID: 592395550}
+  alien: {fileID: 43249647}
 --- !u!4 &1743996876
 Transform:
   m_ObjectHideFlags: 0
@@ -28417,7 +28423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 592395546}
-  dialogueController: {fileID: 0}
+  - {fileID: 534669902}
+  dialogueController: {fileID: 1743996875}
 --- !u!23 &1813363284
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29706,7 +29713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 592395546}
-  dialogueController: {fileID: 0}
+  - {fileID: 534669902}
+  dialogueController: {fileID: 1743996875}
 --- !u!54 &1883840159
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30027,6 +30035,7 @@ MonoBehaviour:
   weaponEquipped: 
   ableToMove: 1
   onTheHouse: 0
+  attack: 1654612129
 --- !u!114 &1896869517
 MonoBehaviour:
   m_ObjectHideFlags: 0
