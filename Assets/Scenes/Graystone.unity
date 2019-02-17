@@ -8565,8 +8565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a1756ddea2cc4990de5492d6c0eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   speed: 2
   direction: 1
+  MaxDist: 10
+  MinDist: 1
   chanceOfCurrency: 0.005
   dialogueController: {fileID: 1743996875}
 --- !u!114 &539000741
@@ -16996,8 +16999,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a1756ddea2cc4990de5492d6c0eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1402130229}
   speed: 2
   direction: 1
+  MaxDist: 2
+  MinDist: 1
   chanceOfCurrency: 0.005
   dialogueController: {fileID: 1743996875}
 --- !u!65 &1048283820

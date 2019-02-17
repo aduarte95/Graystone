@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBehaviourProto : MonoBehaviour
 {
+    Rigidbody rb;
+
     static Animator animator;
     int isWalkingHash = Animator.StringToHash("IsWalking");
     int getHitHash = Animator.StringToHash("GetHit");
@@ -11,13 +14,15 @@ public class EnemyBehaviourProto : MonoBehaviour
     int attack1Hash = Animator.StringToHash("Attack1");
     int attack2Hash = Animator.StringToHash("Attack2");
 
+    public Transform Player;
     bool ableToMove;
     public float speed = 2.0f;
     public int direction = 1;
+    public int MaxDist = 2;
+    public int MinDist = 1;
 
     float random;
     public float chanceOfCurrency = 0.005f;
-    Rigidbody rb;
 
     public float currentHealth { get; set; }
     public float maxHealth { get; set; }
@@ -41,6 +46,8 @@ public class EnemyBehaviourProto : MonoBehaviour
     {
         if (ableToMove)
         {
+            // Random Movement
+            /*
             float translation = direction * speed;
             translation *= Time.deltaTime;
             Vector3 move = new Vector3(0, 0, translation);
@@ -66,8 +73,28 @@ public class EnemyBehaviourProto : MonoBehaviour
                     animator.SetBool(isWalkingHash, false);
                 }
             }
-        }
+            */
+            //follow movement
+            transform.LookAt(Player);
 
+            if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+            {
+                animator.SetBool(isWalkingHash, true);
+                transform.position += transform.forward * speed * Time.deltaTime;
+            }
+            else
+            {
+                animator.SetBool(isWalkingHash, false);
+            }
+
+            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+            {
+                //Here Call any function U want Like Shoot at here or something
+                StartCoroutine(doAttack2());
+            }
+        }
+        
+        /*
         if (Input.GetKeyDown(KeyCode.B))
         {
             StartCoroutine(doAttack1());
@@ -82,6 +109,7 @@ public class EnemyBehaviourProto : MonoBehaviour
         {
             StartCoroutine(dealDamage(10));
         }
+        */
     }
 
     public bool Front()
