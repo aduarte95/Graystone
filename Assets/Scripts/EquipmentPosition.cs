@@ -8,10 +8,7 @@ public class EquipmentPosition : ObjectInteraction
 
     override public void interact()
     {
-        if (objectToEquip.activeSelf)
-        {
-            objectToEquip.SetActive(!objectToEquip.activeSelf);
-        }
+        objectToEquip.SetActive(!objectToEquip.activeSelf);
     }
 
     override public void setText()
