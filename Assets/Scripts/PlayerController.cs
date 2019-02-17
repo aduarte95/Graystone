@@ -21,8 +21,10 @@ public class PlayerController : MonoBehaviour
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
     public DialogueController dialogueController;
-    // DEBUG APPLE NPC public bool HasEaten { get; set; } = false; 
-    //public bool HasApples { get; set; } = false; // DEBUG WOODSMITH NPC
+    //DEBUG APPLE NPC 
+    public bool HasEaten { get; set; } = false;
+    //
+    public bool HasApples { get; set; } = false; // DEBUG WOODSMITH NPC
 
     void Start()
     {
@@ -119,10 +121,18 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Player attacks");
                 //attack
             }
+
+            //SETEAR EN TRUE QUE SE COMIO LAS MANZANAS. MIENTRAS TANTO JAJA
+            /*if (Input.GetKeyDown(KeyCode.R))
+            {
+                HasEaten = true;
+            }*/
+
             if (Input.GetKeyDown(KeyCode.P))
             {
-                // DEBUG APPLE NPC HasEaten = true;
-                //HasApples = true; // DEBUG APPLE NPC 
+                // DEBUG APPLE NPC 
+                
+               // HasApples = true; // DEBUG APPLE NPC 
                 
                 if (dialogueController.FirstTimeHit == 0)
                 {

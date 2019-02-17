@@ -37,7 +37,7 @@ public class SceneController : MonoBehaviour
 
     public void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == tag && dialogueController.FinishedHouse) //PROTO alien dead
+        if (collision.gameObject.tag == tag && dialogueController.FinishedHouse) //PROTO alien dead QUITAR SEGUNDA CONDICON SI QUIEREN SALIR DE LA CASA :)
         {
             
             collision.gameObject.transform.position = scenePosition;

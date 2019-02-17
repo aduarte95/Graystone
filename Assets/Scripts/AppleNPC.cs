@@ -16,7 +16,7 @@ public class AppleNPC : NPCController
     // Update is called once per frame
     void Update()
     {
-        if(false)//player.HasEaten) // DEBUG APPLE NPC
+        if(false)//player.HasEaten) // DEBUG APPLE NPC quitar el false y poner ese cuando player ya tenga el seteo de la variable HasEaten
         {
             walk();
         } else if (CanTalk)
@@ -57,7 +57,7 @@ public class AppleNPC : NPCController
 
     private void setCanTalk()
     {
-       //player.HasEaten = false; // DEBUG APPLE NPC
+       //player.HasEaten = false; // DEBUG APPLE NPC. SAME jaja
        CanTalk = true;
     }
 

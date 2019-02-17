@@ -50,19 +50,6 @@ public class DialogueController : MonoBehaviour
                  }
             }
         }
-        /* if (isOnTheHouse)
-    {
-        objectsWithDialogues[HOUSE].TriggerDialogue(1);
-        isOnTheHouse = false;
-    }
-
-    if (isPlayerPoisoned)
-    {
-        isPlayerPoisoned = false; //Just once
-        objectsWithDialogues[HOUSE].TriggerDialogue(2);
-    }
-    */
-
     }
 
     public void Begin() //First Dialogue

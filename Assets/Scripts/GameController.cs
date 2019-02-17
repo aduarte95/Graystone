@@ -27,33 +27,37 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //DESCOMENTAR PARA INICIAR MISION . TODOS LOS DIALOGOS ESTAN EN HOUSE CAMERA
         
-       /*if(Begin)
+    /*
+        if (Begin) //Dialogo inicial
        {
            dialogueController.Begin();
            Begin = false;
        }
 
 
-         if(Next)
+         if(Next) //Si el dialogo termino permite a los otros dialogos entrar
        {
-           if (!objects[INSECT].activeSelf)
+           if (!objects[INSECT].activeSelf) //Aparece el alien y muestra dialogos
            {
                Next = false;
                objects[INSECT].SetActive(true); //Appears enemy
                dialogueController.AlienAppearsDialogue();
-           } else if (dialogueController.FirstTimeHit == 1)
+           } else if (dialogueController.FirstTimeHit == 1) //si dio primer golpe aparece dialogo que debe tomar palo. TODO: hacer que el palo apareza, tal vez agregando un objeto palo acá y desactivando desde el inicio
            {
                Next = false;
                dialogueController.PlayerHits();
                dialogueController.FirstTimeHit = 2;
-           } else if (dialogueController.IsAlienDead)
+           } else if (dialogueController.IsAlienDead) //Dialogo donde el alien muere y ya le permite salir de la casa. EL ALIEN DEBE AVISARLE A DIALOGUE CONTROLLER QUE MURIO. AHORITA LO HACE CON M JAJA
            {
                Next = false;
                dialogueController.AlienIsDeadDialogue();
                objects[APPLE].SetActive(true); //shows next mission
                objects[LAKE].SetActive(true); //shows next mission lake
            }
-       }*/
+       }
+       */
     }
 }
