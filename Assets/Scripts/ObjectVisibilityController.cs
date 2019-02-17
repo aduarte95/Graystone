@@ -6,14 +6,26 @@ public class ObjectVisibilityController : ObjectInteraction
 
     override public void interact()
     {
-        objectToHide.SetActive(!objectToHide.activeSelf);
-    }
+		Pickup p = objectToHide.GetComponent<Pickup>();
+		InventoryController ic = GameObject.Find("Player").GetComponent<InventoryController>();
+		if(!objectToHide.activeSelf){
+			Debug.Log("A");
+			ic.putItem(objectToHide);
+			objectToHide.SetActive(true);
+		}
+		else
+		{
+			Debug.Log("B");
+			ic.takeItem(objectToHide);
+			objectToHide.SetActive(false);
+		}
+	}
 
     override public void setText()
     {
         if (objectToHide.activeSelf)
         {
-            text = "Press Q button to keep away ";
+            text = "Press Q button to take ";
         }
         else
         {

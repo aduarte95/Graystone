@@ -10,7 +10,19 @@ public class EquipmentPosition : ObjectInteraction
     override public void interact()
     {
         showText = false;
-        objectToEquip.SetActive(!objectToEquip.activeSelf);
+		
+		InventoryController ic = GameObject.Find("Player").GetComponent<InventoryController>();
+		if(!objectToEquip.activeSelf){
+			Debug.Log("A");
+			ic.EquipWeapon(null);
+			objectToEquip.SetActive(true);
+		}
+		else
+		{
+			Debug.Log("B");
+			ic.EquipWeapon(objectToEquip);
+			objectToEquip.SetActive(false);
+		}
     }
 
     override public void setText()

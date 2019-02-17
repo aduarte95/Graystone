@@ -33,6 +33,7 @@ public class Slot : MonoBehaviour
                 child.GetComponent<Spawn>().SpawnDroppedItem();
                 GameObject.Destroy(child.gameObject);
             }
+			item = "";
         }
     }
 
@@ -43,5 +44,18 @@ public class Slot : MonoBehaviour
             child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }
+		item = "";
     }
+	
+	public void RemoveItem(){
+		if (inventory.isFull[i])
+        {
+            Debug.Log("Removing item.");
+            foreach (Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+			item = "";
+        }
+	}
 }
