@@ -1,36 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ObjectVisibilityController : MonoBehaviour
+public class ObjectVisibilityController : ObjectInteraction
 {
-    bool isActiveAndEnabled;
-    bool keyIsEnable = false;
-    public GameObject chair;
+    public GameObject objectToHide;
 
-    public void Update()
+    override public void interact()
     {
-      if(keyIsEnable && Input.GetKeyDown("q"))
-        {
-            chair.SetActive(!chair.activeSelf);
-        }  
+        objectToHide.SetActive(!objectToHide.activeSelf);
     }
 
-    public void OnTriggerEnter(Collider collision)
+    override public void setText()
     {
-        if (!keyIsEnable && collision.gameObject.tag == "Player")
+        if (objectToHide.activeSelf)
         {
-            Debug.Log("Colission");
-            keyIsEnable = true;
+            text = "Press Q button to keep away ";
         }
-    }
-
-    public void OnTriggerExit(Collider other)
-    {
-        if (keyIsEnable && other.gameObject.tag == "Player")
+        else
         {
-            Debug.Log("Colission exit");
-            keyIsEnable = false;
+            text = "Press Q button to put ";
         }
+        
+        objectName = objectToHide.name;
     }
 }
