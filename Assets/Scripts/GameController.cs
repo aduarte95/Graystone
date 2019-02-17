@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
 
         //DESCOMENTAR PARA INICIAR MISION . TODOS LOS DIALOGOS ESTAN EN HOUSE CAMERA
         
-    /*
+        
         if (Begin) //Dialogo inicial
        {
            dialogueController.Begin();
@@ -58,6 +58,6 @@ public class GameController : MonoBehaviour
                objects[LAKE].SetActive(true); //shows next mission lake
            }
        }
-       */
+       
     }
 }
