@@ -149,9 +149,15 @@ public class EnemyBehaviourProto : MonoBehaviour
         }
     }
 
+    public void getHit(int damage)
+    {
+        StartCoroutine(dealDamage(damage));
+    }
+
     // Reduce the health in "damageValue" points
     IEnumerator dealDamage(float damageValue)
     {
+        Debug.Log("Perdio vida");
         currentHealth -= damageValue;
         // if health gets negative passes to 0
         if (currentHealth > 0)

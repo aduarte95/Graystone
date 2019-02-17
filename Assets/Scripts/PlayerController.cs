@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     public int attack = Animator.StringToHash("Hit");
     public DialogueController dialogueController;
 
+    public EnemyBehaviourProto enemy;
+    public Transform Enemy; // to use the transform.position of enemy after Attack
+
     public DialogueManager dialogueManager;
     //DEBUG APPLE NPC 
     public bool HasEaten { get; set; } = false;
@@ -148,6 +151,7 @@ public class PlayerController : MonoBehaviour
                    }
 
                    StartCoroutine(Attack());
+                  
                    Debug.Log("Pegó");
                }
                 
@@ -225,6 +229,12 @@ public class PlayerController : MonoBehaviour
 
         //animator.SetBool(attack, true);
         animator.SetTrigger("Hit");
+        if ((Vector3.Distance(transform.position, Enemy.position) >= 0) &&
+            (Vector3.Distance(transform.position, Enemy.position) <= 2))
+        {
+            enemy.getHit(10);
+        }
+
         yield return new WaitForSeconds(0.5f);
         animator.SetBool(attack, false);
     }
