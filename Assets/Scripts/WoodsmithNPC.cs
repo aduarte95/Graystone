@@ -10,10 +10,10 @@ public class WoodsmithNPC : NPCController
     // Update is called once per frame
     void Update()
     {
-        if(CanTalk) //ACTIVAR ESTO CON UN BOTÓN EN PLAYER
+        if(CanTalk) //actives in position of npc
         {
             CanTalk = false;
-            if(player.HasApples)
+            if(true)//player.HasApples) NPC DEBUG 
             {
 
                 dialogueTrigger.TriggerDialogue(RIGTH);
