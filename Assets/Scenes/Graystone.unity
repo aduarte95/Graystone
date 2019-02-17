@@ -15068,6 +15068,10 @@ MonoBehaviour:
   dialogueTrigger: {fileID: 904922398}
   player: {fileID: 1402130225}
   targetPosition: {fileID: 1402130229}
+  nextHouseDiamond: {fileID: 504626162}
+  myDiamonds:
+  - {fileID: 1370399412}
+  - {fileID: 509565274}
 --- !u!114 &904922398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25157,7 +25161,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1458336687690522, guid: 186ec65d3a27e9f448c5603f147f80d0, type: 3}
       propertyPath: m_Name
-      value: Apple's Peasant
+      value: Steve Jobs NPC
       objectReference: {fileID: 0}
     - target: {fileID: 4326148090780510, guid: 186ec65d3a27e9f448c5603f147f80d0, type: 3}
       propertyPath: m_LocalPosition.x
