@@ -8565,29 +8565,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a1756ddea2cc4990de5492d6c0eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 1402130229}
   speed: 2
   direction: 1
   MaxDist: 10
   MinDist: 1
   chanceOfCurrency: 0.005
-  playerHealth: {fileID: 0}
-  dialogueController: {fileID: 1743996875}
---- !u!114 &539000741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539000739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48849efa90400804f9e8f1dedfb80261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  direction: 1
-  chanceOfCurrency: 0.005
+  playerHealth: {fileID: 1402130231}
   dialogueController: {fileID: 1743996875}
 --- !u!65 &539000742
 BoxCollider:
@@ -16919,6 +16903,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
       value: Proto_Insect
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_LocalPosition.x
