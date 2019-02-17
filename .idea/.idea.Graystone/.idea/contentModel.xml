@@ -277,7 +277,6 @@
           <e p="AppleNPC.cs" t="Include" />
           <e p="AppleTree.cs" t="Include" />
           <e p="BoundaryHouseController.cs" t="Include" />
-          <e p="ControlPlayer.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialogueController.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
@@ -306,6 +305,7 @@
           <e p="SceneController.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
           <e p="Spawn.cs" t="Include" />
+          <e p="WeaponSlot.cs" t="Include" />
           <e p="WoodsmithNPC.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
