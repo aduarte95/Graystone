@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.I)) {
@@ -31,10 +31,10 @@ public class PlayerHealth : MonoBehaviour
             gainLife(10);
         }
 
-    }
+    }*/
 
     // Reduce the health in "damageValue" points
-    void dealDamage(float damageValue) {
+    public void dealDamage(float damageValue) {
         currentHealth -= damageValue;
         // if health gets negative passes to 0
         if (currentHealth < 0) {
@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Gain "lifeValue" points of health
-    void gainLife(float lifeValue)
+    public void gainLife(float lifeValue)
     {
         currentHealth += lifeValue;
 

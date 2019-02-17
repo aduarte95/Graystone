@@ -215,7 +215,6 @@
             <e p="EasyRoads3D-Surface-Offset.shader" t="Include" />
           </e>
         </e>
-        <e p="EnemyBehaviourProto.cs" t="Include" />
         <e p="Gems Ultimate Pack" t="Include">
           <e p="Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
@@ -274,6 +273,8 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AppleController.cs" t="Include" />
+          <e p="AppleNPC.cs" t="Include" />
           <e p="AppleTree.cs" t="Include" />
           <e p="BoundaryHouseController.cs" t="Include" />
           <e p="ControlPlayer.cs" t="Include" />
@@ -282,6 +283,8 @@
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="EnemyBehaviour.cs" t="Include" />
+          <e p="EnemyBehaviourProto.cs" t="Include" />
+          <e p="EquipmentPosition.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="GraystoneForestBoundaryController.cs" t="Include" />
           <e p="H2GController.cs" t="Include" />
@@ -293,11 +296,17 @@
           <e p="LakeSceneController.cs" t="Include" />
           <e p="MinimapScript.cs" t="Include" />
           <e p="NPCController.cs" t="Include" />
+          <e p="ObjectInteraction.cs" t="Include" />
           <e p="ObjectVisibilityController.cs" t="Include" />
+          <e p="Pickup.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
           <e p="PoisonLevel.cs" t="Include" />
+          <e p="PositionController.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />
+          <e p="Slot.cs" t="Include" />
+          <e p="Spawn.cs" t="Include" />
+          <e p="WoodsmithNPC.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
