@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
 
         //DESCOMENTAR PARA INICIAR MISION . TODOS LOS DIALOGOS ESTAN EN HOUSE CAMERA
         
-    /*
+        /*
         if (Begin) //Dialogo inicial
        {
            dialogueController.Begin();
