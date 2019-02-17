@@ -8974,6 +8974,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!4 &539000744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5be2c6dc7d0cd11418701026bf971b37,
+    type: 3}
+  m_PrefabInstance: {fileID: 1639236704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &541832775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24138,6 +24144,8 @@ MonoBehaviour:
   isInLake: 1
   attack: 1654612129
   dialogueController: {fileID: 1743996875}
+  enemy: {fileID: 539000740}
+  Enemy: {fileID: 539000744}
   dialogueManager: {fileID: 490440689}
 --- !u!114 &1402130226
 MonoBehaviour:
@@ -32901,6 +32909,8 @@ MonoBehaviour:
   isInLake: 1
   attack: 1654612129
   dialogueController: {fileID: 1743996875}
+  enemy: {fileID: 0}
+  Enemy: {fileID: 0}
   dialogueManager: {fileID: 0}
 --- !u!114 &1896869517
 MonoBehaviour:
