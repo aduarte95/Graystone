@@ -172,6 +172,8 @@ public class EnemyBehaviourProto : MonoBehaviour
             ableToMove = false;
             animator.SetBool(dieHash, true);
             dialogueController.IsAlienDead = true; //Tells that the alien is dead
+            yield return new WaitForSeconds(1.5f);
+            gameObject.SetActive(false);
         }
     }
 

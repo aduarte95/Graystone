@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     private const int ALIEN = 4;
     private const int LAKE = 5;
     
+    public int alienDied = 0; // i'll look for a better solution, but this will be needed for the best behavior of the dialogue that makes alien appears
+
+    
     public DialogueController dialogueController;
     public PlayerController playerController; //Si comio manzana
 
@@ -30,7 +33,7 @@ public class GameController : MonoBehaviour
 
         //DESCOMENTAR PARA INICIAR MISION . TODOS LOS DIALOGOS ESTAN EN HOUSE CAMERA
         
-        /*
+        
         if (Begin) //Dialogo inicial
        {
            dialogueController.Begin();
@@ -40,7 +43,7 @@ public class GameController : MonoBehaviour
 
          if(Next) //Si el dialogo termino permite a los otros dialogos entrar
        {
-           if (!objects[INSECT].activeSelf) //Aparece el alien y muestra dialogos
+           if (!(objects[INSECT].activeSelf) && (alienDied == 0)) //Aparece el alien y muestra dialogos
            {
                Next = false;
                objects[INSECT].SetActive(true); //Appears enemy
@@ -54,10 +57,11 @@ public class GameController : MonoBehaviour
            {
                Next = false;
                dialogueController.AlienIsDeadDialogue();
+               alienDied = 1;
                objects[APPLE].SetActive(true); //shows next mission
                objects[LAKE].SetActive(true); //shows next mission lake
            }
        }
-       */
+       
     }
 }
