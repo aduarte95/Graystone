@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+>>>>>>> abce68014b59fbba0a56ddaad0e96e98902789f0
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8934,28 +8938,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 298a1756ddea2cc4990de5492d6c0eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 1402130229}
   speed: 2
   direction: 1
   MaxDist: 10
   MinDist: 1
   chanceOfCurrency: 0.005
-  dialogueController: {fileID: 1743996875}
---- !u!114 &539000741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539000739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48849efa90400804f9e8f1dedfb80261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  direction: 1
-  chanceOfCurrency: 0.005
+  playerHealth: {fileID: 1402130231}
   dialogueController: {fileID: 1743996875}
 --- !u!65 &539000742
 BoxCollider:
@@ -17442,6 +17431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Proto_Insect
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51.81
@@ -17528,6 +17521,7 @@ MonoBehaviour:
   MaxDist: 2
   MinDist: 1
   chanceOfCurrency: 0.005
+  playerHealth: {fileID: 1402130231}
   dialogueController: {fileID: 1743996875}
 --- !u!65 &1048283820
 BoxCollider:
@@ -24184,6 +24178,32 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2079605010}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402130230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402130224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ce1d719952e0b4c939958a09bb2f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poison: {fileID: 731549427}
+--- !u!114 &1402130231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402130224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df34c05f0be3cdd4f87f9f17b08122b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1391027906}
 --- !u!1001 &1411009866
 PrefabInstance:
   m_ObjectHideFlags: 0

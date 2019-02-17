@@ -27,6 +27,9 @@ public class EnemyBehaviourProto : MonoBehaviour
     public float currentHealth { get; set; }
     public float maxHealth { get; set; }
 
+    public PlayerHealth playerHealth;
+    
+
     public DialogueController dialogueController; //Tells the dialogue that the alien is dead
 
     // Start is called before the first frame update
@@ -164,6 +167,7 @@ public class EnemyBehaviourProto : MonoBehaviour
     IEnumerator doAttack2()
     {
         animator.SetBool(attack2Hash, true);
+        playerHealth.dealDamage(10);
         yield return new WaitForSeconds(0.5f);
         animator.SetBool(attack2Hash, false);
     }
