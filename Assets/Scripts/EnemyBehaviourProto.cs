@@ -22,6 +22,7 @@ public class EnemyBehaviourProto : MonoBehaviour
     public float MaxDist = 3;
     public int MinDist = 1;
     public bool didHit = false;
+    public DialogueManager dialogueManager;
 
     float random;
     public float chanceOfCurrency = 0.005f;
@@ -80,28 +81,32 @@ public class EnemyBehaviourProto : MonoBehaviour
             }
             */
             //follow movement
-            transform.LookAt(Player);
+            if (dialogueManager.isActive == false)
+            {
+                transform.LookAt(Player);
 
-            if ((Vector3.Distance(transform.position, Player.position) >= MinDist) && (!didHit))
-            {
-                animator.SetBool(isWalkingHash, true);
-                transform.position += transform.forward * speed * Time.deltaTime;
-                //didHit = false;
-            }
-            else
-            {
-                animator.SetBool(isWalkingHash, false);
-                if (!didHit)
+                if ((Vector3.Distance(transform.position, Player.position) >= MinDist) && (!didHit))
                 {
-                    playerHealth.dealDamage(10);
-                    didHit = true;
+                    animator.SetBool(isWalkingHash, true);
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                    //didHit = false;
+                }
+                else
+                {
+                    animator.SetBool(isWalkingHash, false);
+                    if (!didHit)
+                    {
+                        playerHealth.dealDamage(10);
+                        didHit = true;
+                    }
+                }
+
+                if ((Vector3.Distance(transform.position, Player.position) >= MaxDist) && (didHit))
+                {
+                    didHit = false;
                 }
             }
-
-            if ((Vector3.Distance(transform.position, Player.position) >= MaxDist) && (didHit))
-            {
-                didHit = false;
-            }
+           
         }
         
         /*

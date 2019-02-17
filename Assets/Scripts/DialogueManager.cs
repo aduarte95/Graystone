@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    public bool isActive = false; // to know if dialogue box is showing or not
+
     private Queue<string> sentences;
     private Dialogue dialogue;
 
@@ -20,10 +22,12 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public void StartDialogue(Dialogue dialogue) {
+    public void StartDialogue(Dialogue dialogue)
+    {
+        isActive = true;
         this.dialogue = dialogue;
         animator.SetBool("isOpen", true);
-
+        
         nameText.text = dialogue.name;
         sentences.Clear();
 
@@ -54,7 +58,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EndDialogue() {
+    public void EndDialogue()
+    {
+        isActive = false;
         animator.SetBool("isOpen", false);
         dialogue.Finished = true;
     }

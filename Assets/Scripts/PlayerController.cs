@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
     public DialogueController dialogueController;
+
+    public DialogueManager dialogueManager;
     //DEBUG APPLE NPC 
     public bool HasEaten { get; set; } = false;
     //
@@ -82,10 +84,11 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (!Front() || ableToMove || !Input.GetKey("w") || !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))
+        if ((!Front() || ableToMove || !Input.GetKey("w") || !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))&& (dialogueManager.isActive == false))
         {
             float translation = Input.GetAxis("Vertical") * speed;
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+            
             translation *= Time.deltaTime;
             rotation *= Time.deltaTime;
             RaycastHit res;
@@ -100,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
             transform.Rotate(0, rotation, 0);
 
-
+           
 
             if (translation != 0)
             {
@@ -133,18 +136,21 @@ public class PlayerController : MonoBehaviour
                 // DEBUG APPLE NPC 
                 
                // HasApples = true; // DEBUG APPLE NPC 
-                
-                if (dialogueController.FirstTimeHit == 0)
-                {
-                    setFirstHit(1);
-                }
-                else if (dialogueController.FirstTimeHit == 1)
-                {
-                    setFirstHit(2);
-                }
+               if (dialogueManager.isActive == false)
+               {
+                   if (dialogueController.FirstTimeHit == 0)
+                   {
+                       setFirstHit(1);
+                   }
+                   else if (dialogueController.FirstTimeHit == 1)
+                   {
+                       setFirstHit(2);
+                   }
 
-                StartCoroutine(Attack());
-                Debug.Log("Pegó");
+                   StartCoroutine(Attack());
+                   Debug.Log("Pegó");
+               }
+                
             }
         }
         else
