@@ -8,13 +8,15 @@ public class InventoryController : MonoBehaviour
     public GameObject[] slots;
     public string weaponEquipped = "";
     public GameObject weaponSlot;
-    public bool isHidden = false;
+    public bool isHidden;
     private GameObject inventory;
 
     // Start is called before the first frame update
     void Start()
     {
+		isHidden = true;
         inventory = GameObject.Find("Inventory");
+		inventory.SetActive(false);
     }
 
     // Update is called once per frame
