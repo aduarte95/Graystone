@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float acceleration;
     public float maxSpeed;
     public float rotationSpeed = 75.0f;
-    public List<string> inventory = new List<string>();
+    public InventoryController inventory;
     public string weaponEquipped = "";
     // Start is called before the first frame update
     public bool ableToMove = true;
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(gameObject.name);
         animator = GetComponent<Animator>();
         animator.SetBool(canRun, true);
+        inventory = gameObject.GetComponent<InventoryController>();
     }
 
     public void setOnTheHouse(bool isOnTheHouse)
@@ -151,16 +152,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool(isWalkingHash, false);
         }
-        if (Input.GetKeyDown("space"))
-        {
-            string m = "";
-            for (int i = 0; i < inventory.Count; i++)
-            {
-                m += inventory[i];
-            }
-            Debug.Log(m);
-        }
-
 
     }
 

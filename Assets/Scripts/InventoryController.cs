@@ -88,4 +88,48 @@ public class InventoryController : MonoBehaviour
         }*/
     }
 
+	public void EquipWeapon(GameObject weapon){
+		if(weapon == null){
+			weaponSlot.GetComponent<WeaponSlot>().ConsumeItem();
+		}
+		else
+		{
+			Debug.Log("Equipped: " + weapon.name+ weapon.GetComponent<Pickup>().itemButton.name);
+			
+			Instantiate(weapon.GetComponent<Pickup>().itemButton, weaponSlot.transform, false);
+		}
+	}
+	
+	public void takeItem(GameObject item){
+		for (int i = 0; i < slots.Length; i++)
+        {
+            if (!isFull[i])
+            {
+                Debug.Log("Player picked up "+item.name+".");
+                isFull[i] = true;
+				slots[i].GetComponent<Slot>().item = item.name;
+                Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
+                //Destroy(gameObject);
+                break;
+            }
+        }
+	}
+	
+	public void putItem(GameObject item){
+		for (int i = 0; i < slots.Length; i++)
+        {
+            if (isFull[i])
+            {
+				if(slots[i].GetComponent<Slot>().item == item.name){
+					Debug.Log("Player dropped "+item.name+".");
+					slots[i].GetComponent<Slot>().RemoveItem();
+					//Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
+					//Destroy(gameObject);
+					
+					isFull[i] = false;
+					break;
+				}
+            }
+        }
+	}
 }
