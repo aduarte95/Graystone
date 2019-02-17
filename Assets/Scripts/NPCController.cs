@@ -7,51 +7,17 @@ public class NPCController : MonoBehaviour
     public Animator animator;
     public DialogueTrigger dialogueTrigger;
     public PlayerController player;
-    public Transform targetPosition;
-    protected int MoveSpeed = 4;
-    protected int MaxDist = 10;
-    protected int MinDist = 2;
-    protected int isWalkingHash = Animator.StringToHash("IsWalking");
-    protected bool canTalk = false;
+    public bool CanTalk { get;  set; } = false;
+    public string Name { get; protected set; }
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        setName();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-            
-        }
-
-    protected void walk()
-    {
-        animator.SetBool("IsWalking", true);
-        transform.LookAt(targetPosition);
-
-        // DEBUG APPLE NPC
-        /*if (Vector3.Distance(transform.position, targetPosition.position) > MinDist)
-        {
-
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
-
-        }
-        else
-        {
-            animator.SetBool(isWalkingHash, false);
-            MoveSpeed = 0;
-            stopWalk();
-        }*/
-    }
-
-    virtual public bool CanWalk()
-    {
-        return false;
-    }
-
-    virtual public void stopWalk()
+    virtual public void setName()
     {
 
     }

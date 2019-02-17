@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
     public DialogueController dialogueController;
-   // DEBUG APPLE NPC public bool HasEaten { get; set; } = false; 
-
+    // DEBUG APPLE NPC public bool HasEaten { get; set; } = false; 
+    //public bool HasApples { get; set; } = false; // DEBUG WOODSMITH NPC
 
     void Start()
     {
@@ -122,6 +122,8 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.P))
             {
                 // DEBUG APPLE NPC HasEaten = true;
+                //HasApples = true; // DEBUG APPLE NPC 
+                
                 if (dialogueController.FirstTimeHit == 0)
                 {
                     setFirstHit(1);

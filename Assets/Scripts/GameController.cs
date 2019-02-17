@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         
-       if(Begin)
+       /*if(Begin)
        {
            dialogueController.Begin();
            Begin = false;
@@ -54,6 +54,6 @@ public class GameController : MonoBehaviour
                objects[APPLE].SetActive(true); //shows next mission
                objects[LAKE].SetActive(true); //shows next mission lake
            }
-       }
+       }*/
     }
 }
