@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     public bool[] isFull;
+    public GameObject stick;
     public GameObject[] slots;
     public string weaponEquipped = "";
     public GameObject weaponSlot;
@@ -93,12 +94,15 @@ public class InventoryController : MonoBehaviour
 	public void EquipWeapon(GameObject weapon){
 		if(weapon == null){
 			weaponSlot.GetComponent<WeaponSlot>().ConsumeItem();
+            
 		}
 		else
 		{
 			Debug.Log("Equipped: " + weapon.name+ weapon.GetComponent<Pickup>().itemButton.name);
-			
+            stick.SetActive(true);
+            
 			Instantiate(weapon.GetComponent<Pickup>().itemButton, weaponSlot.transform, false);
+			
 		}
 	}
 	
