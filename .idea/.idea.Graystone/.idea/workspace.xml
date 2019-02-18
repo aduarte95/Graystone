@@ -23,11 +23,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="995ced36-1013-4747-ad92-44a301f36a07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graystone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graystone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WoodsmithNPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WoodsmithNPC.cs" afterDir="false" />
-    </list>
+    <list default="true" id="995ced36-1013-4747-ad92-44a301f36a07" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/WoodsmithNPC.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -125,6 +121,21 @@
                 <marker date="1550468474234" expanded="true" signature="437:674" ph="{...}" />
                 <marker date="1550468474234" expanded="true" signature="679:763" ph="{...}" />
                 <marker date="1550468474234" expanded="true" signature="815:861" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Candle.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding>
+                <marker date="1550470493464" expanded="false" signature="6:78" ph="..." />
+                <marker date="1550470493464" expanded="true" signature="115:299" ph="{...}" />
+                <marker date="1550470493464" expanded="true" signature="187:208" ph="{...}" />
+                <marker date="1550470493464" expanded="true" signature="266:287" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -283,6 +294,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventoryController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PoisonLevel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Candle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LakeSceneController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectInteraction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -321,6 +333,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WoodsmithNPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Candle.cs" />
       </list>
     </option>
   </component>
@@ -375,7 +388,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26346000" />
+    <option name="totallyTimeSpent" value="26389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,6 +930,19 @@
             <marker date="1550468474234" expanded="true" signature="437:674" ph="{...}" />
             <marker date="1550468474234" expanded="true" signature="679:763" ph="{...}" />
             <marker date="1550468474234" expanded="true" signature="815:861" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Candle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <marker date="1550470493464" expanded="false" signature="6:78" ph="..." />
+            <marker date="1550470493464" expanded="true" signature="115:299" ph="{...}" />
+            <marker date="1550470493464" expanded="true" signature="187:208" ph="{...}" />
+            <marker date="1550470493464" expanded="true" signature="266:287" ph="{...}" />
           </folding>
         </state>
       </provider>

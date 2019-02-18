@@ -6,6 +6,7 @@ public class WoodsmithNPC : NPCController
 {
     const int RIGTH = 0; //Success on mission
     const int WRONG = 1;
+    public GameObject candle;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class WoodsmithNPC : NPCController
                 dialogueTrigger.TriggerDialogue(RIGTH);
                 PlayerController pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
                 pc.emptyInventory();
+                candle.SetActive(true);
             } else
             {
                 dialogueTrigger.TriggerDialogue(WRONG);
