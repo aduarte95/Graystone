@@ -19,6 +19,7 @@ public class AppleNPC : NPCController
         if(player.HasEaten) // DEBUG APPLE NPC quitar el false y poner ese cuando player ya tenga el seteo de la variable HasEaten
         {
             walk();
+            
         } else if (CanTalk)
         {
             CanTalk = false;
@@ -57,7 +58,7 @@ public class AppleNPC : NPCController
 
     private void setCanTalk()
     {
-       //player.HasEaten = false; // DEBUG APPLE NPC. SAME jaja
+       player.HasEaten = false; // DEBUG APPLE NPC. SAME jaja
        CanTalk = true;
     }
 
