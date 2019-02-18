@@ -13,7 +13,7 @@ public class WoodsmithNPC : NPCController
         if(CanTalk) //actives in position of npc
         {
             CanTalk = false;
-            if(player.HasApples) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
+            if(true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
             {
 
                 dialogueTrigger.TriggerDialogue(RIGTH);

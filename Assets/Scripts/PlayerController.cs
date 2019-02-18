@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     public bool HasEaten = false;
 
     //
-    public bool HasApples  = false; // DEBUG WOODSMITH NPC
+    public bool HasApples  = true; // DEBUG WOODSMITH NPC
 
     void Start()
     {
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
         else if (inventory.inventoryLength < inventory.slots.Length)
         {
            
-            HasApples = false;
+            HasApples = true;
         }
 
 
