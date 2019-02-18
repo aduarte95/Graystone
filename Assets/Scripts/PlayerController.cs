@@ -135,7 +135,12 @@ public class PlayerController : MonoBehaviour
                 {
                     speed += acceleration * Time.deltaTime;
                 }
-                healthBar.dealDamage(0.1f);
+
+                if (isPoisoned)
+                {
+                    healthBar.dealDamage(0.05f);    
+                }
+                
             }
             else
             {
