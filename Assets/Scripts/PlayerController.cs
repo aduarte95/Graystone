@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
     public DialogueManager dialogueManager;
     //DEBUG APPLE NPC 
-    public bool HasEaten { get; set; } = false;
+    public bool HasEaten = false;
+
     //
     public bool HasApples { get; set; } = false; // DEBUG WOODSMITH NPC
 

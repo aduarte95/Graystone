@@ -5,6 +5,8 @@ using UnityEngine;
 public class AppleController : MonoBehaviour
 {
     public float healAmount = 20;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,9 @@ public class AppleController : MonoBehaviour
         {
             pc.health = 100;
         }
+
+        pc.HasEaten = true;
+
         Debug.Log("Player healed to: " + pc.health + "% hp");
         Destroy(gameObject);
     }
