@@ -259,5 +259,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void emptyInventory()
+    {
+        inventory.empty();
+    }
+
 
 }

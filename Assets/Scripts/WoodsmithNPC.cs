@@ -17,6 +17,8 @@ public class WoodsmithNPC : NPCController
             {
 
                 dialogueTrigger.TriggerDialogue(RIGTH);
+                PlayerController pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+                pc.emptyInventory();
             } else
             {
                 dialogueTrigger.TriggerDialogue(WRONG);

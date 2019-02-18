@@ -145,4 +145,22 @@ public class InventoryController : MonoBehaviour
             }
         }
 	}
+
+    public void empty()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (isFull[i])
+            {
+               
+                    slots[i].GetComponent<Slot>().RemoveItem();
+                    inventoryLength--;
+                    //Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
+                    //Destroy(gameObject);
+					
+                    isFull[i] = false;
+                
+            }
+        }
+    }
 }
