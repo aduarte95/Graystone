@@ -29,6 +29,7 @@ public class AppleController : MonoBehaviour
         }
 
         pc.HasEaten = true;
+        pc.isPoisoned = false;
 
         Debug.Log("Player healed to: " + pc.health + "% hp");
         Destroy(gameObject);

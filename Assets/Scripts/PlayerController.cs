@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
     public DialogueController dialogueController;
+    public bool isPoisoned = false;
+    public PlayerHealth healthBar;
+    
 
     public EnemyBehaviourProto enemy;
     public Transform Enemy; // to use the transform.position of enemy after Attack
@@ -30,7 +33,7 @@ public class PlayerController : MonoBehaviour
     public bool HasEaten = false;
 
     //
-    public bool HasApples { get; set; } = false; // DEBUG WOODSMITH NPC
+    public bool HasApples  = false; // DEBUG WOODSMITH NPC
 
     void Start()
     {
@@ -77,6 +80,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPoisoned)
+        {
+            StartCoroutine(poisoned());
+        }
+
         if (onTheHouse)
         {
             setHouseVariables();
@@ -86,6 +94,16 @@ public class PlayerController : MonoBehaviour
         {
             setGraystoneVariables();
             animator.SetBool(canRun, true);
+        }
+
+        if (inventory.inventoryLength >= inventory.slots.Length)
+        {
+            HasApples = true;
+        }
+        else if (inventory.inventoryLength < inventory.slots.Length)
+        {
+           
+            HasApples = false;
         }
 
 
@@ -229,6 +247,16 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         animator.SetBool(attack, false);
+    }
+
+    IEnumerator poisoned()
+    {
+        while (true)
+        {
+            healthBar.dealDamage(3);
+            yield return new WaitForSeconds(1000);
+                
+        }
     }
 
 

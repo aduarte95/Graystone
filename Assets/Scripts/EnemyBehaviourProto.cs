@@ -31,6 +31,11 @@ public class EnemyBehaviourProto : MonoBehaviour
     public float maxHealth { get; set; }
 
     public PlayerHealth playerHealth;
+
+    public PoisonLevel poisonLevel;
+
+    public PlayerController player;
+    
     
 
     public DialogueController dialogueController; //Tells the dialogue that the alien is dead
@@ -97,6 +102,8 @@ public class EnemyBehaviourProto : MonoBehaviour
                     if (!didHit)
                     {
                         playerHealth.dealDamage(10);
+                        poisonLevel.getPoison(1);
+                        player.isPoisoned = true;
                         didHit = true;
                     }
                 }

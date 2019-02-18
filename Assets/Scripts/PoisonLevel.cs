@@ -22,7 +22,7 @@ public class PoisonLevel : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Y))
+        /*if (Input.GetKeyDown(KeyCode.Y))
         {
             losePoison(1);
         }
@@ -30,7 +30,7 @@ public class PoisonLevel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             getPoison(1);
-        }
+        }*/
 
     }
 
@@ -47,7 +47,7 @@ public class PoisonLevel : MonoBehaviour
     }
 
     // Gain poisonPoints of poison level
-    void getPoison(float poisonPoints)
+    public void getPoison(float poisonPoints)
     {
         currentPoison += poisonPoints;
 

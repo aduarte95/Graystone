@@ -11,6 +11,7 @@ public class InventoryController : MonoBehaviour
     public GameObject weaponSlot;
     public bool isHidden;
     private GameObject inventory;
+    public int inventoryLength = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +62,8 @@ public class InventoryController : MonoBehaviour
         {
             slots[4].GetComponent<Slot>().DropItem();
         }
+        
+        
         
         //use items
         /*
@@ -114,14 +117,17 @@ public class InventoryController : MonoBehaviour
                 Debug.Log("Player picked up "+item.name+".");
                 isFull[i] = true;
 				slots[i].GetComponent<Slot>().item = item.name;
+                inventoryLength++;
                 Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
                 //Destroy(gameObject);
                 break;
             }
         }
 	}
-	
-	public void putItem(GameObject item){
+
+    
+
+    public void putItem(GameObject item){
 		for (int i = 0; i < slots.Length; i++)
         {
             if (isFull[i])
@@ -129,6 +135,7 @@ public class InventoryController : MonoBehaviour
 				if(slots[i].GetComponent<Slot>().item == item.name){
 					Debug.Log("Player dropped "+item.name+".");
 					slots[i].GetComponent<Slot>().RemoveItem();
+                    inventoryLength--;
 					//Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
 					//Destroy(gameObject);
 					
