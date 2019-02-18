@@ -80,10 +80,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPoisoned)
+        /*if (isPoisoned)
         {
             StartCoroutine(poisoned());
-        }
+        }*/
 
         if (onTheHouse)
         {
@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
                 {
                     speed += acceleration * Time.deltaTime;
                 }
+                healthBar.dealDamage(0.1f);
             }
             else
             {
@@ -249,7 +250,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(attack, false);
     }
 
-    IEnumerator poisoned()
+    /*IEnumerator poisoned()
     {
         while (true)
         {
@@ -257,7 +258,7 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(1000);
                 
         }
-    }
+    }*/
 
     public void emptyInventory()
     {
