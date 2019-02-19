@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static Animator animator;
+    private AudioSource audioSource;
+    public AudioClip hit;
+    public AudioClip stickBow;
     public int isWalkingHash = Animator.StringToHash("IsWalking");
     public int canRun = Animator.StringToHash("CanRun");
     public float health;
@@ -42,6 +45,7 @@ public class PlayerController : MonoBehaviour
         setGraystoneVariables();
         Debug.Log(gameObject.name);
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         animator.SetBool(canRun, true);
         inventory = gameObject.GetComponent<InventoryController>();
     }
@@ -163,23 +167,32 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.P))
             {
                 // DEBUG APPLE NPC 
-                
-               // HasApples = true; // DEBUG APPLE NPC 
-               if (dialogueManager.isActive == false)
-               {
-                   if (dialogueController.FirstTimeHit == 0)
-                   {
-                       setFirstHit(1);
-                   }
-                   else if (dialogueController.FirstTimeHit == 1)
-                   {
-                       setFirstHit(2);
-                   }
 
-                   StartCoroutine(Attack());
-                  
-                   Debug.Log("Pegó");
-               }
+                // HasApples = true; // DEBUG APPLE NPC 
+                if (dialogueManager.isActive == false)
+                {
+                    if (dialogueController.FirstTimeHit == 0)
+                    {
+                        audioSource.PlayOneShot(hit);
+
+                        setFirstHit(1);
+                    }
+                    else
+                    {
+                        audioSource.Play();
+                        audioSource.PlayOneShot(stickBow);
+
+                        if (dialogueController.FirstTimeHit == 1)
+                        {
+                            setFirstHit(2);
+                        }
+                    }
+
+
+                    StartCoroutine(Attack());
+
+                    Debug.Log("Pegó");
+                }
                 
             }
         }
@@ -245,10 +258,14 @@ public class PlayerController : MonoBehaviour
 
         //animator.SetBool(attack, true);
         animator.SetTrigger("Hit");
+
         if ((Vector3.Distance(transform.position, Enemy.position) >= 0) &&
             (Vector3.Distance(transform.position, Enemy.position) <= 2))
         {
-            enemy.getHit(10);
+            if (enemy.gameObject.activeSelf)
+            {
+                enemy.getHit(10);
+            }
         }
 
         yield return new WaitForSeconds(0.5f);
