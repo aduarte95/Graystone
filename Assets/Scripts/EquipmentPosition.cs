@@ -13,15 +13,18 @@ public class EquipmentPosition : ObjectInteraction
 		
 		InventoryController ic = GameObject.Find("Player").GetComponent<InventoryController>();
 		if(!objectToEquip.activeSelf){
-			Debug.Log("A");
-			ic.EquipWeapon(null);
-			objectToEquip.SetActive(true);
+			
+			if(ic.hasItem(objectToEquip.name)){
+				ic.EquipWeapon(null);
+				objectToEquip.SetActive(true);
+			} else {Debug.Log("Player doesn't have that item");}
 		}
 		else
 		{
-			Debug.Log("B");
-			ic.EquipWeapon(objectToEquip);
-			objectToEquip.SetActive(false);
+			if(!ic.hasItem(objectToEquip.name)){
+				ic.EquipWeapon(objectToEquip);
+				objectToEquip.SetActive(false);
+			} else {Debug.Log("Player already has that item");}
 		}
     }
 

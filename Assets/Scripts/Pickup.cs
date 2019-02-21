@@ -29,6 +29,7 @@ public class Pickup : MonoBehaviour
                     Debug.Log("Player picked up an item.");
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
+					inventory.slots[i].GetComponent<Slot>().item = gameObject.name;
                     Destroy(gameObject);
                     break;
                 }

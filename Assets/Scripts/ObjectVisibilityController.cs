@@ -9,15 +9,17 @@ public class ObjectVisibilityController : ObjectInteraction
 		Pickup p = objectToHide.GetComponent<Pickup>();
 		InventoryController ic = GameObject.Find("Player").GetComponent<InventoryController>();
 		if(!objectToHide.activeSelf){
-			Debug.Log("A");
-			ic.putItem(objectToHide);
-			objectToHide.SetActive(true);
+			if(ic.hasItem(objectToHide.name)){
+				ic.putItem(objectToHide);
+				objectToHide.SetActive(true);
+			} else {Debug.Log("Player doesn't have that item");}
 		}
 		else
 		{
-			Debug.Log("B");
-			ic.takeItem(objectToHide);
-			objectToHide.SetActive(false);
+			if(!ic.hasItem(objectToHide.name)){
+				ic.takeItem(objectToHide);
+				objectToHide.SetActive(false);
+			} else {Debug.Log("Player already has that item");}
 		}
 	}
 

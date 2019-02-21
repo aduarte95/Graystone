@@ -152,11 +152,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool(isWalkingHash, false);
             }
 
-            if ((Input.GetMouseButton(0)) && weaponEquipped != "")
-            {
-                Debug.Log("Player attacks");
-                //attack
-            }
 
             //SETEAR EN TRUE QUE SE COMIO LAS MANZANAS. MIENTRAS TANTO JAJA
             /*if (Input.GetKeyDown(KeyCode.R))
@@ -238,7 +233,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey("w") && (other.GetComponent<Collider>().gameObject.name != "Terrain"))
+        if (Input.GetKey("w") && (other.GetComponent<Collider>().gameObject.name != "Terrain") && (other.tag != "Enemy"))
         {
             speed = 0;
             ableToMove = false;

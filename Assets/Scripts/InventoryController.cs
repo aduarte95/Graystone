@@ -125,7 +125,13 @@ public class InventoryController : MonoBehaviour
         }
 	}
 
-    
+	public bool hasItem(string item){
+		foreach(GameObject slot in slots){
+			if(slot.GetComponent<Slot>().item == item)	return true;
+		}
+		if(weaponSlot.GetComponent<WeaponSlot>().weapon == item) return true;
+		return false;
+	}
 
     public void putItem(GameObject item){
 		for (int i = 0; i < slots.Length; i++)
