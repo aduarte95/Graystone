@@ -21,13 +21,9 @@ public class AppleController : MonoBehaviour
 
     public void Heal()
     {
-        PlayerController pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        pc.health += 20;
-        if (pc.health > 100)
-        {
-            pc.health = 100;
-        }
-
+        PlayerHealth pH = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+		pH.gainLife(healAmount);
+		PlayerController pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         pc.HasEaten = true;
         pc.isPoisoned = false;
 
