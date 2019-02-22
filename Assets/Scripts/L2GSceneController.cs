@@ -8,7 +8,7 @@ public class L2GSceneController : SceneController
 
     public override void setScenePosition()
     {
-        scenePosition = new Vector3(269f, 0.004f, 244.9f);
+        scenePosition = new Vector3(276.5f, 0.004f, 262.45f);
 
     }
 
