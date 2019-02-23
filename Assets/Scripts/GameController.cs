@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject[] objects;
     private const int INSECT = 0;
     private const int WOOD_DIAMOND = 1;
     private const int BAKERY_DIAMOND = 2;
@@ -12,6 +11,7 @@ public class GameController : MonoBehaviour
     private const int ALIEN = 4;
     private const int LAKE_DIAMOND = 5;
     private bool notDebugging = true; //Put in false if you're debugging.
+    public GameObject[] objects;
 
     public int alienDied = 0; // i'll look for a better solution, but this will be needed for the best behavior of the dialogue that makes alien appears
 
