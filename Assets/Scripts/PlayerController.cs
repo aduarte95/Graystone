@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     public InventoryController inventory;
     public string weaponEquipped = "";
     // Start is called before the first frame update
-    public bool ableToMove = true;
     public bool onTheHouse = false;
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
@@ -110,23 +109,14 @@ public class PlayerController : MonoBehaviour
             HasApples = true;
         }
 
-
-        if ((!Front() || ableToMove || !Input.GetKey("w") || !(Input.GetKey("w") && (Input.GetKey("a") || Input.GetKey("d"))))&& (dialogueManager.isActive == false))
-        {
             float translation = Input.GetAxis("Vertical") * speed;
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
             
             translation *= Time.deltaTime;
             rotation *= Time.deltaTime;
             RaycastHit res;
-            if (!GetComponent<Rigidbody>().SweepTest(transform.forward, out res, speed * Time.deltaTime + 0.01f))
-            {
-                if (!Front())
-                {
+            
                     transform.Translate(0, 0, translation);
-
-                }
-            }
 
             transform.Rotate(0, rotation, 0);
 
@@ -174,7 +164,7 @@ public class PlayerController : MonoBehaviour
                     }
                     else
                     {
-                        audioSource.Play();
+                        //audioSource.Play();
                         audioSource.PlayOneShot(stickBow);
 
                         if (dialogueController.FirstTimeHit == 1)
@@ -190,11 +180,6 @@ public class PlayerController : MonoBehaviour
                 }
                 
             }
-        }
-        else
-        {
-            animator.SetBool(isWalkingHash, false);
-        }
 
     }
 
@@ -228,24 +213,18 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        speed = 0;
+        
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKey("w") && (other.GetComponent<Collider>().gameObject.name != "Terrain") && (other.tag != "Enemy"))
-        {
-            speed = 0;
-            ableToMove = false;
-            animator.SetBool(isWalkingHash, false);
-        }
+
     }
 
 
     private void OnTriggerExit(Collider col)
     {
-        animator.SetBool(isWalkingHash, true);
-        ableToMove = true;
+
     }
 
     IEnumerator Attack()
