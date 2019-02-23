@@ -170,6 +170,7 @@ public class EnemyBehaviourProto : MonoBehaviour
         if (currentHealth > 0)
         {
             animator.SetBool(getHitHash, true);
+            //animator.SetTrigger("GetHit");
             yield return new WaitForSeconds(0.5f);
             animator.SetBool(getHitHash, false);
         }

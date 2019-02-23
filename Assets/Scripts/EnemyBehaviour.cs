@@ -25,6 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float speed = 2.0f;
     public int direction = 1;
     public float MaxDistS = 15;
+    public float MaxDist = 3;
     public int MinDist = 1;
     public float MaxTime = 10;
     public bool turn;
@@ -84,8 +85,28 @@ public class EnemyBehaviour : MonoBehaviour
             if ((Vector3.Distance(Player.position, Sphere.position) <= MaxDistS))
             {
                 transform.LookAt(Player);
-                animator.SetBool(isWalkingHash, true);
-                transform.position += transform.forward * speed * Time.deltaTime;
+                if ((Vector3.Distance(transform.position, Player.position) >= MinDist) && (!didHit))
+                {
+                    animator.SetBool(isWalkingHash, true);
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                    //didHit = false;
+                }
+                else
+                {
+                    animator.SetBool(isWalkingHash, false);
+                    if (!didHit)
+                    {
+                        playerHealth.dealDamage(10);
+                        poisonLevel.getPoison(1);
+                        player.isPoisoned = true;
+                        didHit = true;
+                    }
+                }
+
+                if ((Vector3.Distance(transform.position, Player.position) >= MaxDist) && (didHit))
+                {
+                    didHit = false;
+                }
             }
             else
             {
