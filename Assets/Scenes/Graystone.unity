@@ -655,14 +655,14 @@ MonoBehaviour:
   poisonLevel: {fileID: 1402130230}
   player: {fileID: 1402130225}
   speed: 2
-  direction: 1
+  direction: -1
   MaxDistS: 15
   MaxDist: 3
   MinDist: 1
   MaxTime: 10
   turn: 0
   didHit: 0
-  chanceOfCurrency: 0.005
+  chanceOfCurrency: 0.25
 --- !u!1 &38775838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 112464, guid: 950c0a0cf14577549b026c95956a3c99,
@@ -28343,7 +28343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.z
@@ -45860,7 +45860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.z

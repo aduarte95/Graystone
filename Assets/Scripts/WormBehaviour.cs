@@ -23,7 +23,7 @@ public class WormBehaviour : MonoBehaviour
 
     bool ableToMove;
     public float speed = 2.0f;
-    public int direction = 1;
+    public int direction = -1;
     public float MaxDistS = 15;
     public float MaxDist = 3;
     public int MinDist = 1;
@@ -35,7 +35,7 @@ public class WormBehaviour : MonoBehaviour
     public float maxHealth { get; set; }
 
     float random;
-    public float chanceOfCurrency = 0.005f;
+    public float chanceOfCurrency = 0.25f;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,15 +54,10 @@ public class WormBehaviour : MonoBehaviour
     {
         if (ableToMove)
         {
+
             float translation = direction * speed;
             translation *= Time.deltaTime;
             Vector3 move = new Vector3(0, 0, translation);
-
-            random = Random.value;
-            if (random < chanceOfCurrency)
-            {
-                transform.Rotate(0, 90, 0);
-            }
 
             if ((Vector3.Distance(transform.position, Sphere.position) <= MaxDistS) || (turn))
             {
@@ -70,14 +65,6 @@ public class WormBehaviour : MonoBehaviour
                 transform.position += transform.forward * speed * Time.deltaTime;
                 if (turn)
                     turn = false;
-
-                MaxTime -= Time.deltaTime;
-                if (MaxTime <= 0)
-                {
-                    MaxTime = 10;
-                    random = Random.Range(0, 360);
-                    transform.Rotate(0, random, 0);
-                }
             }
             else
             {
@@ -89,11 +76,18 @@ public class WormBehaviour : MonoBehaviour
                 }
             }
 
-            random = Random.value;
-            if (random < chanceOfCurrency)
+            /*
+            MaxTime -= Time.deltaTime;
+            if (MaxTime <= 0)
             {
-                transform.Rotate(0, 90, 0);
-            }
+                random = Random.value;
+                if (random < chanceOfCurrency)
+                {
+                    transform.Rotate(0, 90, 0);
+                    MaxTime = 10;
+                }
+            } 
+            */
         }
     }
 }
