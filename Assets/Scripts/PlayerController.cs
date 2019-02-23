@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public InventoryController inventory;
     public string weaponEquipped = "";
     // Start is called before the first frame update
-    public bool onTheHouse = false;
+    public bool onTheHouse;
     public bool isInLake = true;
     public int attack = Animator.StringToHash("Hit");
     public DialogueController dialogueController;
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         health = 100f;
         speed = 2.0f;
-        setGraystoneVariables();
+        onTheHouse = true;
         Debug.Log(gameObject.name);
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
