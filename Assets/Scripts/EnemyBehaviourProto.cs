@@ -7,7 +7,7 @@ public class EnemyBehaviourProto : MonoBehaviour
 {
     Rigidbody rb;
 
-    static Animator animator;
+    public Animator animator;
     int isWalkingHash = Animator.StringToHash("IsWalking");
     int getHitHash = Animator.StringToHash("GetHit");
     int dieHash = Animator.StringToHash("Dies");

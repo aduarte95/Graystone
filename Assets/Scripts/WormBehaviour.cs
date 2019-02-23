@@ -14,7 +14,7 @@ public class WormBehaviour : MonoBehaviour
     public PlayerController player;
 
     Rigidbody rb;
-    static Animator animator;
+    private Animator animator;
     int isWalkingHash = Animator.StringToHash("IsWalking");
     int getHitHash = Animator.StringToHash("GetHit");
     int dieHash = Animator.StringToHash("Dies");
