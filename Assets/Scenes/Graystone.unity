@@ -655,14 +655,14 @@ MonoBehaviour:
   poisonLevel: {fileID: 1402130230}
   player: {fileID: 1402130225}
   speed: 2
-  direction: -1
+  direction: 1
   MaxDistS: 15
   MaxDist: 3
   MinDist: 1
   MaxTime: 10
   turn: 0
   didHit: 0
-  chanceOfCurrency: 0.25
+  chanceOfCurrency: 0.025
 --- !u!1 &38775838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 112464, guid: 950c0a0cf14577549b026c95956a3c99,
@@ -28339,7 +28339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 220.73798
+      value: 231.84
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28347,7 +28347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 106.370384
+      value: 95.01
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalRotation.x
@@ -28355,7 +28355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalRotation.z
@@ -28363,7 +28363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_RootOrder
@@ -28375,7 +28375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -28397,6 +28397,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: be46d17db1c40b04abbf43c30863a477, type: 2}
+    - target: {fileID: 9500000, guid: c3701783ee3206b4492deed733703204, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b9fc8b770f3ddbf4cad7c1f784088ecd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3701783ee3206b4492deed733703204, type: 3}
 --- !u!1 &1281082152
@@ -40001,6 +40005,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 532066205bc320d4aa4647332e9d2ffa, type: 3}
+--- !u!1 &1832301704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 1280768785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1832301707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832301704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4abe5dd5fde1eca4a976208533d6aecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueController: {fileID: 1743996875}
+  Sphere: {fileID: 280986985}
+  Player: {fileID: 1402130229}
+  playerHealth: {fileID: 1402130231}
+  poisonLevel: {fileID: 1402130230}
+  player: {fileID: 1402130225}
+  speed: 2
+  direction: 1
+  MaxDistS: 15
+  MaxDist: 3
+  MinDist: 1
+  MaxTime: 10
+  turn: 0
+  didHit: 0
+  chanceOfCurrency: 0.025
 --- !u!1001 &1834237888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45161,6 +45198,7 @@ GameObject:
   - component: {fileID: 2046114605}
   - component: {fileID: 2046114604}
   - component: {fileID: 2046114607}
+  - component: {fileID: 2046114608}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -45271,6 +45309,33 @@ MonoBehaviour:
   backupFlagNotification: 0
   backupObject: {fileID: 0}
   terrain: {fileID: 0}
+--- !u!114 &2046114608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046114603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4abe5dd5fde1eca4a976208533d6aecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueController: {fileID: 0}
+  Sphere: {fileID: 0}
+  Player: {fileID: 0}
+  playerHealth: {fileID: 0}
+  poisonLevel: {fileID: 0}
+  player: {fileID: 0}
+  speed: 2
+  direction: 1
+  MaxDistS: 15
+  MaxDist: 3
+  MinDist: 1
+  MaxTime: 10
+  turn: 0
+  didHit: 0
+  chanceOfCurrency: 0.025
 --- !u!1001 &2049933810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45918,6 +45983,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b9fc8b770f3ddbf4cad7c1f784088ecd, type: 2}
+    - target: {fileID: 400012, guid: c3701783ee3206b4492deed733703204, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.73
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3701783ee3206b4492deed733703204, type: 3}
 --- !u!1001 &2075782928

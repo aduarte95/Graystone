@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WormBehaviour : MonoBehaviour
 {
-    public DialogueController dialogueController; //Tells the dialogue that the alien is dead
+    public DialogueController dialogueController; 
 
     public Transform Sphere;
 
@@ -23,7 +23,7 @@ public class WormBehaviour : MonoBehaviour
 
     bool ableToMove;
     public float speed = 2.0f;
-    public int direction = -1;
+    public int direction = 1;
     public float MaxDistS = 15;
     public float MaxDist = 3;
     public int MinDist = 1;
@@ -35,7 +35,7 @@ public class WormBehaviour : MonoBehaviour
     public float maxHealth { get; set; }
 
     float random;
-    public float chanceOfCurrency = 0.25f;
+    public float chanceOfCurrency = 0.025f;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,14 +55,10 @@ public class WormBehaviour : MonoBehaviour
         if (ableToMove)
         {
 
-            float translation = direction * speed;
-            translation *= Time.deltaTime;
-            Vector3 move = new Vector3(0, 0, translation);
-
             if ((Vector3.Distance(transform.position, Sphere.position) <= MaxDistS) || (turn))
             {
                 animator.SetBool(isWalkingHash, true);
-                transform.position += transform.forward * speed * Time.deltaTime;
+                transform.position += transform.forward * speed * Time.deltaTime * -1;
                 if (turn)
                     turn = false;
             }
@@ -76,7 +72,7 @@ public class WormBehaviour : MonoBehaviour
                 }
             }
 
-            /*
+            
             MaxTime -= Time.deltaTime;
             if (MaxTime <= 0)
             {
@@ -86,8 +82,7 @@ public class WormBehaviour : MonoBehaviour
                     transform.Rotate(0, 90, 0);
                     MaxTime = 10;
                 }
-            } 
-            */
+            }
         }
     }
 }
