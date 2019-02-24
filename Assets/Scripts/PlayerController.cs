@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public DialogueController dialogueController;
     public bool isPoisoned = false;
     public PlayerHealth healthBar;
+    public bool hasJug = false; // to control if player has jug equiped
     
 
     public EnemyBehaviourProto enemy;

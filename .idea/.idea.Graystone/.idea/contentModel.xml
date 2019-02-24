@@ -190,31 +190,6 @@
           </e>
         </e>
         <e p="Apple.cs" t="Include" />
-        <e p="EasyRoads3D" t="Include">
-          <e p="_readme .txt" t="Include" />
-          <e p="_Release Notes.txt" t="Include" />
-          <e p="prefab meshes" t="Include">
-            <e p="_custom prefabs.txt" t="Include" />
-          </e>
-          <e p="prefab sources" t="Include">
-            <e p="_custom prefabs.txt" t="Include" />
-          </e>
-          <e p="Resources" t="Include">
-            <e p="custom prefabs" t="Include">
-              <e p="_custom prefabs.txt" t="Include" />
-            </e>
-            <e p="dynamic prefabs" t="Include">
-              <e p="dynamic prefabs.txt" t="Include" />
-            </e>
-          </e>
-          <e p="Shaders" t="Include">
-            <e p="EasyRoads3D - Unity 5 Standard.shader" t="Include" />
-            <e p="EasyRoads3D - Unity 5 StandardSpecular.shader" t="Include" />
-            <e p="EasyRoads3D - Unity Standard 2018.shader" t="Include" />
-            <e p="EasyRoads3D-Road-Edit-Mode.shader" t="Include" />
-            <e p="EasyRoads3D-Surface-Offset.shader" t="Include" />
-          </e>
-        </e>
         <e p="Gems Ultimate Pack" t="Include">
           <e p="Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
@@ -292,6 +267,7 @@
           <e p="InventoryController.cs" t="Include" />
           <e p="JamsNPCController.cs" t="Include" />
           <e p="JeiferPrueba.cs" t="Include" />
+          <e p="JugController.cs" t="Include" />
           <e p="L2GSceneController.cs" t="Include" />
           <e p="LakeSceneController.cs" t="Include" />
           <e p="MinimapScript.cs" t="Include" />
@@ -306,8 +282,10 @@
           <e p="SceneController.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
           <e p="Spawn.cs" t="Include" />
+          <e p="WaterCollisionController.cs" t="Include" />
           <e p="WeaponSlot.cs" t="Include" />
           <e p="WoodsmithNPC.cs" t="Include" />
+          <e p="WormBehaviour.cs" t="Include" />
         </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
