@@ -22,6 +22,8 @@ public class Spawn : MonoBehaviour
     {
         Vector3 playerPos = new Vector3(player.position.x-2, player.position.y, player.position.z);
         Instantiate(item, playerPos, Quaternion.identity);
-        item.transform.localScale = new Vector3(10, 10, 10);
+		if(item.tag == "Apple"){
+			item.transform.localScale = new Vector3(10, 10, 10);
+		}
     }
 }

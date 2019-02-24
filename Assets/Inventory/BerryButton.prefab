@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7597284652600401517}
   - component: {fileID: 7434738767414078093}
   - component: {fileID: 228527981868464003}
+  - component: {fileID: 2593658028266818694}
   m_Layer: 5
   m_Name: BerryButton
   m_TagString: Untagged
@@ -197,3 +198,16 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2593658028266818694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7278972302347315172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e396ba66285971b4cb8725aeaad071a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1470115515692347240, guid: d32f38f34d5572e44b4f167f8bb84fd5, type: 3}

@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
                 if (isPoisoned)
                 {
-                    healthBar.dealDamage(0.05f);    
+                    healthBar.dealDamage(0.02f);    
                 }
                 
             }
