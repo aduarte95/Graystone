@@ -14,14 +14,14 @@ public class EquipmentPosition : ObjectInteraction
 		InventoryController ic = GameObject.Find("Player").GetComponent<InventoryController>();
 		if(!objectToEquip.activeSelf){
 			
-			if(ic.hasItem(objectToEquip.name)){
+			if(ic.hasItem(objectToEquip.tag)){
 				ic.EquipWeapon(null);
 				objectToEquip.SetActive(true);
 			} else {Debug.Log("Player doesn't have that item");}
 		}
 		else
 		{
-			if(!ic.hasItem(objectToEquip.name)){
+			if(!ic.hasItem(objectToEquip.tag)){
 				ic.EquipWeapon(objectToEquip);
 				objectToEquip.SetActive(false);
 			} else {Debug.Log("Player already has that item");}
@@ -34,7 +34,7 @@ public class EquipmentPosition : ObjectInteraction
         {
             text = "Press Q button to equip ";
 
-            objectName = objectToEquip.name;
+            objectName = objectToEquip.tag;
         } else
         {
             text = "";

@@ -138,8 +138,8 @@ public class InventoryController : MonoBehaviour
         {
             if (isFull[i])
             {
-				if(slots[i].GetComponent<Slot>().item == item.name){
-					Debug.Log("Player dropped "+item.name+".");
+				if(slots[i].GetComponent<Slot>().item == item.tag){
+					Debug.Log("Player dropped "+item.tag+".");
 					slots[i].GetComponent<Slot>().RemoveItem();
                     inventoryLength--;
 					//Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
@@ -169,4 +169,14 @@ public class InventoryController : MonoBehaviour
             }
         }
     }
+	
+	public bool hasNAmountOfItem(string item, int n){ //returns true if it has at n or more of "item" in inventory
+		GameObject slot;
+		int count = 0;
+		for(int i = 0; i < 5; i++){
+			slot = slots[i];
+			if(slot.GetComponent<Slot>().item == item)	count++;
+		}
+		return count <= n;
+	}
 }

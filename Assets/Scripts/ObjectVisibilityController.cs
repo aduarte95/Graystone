@@ -10,7 +10,7 @@ public class ObjectVisibilityController : ObjectInteraction
 		InventoryController ic = GameObject.Find("Player").GetComponent<InventoryController>();
 		PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
 		if(!objectToHide.activeSelf){
-			if(ic.hasItem(objectToHide.name)){
+			if(ic.hasItem(objectToHide.tag)){
 				ic.putItem(objectToHide);
 				if (objectToHide.gameObject.CompareTag("Jug"))
 				{
@@ -22,7 +22,7 @@ public class ObjectVisibilityController : ObjectInteraction
 		}
 		else
 		{
-			if(!ic.hasItem(objectToHide.name)){
+			if(!ic.hasItem(objectToHide.tag)){
 				ic.takeItem(objectToHide);
 				objectToHide.SetActive(false);
 				if (objectToHide.gameObject.CompareTag("Jug"))
@@ -49,6 +49,6 @@ public class ObjectVisibilityController : ObjectInteraction
             text = "Press Q button to put ";
         }
         
-        objectName = objectToHide.name;
+        objectName = objectToHide.tag;
     }
 }
