@@ -9,6 +9,7 @@ public class NPCController : MonoBehaviour
     public PlayerController player;
     public bool CanTalk { get;  set; } = false;
     public string Name { get; protected set; }
+    public Transform targetPosition;
 
     // Start is called before the first frame update
     void Start()

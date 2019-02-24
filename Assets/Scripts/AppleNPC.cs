@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class AppleNPC : NPCController
 {
-    public Transform targetPosition;
     public GameObject nextHouseDiamond;
     public GameObject[] myDiamonds;
     private int MoveSpeed = 4;
