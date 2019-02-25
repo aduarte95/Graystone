@@ -27897,6 +27897,7 @@ MonoBehaviour:
   myDiamonds:
   - {fileID: 1370399412}
   - {fileID: 509565274}
+  Sphere: {fileID: 0}
 --- !u!114 &904922398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42067,6 +42068,8 @@ MonoBehaviour:
   hasJug: 0
   enemy: {fileID: 539000740}
   Enemy: {fileID: 539000744}
+  enemyBerry: {fileID: 0}
+  EnemyBerry: {fileID: 0}
   dialogueManager: {fileID: 490440689}
   HasEaten: 0
   HasApples: 0
@@ -61675,7 +61678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 708
+      value: -48
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.y
@@ -61683,7 +61686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 258.5
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalRotation.x
