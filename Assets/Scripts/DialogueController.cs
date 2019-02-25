@@ -2,6 +2,7 @@
 
 public class DialogueController : MonoBehaviour
 {
+    private const int BLUEBERRY_MISSION = 4;
     public DialogueTrigger[] objectsWithDialogues; //Array of objects that have dialog
     //public EnemyBehaviour alien; FOR GAME. Add to dialogue or will chrash
     public EnemyBehaviourProto alien; //PROTO
@@ -82,9 +83,17 @@ public class DialogueController : MonoBehaviour
 
     //PROTO
     public void setPlayerPoisoned(bool isPlayerPoisoned)
-        {
-            this.isPlayerPoisoned = isPlayerPoisoned;
-        }
+    {
+        this.isPlayerPoisoned = isPlayerPoisoned;
     }
+
+    public void BlueberryMission()
+    {
+        objectsWithDialogues[HOUSE].TriggerDialogue(BLUEBERRY_MISSION);
+        currentDialog = objectsWithDialogues[HOUSE].dialogues[BLUEBERRY_MISSION];
+    }
+}
+
+
 
 

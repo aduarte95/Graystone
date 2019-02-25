@@ -27,6 +27,7 @@ public class AppleNPC : NPCController
             {
                 StillMad = false;
                 dialogueTrigger.TriggerDialogue(currentDialogue);
+                missionsGame.setFinished(APPLE_MISSION);
             }
              
         } else
@@ -40,13 +41,6 @@ public class AppleNPC : NPCController
                     ++currentDialogue;
                 }
             }
-
-            /*if(dialogueTrigger.dialogues[0].Finished)
-            {
-                nextHouseDiamond.SetActive(true);
-                myDiamonds[0].SetActive(false);
-                myDiamonds[1].SetActive(false);
-            }*/
         }
 
     }

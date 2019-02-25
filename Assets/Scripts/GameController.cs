@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     private const int WOOD_DIAMOND = 1;
     private const int BAKERY_DIAMOND = 2;
     private const int APPLE_DIAMOND = 3;
-    private const int ALIEN = 4;
+    private const int ALIEN_DIAMOND = 4;
     private const int LAKE_DIAMOND = 5;
     private bool notDebugging = true; //Put in false if you're debugging.
     public GameObject[] objects;
@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
 
     public bool Begin { get; private set; } = true;
     public bool Next { get; set; } = false;
+    public bool CandleMissionFinished { get; set; } = false;
 
     // Start is called before the first frame update
     void Start()
@@ -57,15 +58,37 @@ public class GameController : MonoBehaviour
                     dialogueController.PlayerHits();
                     dialogueController.FirstTimeHit = 2;
                 }
-                else if (dialogueController.IsAlienDead) //Dialogo donde el alien muere y ya le permite salir de la casa. EL ALIEN DEBE AVISARLE A DIALOGUE CONTROLLER QUE MURIO. AHORITA LO HACE CON M JAJA
+                else if (CandleMissionFinished)
+                {
+                    Next = false;
+                    CandleMissionFinished = false;
+                    dialogueController.BlueberryMission();
+                    objects[WOOD_DIAMOND].SetActive(true); //shows next mission
+                    objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+                }
+
+                if (dialogueController.IsAlienDead) //Dialogo donde el alien muere y ya le permite salir de la casa. EL ALIEN DEBE AVISARLE A DIALOGUE CONTROLLER QUE MURIO. AHORITA LO HACE CON M JAJA
                 {
                     Next = false;
                     dialogueController.AlienIsDeadDialogue();
                     alienDied = 1;
-                    objects[APPLE_DIAMOND].SetActive(true); //shows next mission
+                    objects[APPLE_DIAMOND].SetActive(true); //shows next mission         
                     objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+
                 }
             }
         }
+        /*
+        if (Next)
+        {
+            if (CandleMissionFinished)
+            {
+                Next = false;
+                CandleMissionFinished = false;
+                dialogueController.BlueberryMission();
+                objects[WOOD_DIAMOND].SetActive(true); //shows next mission
+                objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+            }
+        }*/
     }
 }
