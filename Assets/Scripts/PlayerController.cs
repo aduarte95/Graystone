@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour
     public EnemyBehaviourProto enemy;
     public Transform Enemy; // to use the transform.position of enemy after Attack
 
+    public EnemyBehaviour enemyBerry;
+    public Transform EnemyBerry; // to use the transform.position of enemy after Attack
+
     public DialogueManager dialogueManager;
     //DEBUG APPLE NPC 
     public bool HasEaten = false;
@@ -256,6 +259,15 @@ public class PlayerController : MonoBehaviour
             if (enemy.gameObject.activeSelf)
             {
                 enemy.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, EnemyBerry.position) >= 0) &&
+            (Vector3.Distance(transform.position, EnemyBerry.position) <= 2))
+        {
+            if (enemyBerry.gameObject.activeSelf)
+            {
+                enemyBerry.getHit(10);
             }
         }
 

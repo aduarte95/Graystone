@@ -176,6 +176,11 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
+    public void getHit(int damage)
+    {
+        StartCoroutine(dealDamage(damage));
+    }
+
     // Reduce the health in "damageValue" points
     IEnumerator dealDamage(float damageValue)
     {
