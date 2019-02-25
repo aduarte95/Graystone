@@ -15,10 +15,10 @@ public class WaterCollisionController : ObjectInteraction
     
     override public void interact()
     {
-        PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
+        InventoryController inventory = GameObject.Find("Inventory").GetComponent<InventoryController>();
         JugController jug = GameObject.Find("jug").GetComponent<JugController>();
 
-        if (player.hasJug)
+        if (inventory.hasItem("Jug"))
         {
             if (jug.isFull)
             {
@@ -38,7 +38,7 @@ public class WaterCollisionController : ObjectInteraction
         }
         else
         {
-            if (!player.hasJug)
+            if (!inventory.hasItem("Jug"))
             {
                 dialogueTrigger.TriggerDialogue(NOJUG);
             }
