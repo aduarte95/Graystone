@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6250,6 +6250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &220524368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12340,6 +12341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &406516106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13351,6 +13353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &437368874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21051,6 +21054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &687441692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27741,6 +27745,7 @@ MonoBehaviour:
   player: {fileID: 1402130225}
   targetPosition: {fileID: 1402130229}
   missionsGame: {fileID: 854675706}
+  positionController: {fileID: 0}
   gameController: {fileID: 138790278}
   nextHouseDiamond: {fileID: 504626162}
   myDiamonds:
@@ -30307,6 +30312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &1005425874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30694,6 +30700,11 @@ PrefabInstance:
     - target: {fileID: 108546126138138148, guid: 9d012b73caba62246906034d78994c42,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65455356704917402, guid: 9d012b73caba62246906034d78994c42,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -32633,6 +32644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &1093042190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33247,6 +33259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &1112509077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54633,6 +54646,7 @@ MonoBehaviour:
   player: {fileID: 1402130225}
   targetPosition: {fileID: 1402130229}
   missionsGame: {fileID: 854675706}
+  positionController: {fileID: 0}
   gameController: {fileID: 138790278}
   candle: {fileID: 1014530820}
   house: {fileID: 1918537558}
@@ -56630,6 +56644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &1920067584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62922,6 +62937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
 --- !u!114 &2146410121
 MonoBehaviour:
   m_ObjectHideFlags: 0

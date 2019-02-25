@@ -10,6 +10,7 @@ public class WoodsmithNPC : NPCController
     const int CHAIR = 3;
     public GameObject candle;
     public HouseSceneController house;
+    public bool HasCandle { get; protected set; } = false;
     private bool playerTransported = false;
     private PlayerController pc;
     private CharacterController characterController;
@@ -52,7 +53,7 @@ public class WoodsmithNPC : NPCController
             }
         }
 
-        if (!playerTransported && dialogueTrigger.dialogues[RIGHT].Finished)
+        if (HasCandle && dialogueTrigger.dialogues[RIGHT].Finished)
         {
             finishCandleMission();  
         } else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
@@ -63,7 +64,7 @@ public class WoodsmithNPC : NPCController
 
     void finishCandleMission()
     {
-        playerTransported = true;
+        HasCandle = false;
         missionsGame.setFinished(CANDLE_MISSION);
         gameController.CandleMissionFinished = true;
         gameController.Next = true;
@@ -72,12 +73,19 @@ public class WoodsmithNPC : NPCController
         pc.gameObject.transform.position = house.scenePosition;
         characterController.enabled = true;
         house.setObjects();
-        candle.SetActive(false);
         positionController.cleanText();
     }
 
     public override void setName()
     {
         Name = "Woody Carpenter";
+    }
+
+    public override void setHasObject(int theObject)
+    {
+        if (theObject == 0)
+        {
+            HasCandle = true;
+        }
     }
 }

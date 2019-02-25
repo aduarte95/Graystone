@@ -30,4 +30,9 @@ public class NPCController : MonoBehaviour
     {
 
     }
+
+    virtual public void setHasObject(int theObject)
+    {
+
+    }
 }
