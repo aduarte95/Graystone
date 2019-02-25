@@ -261,6 +261,7 @@
           <e p="EnemyBehaviourProto.cs" t="Include" />
           <e p="EquipmentPosition.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
+          <e p="GameOverManager.cs" t="Include" />
           <e p="GraystoneForestBoundaryController.cs" t="Include" />
           <e p="H2GController.cs" t="Include" />
           <e p="HouseSceneController.cs" t="Include" />
