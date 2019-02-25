@@ -38,6 +38,13 @@ public class PlayerController : MonoBehaviour
     //
     public bool HasApples  = true; // DEBUG WOODSMITH NPC
 
+    
+    
+    private Vector3 moveDirection = Vector3.zero;
+    private CharacterController controller;
+
+    
+    
     void Start()
     {
         health = 100f;
@@ -48,6 +55,7 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         animator.SetBool(canRun, true);
         inventory = gameObject.GetComponent<InventoryController>();
+        controller = GetComponent<CharacterController>();
     }
 
     public void setOnTheHouse(bool isOnTheHouse)
@@ -117,13 +125,21 @@ public class PlayerController : MonoBehaviour
             rotation *= Time.deltaTime;
             RaycastHit res;
             
-                    transform.Translate(0, 0, translation);
+            //transform.Translate(0, 0, translation);
 
-            transform.Rotate(0, rotation, 0);
+            //transform.Rotate(0, rotation, 0);
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            //moveDirection = transform.TransformDirection(moveDirection);
+            //moveDirection = moveDirection * speed;
+            // Move the controller
+            if (moveDirection != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(moveDirection);
+            }
 
-           
+            controller.Move(moveDirection /20);
 
-            if (translation != 0)
+            if (translation != 0  || moveDirection != Vector3.zero)
             {
                 animator.SetBool(isWalkingHash, true);
                 if (speed < maxSpeed)
