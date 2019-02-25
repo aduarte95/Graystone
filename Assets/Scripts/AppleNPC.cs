@@ -14,6 +14,8 @@ public class AppleNPC : NPCController
     private int currentDialogue = 0;
     private bool StillMad { get; set; } = true; //Avoid npc seacrhes for player if eat another apple
 
+    public Transform Sphere; //Set limits
+
     // Update is called once per frame
     void Update()
     {
@@ -51,7 +53,7 @@ public class AppleNPC : NPCController
         transform.LookAt(targetPosition);
 
         // DEBUG APPLE NPC
-        if (Vector3.Distance(transform.position, targetPosition.position) > MinDist && StillMad)
+        if ((Vector3.Distance(transform.position, targetPosition.position) > MinDist) && (StillMad) && (Vector3.Distance(transform.position, Sphere.position) < MaxDist))
         {
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;

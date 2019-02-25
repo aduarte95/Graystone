@@ -138,6 +138,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         }
         
+        /*
         if (Input.GetKeyDown(KeyCode.B))
         {
             StartCoroutine(doAttack1());
@@ -152,6 +153,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             StartCoroutine(dealDamage(10));
         }
+        */
     }
 
     public bool Front()
@@ -198,6 +200,7 @@ public class EnemyBehaviour : MonoBehaviour
             ableToMove = false;
             animator.SetBool(dieHash, true);
             dialogueController.IsAlienDead = true; //Tells that the alien is dead
+            gameObject.SetActive(false);
         }
     }
 
