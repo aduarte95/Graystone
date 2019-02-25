@@ -26,9 +26,9 @@ public class WoodsmithNPC : NPCController
         {
             CanTalk = false;
             transform.LookAt(targetPosition);
-           missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
+          /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
             gameController.objects[1].SetActive(true); //FOR DEBUG
-            gameController.objects[5].SetActive(true); //FOR DEBUG
+            gameController.objects[5].SetActive(true); //FOR DEBUG*/
 
             if (missionsGame.isFinished(CANDLE_MISSION))
             {
