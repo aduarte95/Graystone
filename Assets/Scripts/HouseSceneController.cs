@@ -10,6 +10,7 @@ public class HouseSceneController : SceneController
     {
         objects[HOUSE].SetActive(isOn);
         objects[MAIN].SetActive(!isOn);
+        playerController.setInLake(true);
         playerController.setOnTheHouse(true);
         dialogueController.IsOnTheHouse = true;
     }

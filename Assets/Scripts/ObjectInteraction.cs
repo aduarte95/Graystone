@@ -40,10 +40,15 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            pressButton.text = "";
-            goAhead = false;
-            setOtherVariables();
+            cleanText();
         }
+    }
+
+    public void cleanText()
+    {
+        pressButton.text = "";
+        goAhead = false;
+        setOtherVariables();
     }
 
     protected void setPressText()

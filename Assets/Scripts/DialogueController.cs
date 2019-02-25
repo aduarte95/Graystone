@@ -9,7 +9,6 @@ public class DialogueController : MonoBehaviour
     private const int HOUSE = 0;
     private Dialogue currentDialog;
     public GameController gameController;
-    private bool first = true; //See if it's alien first time dead
     public int FirstTimeHit { get; set; } = 0; // 0 means never hit at all, 1 means hit for the first time, 2 hit after the first time
 
     public bool IsAlienDead { get; set; } = false;//Alien have to change it if he dies. PROTO
@@ -73,12 +72,8 @@ public class DialogueController : MonoBehaviour
 
     public void AlienIsDeadDialogue()
     {
-        if (IsAlienDead && first)
-        {
-            first = false;
-            objectsWithDialogues[HOUSE].TriggerDialogue(3);
-            currentDialog = objectsWithDialogues[HOUSE].dialogues[3];
-        }
+       objectsWithDialogues[HOUSE].TriggerDialogue(3);
+       currentDialog = objectsWithDialogues[HOUSE].dialogues[3];
     }
 
     //PROTO

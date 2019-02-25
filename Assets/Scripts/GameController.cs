@@ -57,6 +57,15 @@ public class GameController : MonoBehaviour
                     Next = false;
                     dialogueController.PlayerHits();
                     dialogueController.FirstTimeHit = 2;
+                } else if (dialogueController.IsAlienDead) //Dialogo donde el alien muere y ya le permite salir de la casa. EL ALIEN DEBE AVISARLE A DIALOGUE CONTROLLER QUE MURIO. AHORITA LO HACE CON M JAJA
+                {
+                    Next = false;
+                    dialogueController.IsAlienDead = false;
+                    dialogueController.AlienIsDeadDialogue();
+                    alienDied = 1;
+                    objects[APPLE_DIAMOND].SetActive(true); //shows next mission         
+                    objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+
                 }
                 else if (CandleMissionFinished)
                 {
@@ -67,15 +76,7 @@ public class GameController : MonoBehaviour
                     objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
                 }
 
-                if (dialogueController.IsAlienDead) //Dialogo donde el alien muere y ya le permite salir de la casa. EL ALIEN DEBE AVISARLE A DIALOGUE CONTROLLER QUE MURIO. AHORITA LO HACE CON M JAJA
-                {
-                    Next = false;
-                    dialogueController.AlienIsDeadDialogue();
-                    alienDied = 1;
-                    objects[APPLE_DIAMOND].SetActive(true); //shows next mission         
-                    objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
-
-                }
+                
             }
         }
         /*

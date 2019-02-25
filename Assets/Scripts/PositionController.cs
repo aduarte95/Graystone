@@ -4,16 +4,6 @@ public class PositionController : ObjectInteraction
 {
     public NPCController npc;
 
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            pressButton.text = "";
-            goAhead = false;
-            setOtherVariables();
-        }
-    }
-
     override public void setOtherVariables()
     {
         npc.CanTalk = false;

@@ -14,6 +14,7 @@ public class WoodsmithNPC : NPCController
     private PlayerController pc;
     private CharacterController characterController;
     private bool debug = true;
+   
     // Update is called once per frame
     void Update()
     {
@@ -53,20 +54,26 @@ public class WoodsmithNPC : NPCController
 
         if (!playerTransported && dialogueTrigger.dialogues[RIGHT].Finished)
         {
-            playerTransported = true;
-            missionsGame.setFinished(CANDLE_MISSION);
-            gameController.CandleMissionFinished = true;
-            gameController.Next= true;
-            //TODO: MAYBE CAN BE A METHOD ON PLAYERCONTROLLER
-            characterController.enabled = false;
-            pc.gameObject.transform.position = house.scenePosition;
-            characterController.enabled = true;
-            house.setObjects();
-            candle.SetActive(false);
+            finishCandleMission();  
         } else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
         {
             dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].setDiamondsMission();
         }
+    }
+
+    void finishCandleMission()
+    {
+        playerTransported = true;
+        missionsGame.setFinished(CANDLE_MISSION);
+        gameController.CandleMissionFinished = true;
+        gameController.Next = true;
+        //TODO: MAYBE CAN BE A METHOD ON PLAYERCONTROLLER
+        characterController.enabled = false;
+        pc.gameObject.transform.position = house.scenePosition;
+        characterController.enabled = true;
+        house.setObjects();
+        candle.SetActive(false);
+        positionController.cleanText();
     }
 
     public override void setName()
