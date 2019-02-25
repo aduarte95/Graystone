@@ -18,12 +18,14 @@ public class BerryNPC : NPCController
 
             if (missionsGame.isFinished(ASK_CHAIR_MISSION)) //Woodsmith already ask for the favor
             {
-                dialogueTrigger.TriggerDialogue(KILL_ALIEN);
-
-            }
-            else if (missionsGame.isFinished(BERRY_ALIEN_DEAD))
-            {
-                dialogueTrigger.TriggerDialogue(JAM);
+                if (missionsGame.isFinished(BERRY_ALIEN_DEAD))
+                {
+                    dialogueTrigger.TriggerDialogue(JAM);
+                }
+                else
+                {
+                    dialogueTrigger.TriggerDialogue(KILL_ALIEN);
+                }
             }
             else //If jumps the mission order
             {
@@ -31,15 +33,14 @@ public class BerryNPC : NPCController
             }
         }
 
-        if (dialogueTrigger.dialogues[KILL_ALIEN].Finished)
+        if (dialogueTrigger.dialogues[KILL_ALIEN].Finished && !is_berry_alien_dead)
         {
             dialogueTrigger.dialogues[KILL_ALIEN].setDiamondsMission();
-        }
-
-        if (is_berry_alien_dead)
+        } else if (is_berry_alien_dead)
         {
             missionsGame.setFinished(BERRY_ALIEN_DEAD);
-        }
+            dialogueTrigger.dialogues[KILL_ALIEN].cleanDiamonds();
+        } 
     }
 
     public override void setName()

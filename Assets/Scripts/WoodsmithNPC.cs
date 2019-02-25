@@ -8,13 +8,16 @@ public class WoodsmithNPC : NPCController
     const int WRONG = 1;
     const int FAVOR_FOR_CHAIR = 2;
     const int CHAIR = 3;
+    const int NO_JAM = 4;
     public GameObject candle;
     public HouseSceneController house;
     public bool HasCandle { get; protected set; } = false;
+    private bool HasChair { get; set; } = false; //TODO Implementar que tenga silla para volver a casa 
     private bool playerTransported = false;
     private PlayerController pc;
     private CharacterController characterController;
     private bool debug = true;
+    private bool HasJam {get; set;} = true; //TODO Implementar que tenga jam
    
     // Update is called once per frameaw
     void Update()
@@ -23,20 +26,27 @@ public class WoodsmithNPC : NPCController
         {
             CanTalk = false;
             transform.LookAt(targetPosition);
-           /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
+           missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
             gameController.objects[1].SetActive(true); //FOR DEBUG
-            gameController.objects[5].SetActive(true); //FOR DEBUG*/
+            gameController.objects[5].SetActive(true); //FOR DEBUG
 
             if (missionsGame.isFinished(CANDLE_MISSION))
             {
-                if (!missionsGame.isFinished(BLUEBERRY_MISSION)) //First dialogue asking for favor
+                if (!missionsGame.isFinished(BERRY_ALIEN_DEAD)) //First dialogue asking for favor
                 {
                     dialogueTrigger.TriggerDialogue(FAVOR_FOR_CHAIR);
                     missionsGame.setFinished(ASK_CHAIR_MISSION);
                 }
                 else
                 {
-                    dialogueTrigger.TriggerDialogue(CHAIR);
+                    if (HasJam)
+                    {
+                        dialogueTrigger.TriggerDialogue(CHAIR);
+                        finishBerryMission();
+                    } else
+                    {
+                        dialogueTrigger.TriggerDialogue(NO_JAM);
+                    }
                 }
             } else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
             {
@@ -73,6 +83,21 @@ public class WoodsmithNPC : NPCController
         gameController.CandleMissionFinished = true;
         gameController.Next = true;
         //TODO: MAYBE CAN BE A METHOD ON PLAYERCONTROLLER
+        teletransportPlayer();
+    }
+
+    void finishBerryMission()
+    {
+        HasChair = false;
+        missionsGame.setFinished(BLUEBERRY_MISSION);
+        //gameController.BlueberryMissionFinished = true; TODO, I DONT KNOW IF ITS NECESSARY YET
+        //gameController.Next = true;
+        //TODO: MAYBE CAN BE A METHOD ON PLAYERCONTROLLER
+        teletransportPlayer();
+    }
+
+    void teletransportPlayer()
+    {
         characterController.enabled = false;
         pc.gameObject.transform.position = house.scenePosition;
         characterController.enabled = true;

@@ -12,6 +12,7 @@ public class Dialogue
     public GameObject[] diamondsMission;
     public bool Finished { get; set; } = false;
     private bool firstTime = true; //To avoid activated diamonds that other object already deactivates
+    private bool firstTimeClean = true; //To avoid activated diamonds that other object already deactivates
 
     public void setDiamondsMission()
     {
@@ -25,6 +26,19 @@ public class Dialogue
             }
 
             firstTime = false;
+        }
+    }
+
+    public void cleanDiamonds()
+    {
+        if (firstTimeClean)
+        {
+            for (int i = 0; i < diamondsMission.Length; ++i)
+            {
+                diamondsMission[i].SetActive(false);
+            }
+
+            firstTimeClean = false;
         }
     }
 }

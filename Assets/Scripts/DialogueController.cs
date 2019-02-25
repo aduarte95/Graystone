@@ -9,6 +9,7 @@ public class DialogueController : MonoBehaviour
     private const int HOUSE = 0;
     private Dialogue currentDialog;
     public GameController gameController;
+    public GameObject houseStop;
     public int FirstTimeHit { get; set; } = 0; // 0 means never hit at all, 1 means hit for the first time, 2 hit after the first time
 
     public bool IsAlienDead { get; set; } = false;//Alien have to change it if he dies. PROTO
@@ -47,7 +48,11 @@ public class DialogueController : MonoBehaviour
                  if (currentDialog == objectsWithDialogues[HOUSE].dialogues[3]) 
                  {
                         FinishedHouse = true; //If it's last dialogue allows to change scene
-                 }
+                        if (houseStop.activeSelf)
+                        {
+                            houseStop.SetActive(false);
+                        }
+                }
             }
         }
     }
