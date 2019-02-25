@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3966,6 +3966,7 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.005
+  berryNpc: {fileID: 0}
 --- !u!65 &136794230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20434,11 +20435,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1338609483781932, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
       propertyPath: m_Name
-      value: houseChair
+      value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 1338609483781932, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338609483781932, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
+      propertyPath: m_TagString
+      value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 4351705893840692, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20517,6 +20522,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.62868845, y: 1.3213704, z: 0.63300073}
   m_Center: {x: 0.018383285, y: 0.6452844, z: -0.021543287}
+--- !u!114 &663650173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663650167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33f25ebb0e6f374391c0cc8144facd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 5330170061666552501, guid: eb76728a9a72de44686ebaedb5f4cb28,
+    type: 3}
 --- !u!1001 &665392364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26357,6 +26376,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: -1.1340001, z: 0}
+--- !u!1 &830646752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1338609483781932, guid: 81fba7e031514c140a9ba21c9edce8e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1602987571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &830646757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830646752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33f25ebb0e6f374391c0cc8144facd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 5330170061666552501, guid: eb76728a9a72de44686ebaedb5f4cb28,
+    type: 3}
 --- !u!1001 &836022897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37550,6 +37589,7 @@ MonoBehaviour:
   missionsGame: {fileID: 854675706}
   positionController: {fileID: 1249558339}
   gameController: {fileID: 138790278}
+  is_berry_alien_dead: 0
 --- !u!114 &1267025989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47826,7 +47866,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1338609483781932, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
       propertyPath: m_Name
-      value: dfk_chair_01
+      value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338609483781932, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
+      propertyPath: m_TagString
+      value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 4351705893840692, guid: 81fba7e031514c140a9ba21c9edce8e8, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,6 +12,7 @@ TagManager:
   - Candle
   - Stick
   - Woodsmith
+  - Chair
   layers:
   - Default
   - TransparentFX
