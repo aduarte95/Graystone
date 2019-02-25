@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public PlayerHealth healthBar;
     public bool hasJug = false; // to control if player has jug equiped
     
+    
 
     public EnemyBehaviourProto enemy;
     public Transform Enemy; // to use the transform.position of enemy after Attack
@@ -121,13 +122,16 @@ public class PlayerController : MonoBehaviour
             HasApples = true;
         }
 
+        if (dialogueManager.isActive == false)
+        {
+
             float translation = Input.GetAxis("Vertical") * speed;
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-            
+
             translation *= Time.deltaTime;
             rotation *= Time.deltaTime;
             RaycastHit res;
-            
+
             //transform.Translate(0, 0, translation);
 
             //transform.Rotate(0, rotation, 0);
@@ -140,9 +144,9 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(moveDirection);
             }
 
-            controller.Move(moveDirection /20);
+            controller.Move(moveDirection / 20);
 
-            if (translation != 0  || moveDirection != Vector3.zero)
+            if (translation != 0 || moveDirection != Vector3.zero)
             {
                 animator.SetBool(isWalkingHash, true);
                 if (speed < maxSpeed)
@@ -152,18 +156,19 @@ public class PlayerController : MonoBehaviour
 
                 if (isPoisoned)
                 {
-                    healthBar.dealDamage(0.02f);    
+                    healthBar.dealDamage(0.02f);
                 }
-                
+
             }
             else
             {
                 speed = 2.0f;
                 animator.SetBool(isWalkingHash, false);
             }
+        }
 
 
-            //SETEAR EN TRUE QUE SE COMIO LAS MANZANAS. MIENTRAS TANTO JAJA
+        //SETEAR EN TRUE QUE SE COMIO LAS MANZANAS. MIENTRAS TANTO JAJA
             /*if (Input.GetKeyDown(KeyCode.R))
             {
                 HasEaten = true;

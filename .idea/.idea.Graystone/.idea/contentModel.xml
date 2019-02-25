@@ -247,10 +247,14 @@
             <e p="Skybox-Procedural.shader" t="Include" />
           </e>
         </e>
+        <e p="Script" t="Include">
+          <e p="Bonfire.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="AppleController.cs" t="Include" />
           <e p="AppleNPC.cs" t="Include" />
           <e p="AppleTree.cs" t="Include" />
+          <e p="BerryNPC.cs" t="Include" />
           <e p="BoundaryHouseController.cs" t="Include" />
           <e p="Candle.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
@@ -272,9 +276,11 @@
           <e p="L2GSceneController.cs" t="Include" />
           <e p="LakeSceneController.cs" t="Include" />
           <e p="MinimapScript.cs" t="Include" />
+          <e p="MissionState.cs" t="Include" />
           <e p="NPCController.cs" t="Include" />
           <e p="ObjectInteraction.cs" t="Include" />
           <e p="ObjectVisibilityController.cs" t="Include" />
+          <e p="OutsideCamera.cs" t="Include" />
           <e p="Pickup.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
@@ -291,7 +297,6 @@
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
-              <e p="Camera2DFollow.cs" t="Include" />
               <e p="CameraFollow.cs" t="Include" />
               <e p="Platformer2DUserControl.cs" t="Include" />
               <e p="PlatformerCharacter2D.cs" t="Include" />

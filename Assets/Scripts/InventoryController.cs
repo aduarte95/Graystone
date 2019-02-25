@@ -131,6 +131,7 @@ public class InventoryController : MonoBehaviour
 			if(slot.GetComponent<Slot>().item == item)	return true;
 		}
 		if((weaponSlot.GetComponent<WeaponSlot>().weapon == item) && (item == "Stick")) return true;
+        Debug.Log("Player doesnt have that item: "+item);
 		return false;
 	}
 
