@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth { get; set; }
 
     public Slider health;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
         }
         health.value = calculateSlideHealth();
+       
     }
 
     // Gain "lifeValue" points of health
@@ -54,6 +58,8 @@ public class PlayerHealth : MonoBehaviour
         }
         health.value = calculateSlideHealth();
     }
+
+    
 
     // Used to get % between 0 and 1 to use in slider value
     float calculateSlideHealth() {

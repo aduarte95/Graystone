@@ -35,7 +35,7 @@ public class PoisonLevel : MonoBehaviour
     }
 
     // Reduce the poison poisonPoints
-    void losePoison(float poisonPoints)
+    public void losePoison(float poisonPoints)
     {
         currentPoison -= poisonPoints;
         // if poison level gets negative passes to 0
