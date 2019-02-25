@@ -12,8 +12,9 @@ public class GameOverManager : MonoBehaviour
     private Animator animator;
 
     private float restartTimer;
-    
-    
+
+    public GameObject gameOver;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,13 +26,15 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
+            gameOver.SetActive(true);
+
             animator.SetTrigger("GameOver");
 
             restartTimer += Time.deltaTime;
 
             if (restartTimer >= restartDelay)
             {
-                SceneManager.LoadScene( SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
