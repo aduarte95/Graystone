@@ -37,6 +37,8 @@ public class EnemyBehaviour : MonoBehaviour
     float random;
     public float chanceOfCurrency = 0.005f;
 
+    public BerryNPC berryNpc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -199,7 +201,7 @@ public class EnemyBehaviour : MonoBehaviour
             currentHealth = 0;
             ableToMove = false;
             animator.SetBool(dieHash, true);
-            dialogueController.IsAlienDead = true; //Tells that the alien is dead
+            berryNpc.is_berry_alien_dead = true; //Tells that the alien is dead
             gameObject.SetActive(false);
         }
     }

@@ -6,6 +6,8 @@ public class BerryNPC : NPCController
 {
     private const int KILL_ALIEN = 0;
     private const int JAM = 1;
+
+    public bool is_berry_alien_dead = false;
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +34,11 @@ public class BerryNPC : NPCController
         if (dialogueTrigger.dialogues[KILL_ALIEN].Finished)
         {
             dialogueTrigger.dialogues[KILL_ALIEN].setDiamondsMission();
+        }
+
+        if (is_berry_alien_dead)
+        {
+            missionsGame.setFinished(BERRY_ALIEN_DEAD);
         }
     }
 
