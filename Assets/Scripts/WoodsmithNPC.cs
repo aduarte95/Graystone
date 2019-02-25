@@ -16,19 +16,23 @@ public class WoodsmithNPC : NPCController
     private CharacterController characterController;
     private bool debug = true;
    
-    // Update is called once per frame
+    // Update is called once per frameaw
     void Update()
     {
         if(CanTalk) //actives in position of npc
         {
             CanTalk = false;
             transform.LookAt(targetPosition);
+           /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
+            gameController.objects[1].SetActive(true); //FOR DEBUG
+            gameController.objects[5].SetActive(true); //FOR DEBUG*/
 
             if (missionsGame.isFinished(CANDLE_MISSION))
             {
                 if (!missionsGame.isFinished(BLUEBERRY_MISSION)) //First dialogue asking for favor
                 {
                     dialogueTrigger.TriggerDialogue(FAVOR_FOR_CHAIR);
+                    missionsGame.setFinished(ASK_CHAIR_MISSION);
                 }
                 else
                 {
