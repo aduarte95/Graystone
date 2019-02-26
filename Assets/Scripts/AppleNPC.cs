@@ -8,7 +8,7 @@ public class AppleNPC : NPCController
     public GameObject nextHouseDiamond;
     public GameObject[] myDiamonds;
     private int MoveSpeed = 4;
-    private int MaxDist = 10;
+    private int MaxDist = 13;
     private int MinDist = 2;
     private int isWalkingHash = Animator.StringToHash("IsWalking");
     private int currentDialogue = 0;
@@ -53,10 +53,18 @@ public class AppleNPC : NPCController
         transform.LookAt(targetPosition);
 
         // DEBUG APPLE NPC
-        if ((Vector3.Distance(transform.position, targetPosition.position) > MinDist) && (StillMad) && (Vector3.Distance(transform.position, Sphere.position) < MaxDist))
+        if ((Vector3.Distance(transform.position, targetPosition.position) > MinDist) && (StillMad))
         {
 
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            if ((Vector3.Distance(transform.position, Sphere.position) < MaxDist) || (Vector3.Distance(Sphere.position, targetPosition.position) < MaxDist))
+            {
+                transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            }
+            else
+            {
+                animator.SetBool(isWalkingHash, false);
+                MoveSpeed = 0;
+            }
 
         }
         else
