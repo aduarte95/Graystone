@@ -10,6 +10,7 @@ public class WoodsmithNPC : NPCController
     const int CHAIR = 3;
     const int NO_JAM = 4;
     public GameObject candle;
+	public GameObject chair;
     public HouseSceneController house;
     public bool HasCandle { get; protected set; } = false;
     private bool HasChair { get; set; } = false; //TODO Implementar que tenga silla para volver a casa 
@@ -91,6 +92,7 @@ public class WoodsmithNPC : NPCController
 
     void finishBerryMission()
     {
+		chair.SetActive(true);
         HasChair = false;
         missionsGame.setFinished(BLUEBERRY_MISSION);
         //gameController.BlueberryMissionFinished = true; TODO, I DONT KNOW IF ITS NECESSARY YET
