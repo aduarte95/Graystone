@@ -206,6 +206,18 @@ public class PlayerController : MonoBehaviour
                 
             }
 
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                if (GetComponent<InventoryController>().hasNAmountOfItem("Apple",5))
+                {
+                    Debug.Log("Si tiene 5 manzanas");   
+                }
+                else
+                {
+                    Debug.Log("No tiene 5 manzanas");
+                }
+            }
+            
     }
 
     private void OnCollisionEnter(Collision collision)

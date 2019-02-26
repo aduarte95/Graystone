@@ -27,15 +27,16 @@ public class Pickup : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            if (gameObject.GetComponent<Candle>() != null && inventory.hasItem("Candle")) return;
             for (int i = 0; i < inventory.slots.Length; i++)
             {
                 if (!inventory.isFull[i])
                 {
-                    Debug.Log("Player picked up an item.");
+                    Debug.Log("Player picked up an " + tag);
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
-					inventory.slots[i].GetComponent<Slot>().item = gameObject.tag;
-
+					inventory.slots[i].GetComponent<Slot>().item = tag;
+                    inventory.setVisibility(true);
                     if(gameObject.GetComponent<Candle>() != null)
                     {
                         npc = GameObject.FindGameObjectWithTag("Woodsmith").GetComponent<NPCController>();
