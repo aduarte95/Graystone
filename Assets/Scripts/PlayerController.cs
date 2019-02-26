@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
 
         if (dialogueManager.isActive == false)
         {
-            animator.SetBool(activeDialogue, false);
+            //animator.SetBool(activeDialogue, false);
             controller.enabled = true;
 
             float translation = Input.GetAxis("Vertical") * speed;
@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
         else if (dialogueManager.isActive)
         {
             animator.SetBool(isWalkingHash, false);
+            //animator.SetBool(activeDialogue, true);
             controller.enabled = false;
         }
 

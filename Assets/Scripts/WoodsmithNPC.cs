@@ -18,7 +18,6 @@ public class WoodsmithNPC : NPCController
     private PlayerController pc;
     private CharacterController characterController;
     private bool debug = false;
-    private bool HasJam { get; set; } = true; //TODO Implementar que tenga jam
     // Update is called once per frameaw
 
     void Update()
@@ -56,15 +55,16 @@ public class WoodsmithNPC : NPCController
                     }
                     else
                     {
-                        if (HasJam)
-                        {
-                            dialogueTrigger.TriggerDialogue(CHAIR);
-                            setPlayerVariables();
-                        }
-                        else
-                        {
-                            dialogueTrigger.TriggerDialogue(NO_JAM);
-                        }
+						if (pc.GetComponent<InventoryController>().hasItem("Jar"))
+						{
+							chair.SetActive(true);
+							pc.GetComponent<InventoryController>().removeItem("Jar");
+							dialogueTrigger.TriggerDialogue(CHAIR);
+						}
+						else
+						{
+						dialogueTrigger.TriggerDialogue(NO_JAM);
+						}
                     }
                 }
                 else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
@@ -115,7 +115,6 @@ public class WoodsmithNPC : NPCController
 
     void finishBerryMission()
     {
-		chair.SetActive(true);
         HasChair = false;
         missionsGame.setFinished(BLUEBERRY_MISSION);
         gameController.BlueberryMissionFinished = true;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BerryNPC : NPCController
 {
+	public GameObject jam;
     private const int KILL_ALIEN = 0;
     private const int JAM = 1;
 
@@ -21,6 +22,7 @@ public class BerryNPC : NPCController
                 if (missionsGame.isFinished(BERRY_ALIEN_DEAD))
                 {
                     dialogueTrigger.TriggerDialogue(JAM);
+					jam.SetActive(true);
                 }
                 else
                 {

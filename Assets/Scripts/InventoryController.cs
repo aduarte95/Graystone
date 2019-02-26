@@ -119,7 +119,8 @@ public class InventoryController : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Equipped: " + weapon.name+ weapon.GetComponent<Pickup>().itemButton.name);
+			weaponEquipped = weapon.tag;
+			Debug.Log("Equipped: " + weapon.tag);
             stick.SetActive(true);
             
 			Instantiate(weapon.GetComponent<Pickup>().itemButton, weaponSlot.transform, false);
@@ -192,6 +193,13 @@ public class InventoryController : MonoBehaviour
             }
         }
     }
+	
+	public void removeItem(string item){
+		foreach(GameObject slot in slots){
+			if(slot.GetComponent<Slot>().item == item)
+				slot.GetComponent<Slot>().RemoveItem();
+		}
+	}
 	
 	public bool hasNAmountOfItem(string item, int n){ //returns true if it has at n or more of "item" in inventory
 		GameObject slot;
