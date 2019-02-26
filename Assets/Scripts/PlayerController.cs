@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (dialogueManager.isActive)
         {
-            //animator.SetBool(isWalkingHash, false);
+            animator.SetBool(isWalkingHash, false);
             //animator.SetBool(activeDialogue, true);
             controller.enabled = false;
         }
