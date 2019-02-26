@@ -24,9 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="995ced36-1013-4747-ad92-44a301f36a07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graystone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graystone/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,57 +63,57 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2941">
-              <caret line="176" column="51" selection-start-line="176" selection-start-column="51" selection-end-line="176" selection-end-column="51" />
+            <state relative-caret-position="102">
+              <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
               <folding>
-                <marker date="1551210556645" expanded="false" signature="6:113" ph="..." />
-                <marker date="1551210556645" expanded="true" signature="160:8395" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="1686:2068" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2118:2165" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2207:2253" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2290:2356" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2397:2492" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2539:2607" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2668:6408" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2683:2762" ph="/* if (isPoisoned) ... */" />
-                <marker date="1551210556645" expanded="true" signature="2787:2885" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="2898:2999" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="3065:3115" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="3184:3246" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="3294:4784" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="3664:3754" ph="/* transform.Translate(0, 0, translation); ... */" />
-                <marker date="1551210556645" expanded="true" signature="3870:4020" ph="/* moveDirection = transform.TransformDirection(moveDirection); ... */" />
-                <marker date="1551210556645" expanded="true" signature="4067:4172" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="4290:4626" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="4397:4493" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="4526:4611" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="4643:4774" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="4827:4939" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="5027:5124" ph="/* if (Input.GetKeyDown(KeyCode.R)) ... */" />
-                <marker date="1551210556645" expanded="true" signature="5170:6026" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="5201:5278" ph="/* DEBUG APPLE NPC ... */" />
-                <marker date="1551210556645" expanded="true" signature="5333:5995" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="5413:5552" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="5577:5889" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="5771:5867" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="6072:6389" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="6171:6264" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="6285:6375" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="6464:6477" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="6503:7162" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="6617:6800" ph="/* This would cast rays only against colliders in layer 8. ... */" />
-                <marker date="1551210556645" expanded="true" signature="7052:7097" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7110:7156" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7208:7229" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7277:7290" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7337:7350" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7376:8128" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7610:7737" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7665:7727" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7896:8033" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="7956:8023" ph="{...}" />
-                <marker date="1551210556645" expanded="true" signature="8134:8318" ph="/* IEnumerator poisoned() ... */" />
-                <marker date="1551210556645" expanded="true" signature="8352:8391" ph="{...}" />
+                <marker date="1551211833003" expanded="false" signature="6:113" ph="..." />
+                <marker date="1551211833003" expanded="true" signature="160:8447" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="1686:2068" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2118:2165" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2207:2253" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2290:2356" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2397:2492" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2539:2607" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2668:6460" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2683:2762" ph="/* if (isPoisoned) ... */" />
+                <marker date="1551211833003" expanded="true" signature="2787:2885" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="2898:2999" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="3065:3115" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="3184:3246" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="3294:4784" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="3664:3754" ph="/* transform.Translate(0, 0, translation); ... */" />
+                <marker date="1551211833003" expanded="true" signature="3870:4020" ph="/* moveDirection = transform.TransformDirection(moveDirection); ... */" />
+                <marker date="1551211833003" expanded="true" signature="4067:4172" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="4290:4626" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="4397:4493" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="4526:4611" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="4643:4774" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="4827:4991" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="5079:5176" ph="/* if (Input.GetKeyDown(KeyCode.R)) ... */" />
+                <marker date="1551211833003" expanded="true" signature="5222:6078" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="5253:5330" ph="/* DEBUG APPLE NPC ... */" />
+                <marker date="1551211833003" expanded="true" signature="5385:6047" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="5465:5604" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="5629:5941" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="5823:5919" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="6124:6441" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="6223:6316" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="6337:6427" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="6516:6529" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="6555:7214" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="6669:6852" ph="/* This would cast rays only against colliders in layer 8. ... */" />
+                <marker date="1551211833003" expanded="true" signature="7104:7149" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7162:7208" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7260:7281" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7329:7342" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7389:7402" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7428:8180" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7662:7789" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7717:7779" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="7948:8085" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="8008:8075" ph="{...}" />
+                <marker date="1551211833003" expanded="true" signature="8186:8370" ph="/* IEnumerator poisoned() ... */" />
+                <marker date="1551211833003" expanded="true" signature="8404:8443" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -361,12 +359,12 @@
       <workItem from="1550967242216" duration="7741000" />
       <workItem from="1551043784903" duration="2757000" />
       <workItem from="1551120173866" duration="3027000" />
-      <workItem from="1551206945207" duration="3742000" />
+      <workItem from="1551206945207" duration="4683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44456000" />
+    <option name="totallyTimeSpent" value="45397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,57 +978,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2941">
-          <caret line="176" column="51" selection-start-line="176" selection-start-column="51" selection-end-line="176" selection-end-column="51" />
+        <state relative-caret-position="102">
+          <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
           <folding>
-            <marker date="1551210556645" expanded="false" signature="6:113" ph="..." />
-            <marker date="1551210556645" expanded="true" signature="160:8395" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="1686:2068" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2118:2165" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2207:2253" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2290:2356" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2397:2492" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2539:2607" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2668:6408" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2683:2762" ph="/* if (isPoisoned) ... */" />
-            <marker date="1551210556645" expanded="true" signature="2787:2885" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="2898:2999" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="3065:3115" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="3184:3246" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="3294:4784" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="3664:3754" ph="/* transform.Translate(0, 0, translation); ... */" />
-            <marker date="1551210556645" expanded="true" signature="3870:4020" ph="/* moveDirection = transform.TransformDirection(moveDirection); ... */" />
-            <marker date="1551210556645" expanded="true" signature="4067:4172" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="4290:4626" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="4397:4493" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="4526:4611" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="4643:4774" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="4827:4939" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="5027:5124" ph="/* if (Input.GetKeyDown(KeyCode.R)) ... */" />
-            <marker date="1551210556645" expanded="true" signature="5170:6026" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="5201:5278" ph="/* DEBUG APPLE NPC ... */" />
-            <marker date="1551210556645" expanded="true" signature="5333:5995" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="5413:5552" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="5577:5889" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="5771:5867" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="6072:6389" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="6171:6264" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="6285:6375" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="6464:6477" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="6503:7162" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="6617:6800" ph="/* This would cast rays only against colliders in layer 8. ... */" />
-            <marker date="1551210556645" expanded="true" signature="7052:7097" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7110:7156" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7208:7229" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7277:7290" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7337:7350" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7376:8128" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7610:7737" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7665:7727" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7896:8033" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="7956:8023" ph="{...}" />
-            <marker date="1551210556645" expanded="true" signature="8134:8318" ph="/* IEnumerator poisoned() ... */" />
-            <marker date="1551210556645" expanded="true" signature="8352:8391" ph="{...}" />
+            <marker date="1551211833003" expanded="false" signature="6:113" ph="..." />
+            <marker date="1551211833003" expanded="true" signature="160:8447" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="1686:2068" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2118:2165" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2207:2253" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2290:2356" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2397:2492" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2539:2607" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2668:6460" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2683:2762" ph="/* if (isPoisoned) ... */" />
+            <marker date="1551211833003" expanded="true" signature="2787:2885" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="2898:2999" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="3065:3115" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="3184:3246" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="3294:4784" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="3664:3754" ph="/* transform.Translate(0, 0, translation); ... */" />
+            <marker date="1551211833003" expanded="true" signature="3870:4020" ph="/* moveDirection = transform.TransformDirection(moveDirection); ... */" />
+            <marker date="1551211833003" expanded="true" signature="4067:4172" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="4290:4626" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="4397:4493" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="4526:4611" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="4643:4774" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="4827:4991" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="5079:5176" ph="/* if (Input.GetKeyDown(KeyCode.R)) ... */" />
+            <marker date="1551211833003" expanded="true" signature="5222:6078" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="5253:5330" ph="/* DEBUG APPLE NPC ... */" />
+            <marker date="1551211833003" expanded="true" signature="5385:6047" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="5465:5604" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="5629:5941" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="5823:5919" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="6124:6441" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="6223:6316" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="6337:6427" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="6516:6529" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="6555:7214" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="6669:6852" ph="/* This would cast rays only against colliders in layer 8. ... */" />
+            <marker date="1551211833003" expanded="true" signature="7104:7149" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7162:7208" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7260:7281" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7329:7342" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7389:7402" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7428:8180" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7662:7789" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7717:7779" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="7948:8085" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="8008:8075" ph="{...}" />
+            <marker date="1551211833003" expanded="true" signature="8186:8370" ph="/* IEnumerator poisoned() ... */" />
+            <marker date="1551211833003" expanded="true" signature="8404:8443" ph="{...}" />
           </folding>
         </state>
       </provider>
