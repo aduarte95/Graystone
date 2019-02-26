@@ -8,9 +8,9 @@ public class GameController : MonoBehaviour
     private const int WOOD_DIAMOND = 1;
     private const int BAKERY_DIAMOND = 2;
     private const int APPLE_DIAMOND = 3;
-    private const int ALIEN_DIAMOND = 4;
+    private const int RIVER_DIAMOND = 4;
     private const int LAKE_DIAMOND = 5;
-    private bool notDebugging = true; //Put in false if you're debugging.
+    private bool debug = false; //Put in true if you're debugging.
     public GameObject[] objects;
 
     public int alienDied = 0; // i'll look for a better solution, but this will be needed for the best behavior of the dialogue that makes alien appears
@@ -22,11 +22,13 @@ public class GameController : MonoBehaviour
     public bool Begin { get; private set; } = true;
     public bool Next { get; set; } = false;
     public bool CandleMissionFinished { get; set; } = false;
+    public bool BlueberryMissionFinished { get; set; } = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        if(!notDebugging)
+        if(debug)
         {
             dialogueController.FinishedHouse = true;
         }
@@ -35,7 +37,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (notDebugging)
+        if (!debug)
         {
             if (Begin) //Initial Dialogue
             {
@@ -75,8 +77,29 @@ public class GameController : MonoBehaviour
                     objects[WOOD_DIAMOND].SetActive(true); //shows next mission
                     objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
                 }
+                else if (BlueberryMissionFinished)
+                {
+                    Next = false;
+                    BlueberryMissionFinished = false;
+                    dialogueController.pieMission();
+                    objects[BAKERY_DIAMOND].SetActive(true); //shows next mission
+                    objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+                }
 
-                
+
+            }
+        } else
+        {
+            if(Next)
+            {
+                if (BlueberryMissionFinished)
+                {
+                    Next = false;
+                    BlueberryMissionFinished = false;
+                    dialogueController.pieMission();
+                    objects[BAKERY_DIAMOND].SetActive(true); //shows next mission
+                    objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+                }
             }
         }
         /*
