@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
+	public bool placedCandle = false;
     public bool[] isFull;
     public GameObject stick;
     public GameObject[] slots;
@@ -154,6 +155,8 @@ public class InventoryController : MonoBehaviour
 	}
 
     public void putItem(GameObject item){
+		if(item.tag == "Candle") placedCandle = true;
+			
 		for (int i = 0; i < slots.Length; i++)
         {
             if (isFull[i])

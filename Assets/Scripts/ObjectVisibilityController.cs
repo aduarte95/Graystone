@@ -3,7 +3,7 @@
 public class ObjectVisibilityController : ObjectInteraction
 {
     public GameObject objectToHide;
-
+	
     override public void interact()
     {
 		Pickup p = objectToHide.GetComponent<Pickup>();
@@ -23,7 +23,12 @@ public class ObjectVisibilityController : ObjectInteraction
 		else
 		{
 			if(!ic.hasItem(objectToHide.tag)){
+				if(objectToHide.gameObject.CompareTag("Jug") && !ic.placedCandle){ 
+					Debug.Log("Player must have placed candle before taking jug");
+					return;
+				}
 				ic.takeItem(objectToHide);
+				
 				objectToHide.SetActive(false);
 				if (objectToHide.gameObject.CompareTag("Jug"))
 				{
@@ -31,9 +36,8 @@ public class ObjectVisibilityController : ObjectInteraction
 					player.hasJug = true;
 					objectToHide.SetActive(true);
 					objectToHide.GetComponent<Renderer>().enabled = false;
+					
 				}
-				
-				
 			} else {Debug.Log("Player already has that item");}
 		}
 	}
