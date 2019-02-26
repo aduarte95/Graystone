@@ -18,6 +18,7 @@ public class ObjectVisibilityController : ObjectInteraction
 					objectToHide.GetComponent<Renderer>().enabled = true;
 				}
 				objectToHide.SetActive(true);
+				gameObject.SetActive(false);
 			} else {Debug.Log("Player doesn't have that item");}
 		}
 		else

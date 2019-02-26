@@ -18,7 +18,6 @@ public class WoodsmithNPC : NPCController
     private PlayerController pc;
     private CharacterController characterController;
     private bool debug = true;
-    private bool HasJam { get; set; } = true; //TODO Implementar que tenga jam
     // Update is called once per frameaw
 
     void Update()
@@ -40,8 +39,9 @@ public class WoodsmithNPC : NPCController
                 }
                 else
                 {
-                    if (HasJam)
+                    if (pc.GetComponent<InventoryController>().hasItem("Jar"))
                     {
+						pc.GetComponent<InventoryController>().removeItem("Jar");
                         dialogueTrigger.TriggerDialogue(CHAIR);
                         finishBerryMission();
                     }
