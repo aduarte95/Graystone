@@ -94,6 +94,23 @@ public class InventoryController : MonoBehaviour
         }*/
     }
 
+
+    public void setVisibility(bool t)
+    {
+        if (t)
+        {
+            Debug.Log("Enabling inventory...");
+            inventory.SetActive(true);
+            isHidden = false;
+        }
+        else
+        {
+            Debug.Log("disabling inventory...");
+            inventory.SetActive(false);
+            isHidden = true;
+        }
+    }
+
 	public void EquipWeapon(GameObject weapon){
 		if(weapon == null){
 			weaponSlot.GetComponent<WeaponSlot>().ConsumeItem();
@@ -114,6 +131,7 @@ public class InventoryController : MonoBehaviour
         {
             if (!isFull[i])
             {
+                setVisibility(true);
                 Debug.Log("Player picked up "+item.name+".");
                 isFull[i] = true;
 				slots[i].GetComponent<Slot>().item = item.tag;

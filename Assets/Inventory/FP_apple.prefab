@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2201393485255261039}
   m_Layer: 0
   m_Name: FP_apple
-  m_TagString: Untagged
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+  posionCure: 1
