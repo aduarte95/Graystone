@@ -17,66 +17,89 @@ public class WoodsmithNPC : NPCController
     private bool playerTransported = false;
     private PlayerController pc;
     private CharacterController characterController;
-    private bool debug = true;
+    private bool debug = false;
     // Update is called once per frameaw
 
     void Update()
     {
-        if (CanTalk) //actives in position of npc
+        if (debug)
         {
-            CanTalk = false;
-            transform.LookAt(targetPosition);
-            /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
-              gameController.objects[1].SetActive(true); //FOR DEBUG
-              gameController.objects[5].SetActive(true); //FOR DEBUG*/
-
-            if (missionsGame.isFinished(CANDLE_MISSION))
+            if (CanTalk) //actives in position of npc
             {
-                if (!missionsGame.isFinished(BERRY_ALIEN_DEAD)) //First dialogue asking for favor
+                CanTalk = false;
+                HasChair = true;
+                dialogueTrigger.TriggerDialogue(CHAIR);
+                setPlayerVariables();
+            }
+                if (HasChair && dialogueTrigger.dialogues[CHAIR].Finished)
+            {
+                finishBerryMission(); //TODO Implements if took chair then teletransport
+            }
+        }
+        else
+        {
+            if (CanTalk) //actives in position of npc
+            {
+                CanTalk = false;
+                transform.LookAt(targetPosition);
+                /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
+                  gameController.objects[1].SetActive(true); //FOR DEBUG
+                  gameController.objects[5].SetActive(true); //FOR DEBUG*/
+
+                if (missionsGame.isFinished(CANDLE_MISSION))
                 {
-                    dialogueTrigger.TriggerDialogue(FAVOR_FOR_CHAIR);
-                    missionsGame.setFinished(ASK_CHAIR_MISSION);
-                }
-                else
-                {
-                    if (pc.GetComponent<InventoryController>().hasItem("Jar"))
+                    if (!missionsGame.isFinished(BERRY_ALIEN_DEAD)) //First dialogue asking for favor
                     {
-						pc.GetComponent<InventoryController>().removeItem("Jar");
-                        dialogueTrigger.TriggerDialogue(CHAIR);
-                        finishBerryMission();
+                        dialogueTrigger.TriggerDialogue(FAVOR_FOR_CHAIR);
+                        missionsGame.setFinished(ASK_CHAIR_MISSION);
                     }
                     else
                     {
-                        dialogueTrigger.TriggerDialogue(NO_JAM);
+			    if (pc.GetComponent<InventoryController>().hasItem("Jar"))
+			    {
+							pc.GetComponent<InventoryController>().removeItem("Jar");
+				dialogueTrigger.TriggerDialogue(CHAIR);
+				finishBerryMission();
+			    }
+			    else
+			    {
+				dialogueTrigger.TriggerDialogue(NO_JAM);
+			    }
                     }
                 }
-            }
-            else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
-            {
-                dialogueTrigger.TriggerDialogue(notInMission);
-            }
-            else if (missionsGame.isFinished(APPLE_MISSION) && true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
-            {
-                debug = false;
-                dialogueTrigger.TriggerDialogue(RIGHT);
-                pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-                characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
-                pc.emptyInventory();
-                candle.SetActive(true);
-            }
-            else
-            {
-                dialogueTrigger.TriggerDialogue(WRONG);
+                else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
+                {
+                    dialogueTrigger.TriggerDialogue(notInMission);
+                }
+                else if (missionsGame.isFinished(APPLE_MISSION) && true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
+                {
+                    debug = false;
+                    dialogueTrigger.TriggerDialogue(RIGHT);
+                    setPlayerVariables();
+                    pc.emptyInventory();
+                    candle.SetActive(true);
+                }
+                else
+                {
+                    dialogueTrigger.TriggerDialogue(WRONG);
+                }
             }
         }
 
-        if (HasCandle && dialogueTrigger.dialogues[RIGHT].Finished)
+        if (!debug)
         {
-            finishCandleMission();
-        }
-        else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
-        {
-            dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].setDiamondsMission();
+            if (HasCandle && dialogueTrigger.dialogues[RIGHT].Finished)
+            {
+                finishCandleMission();
+            }
+            else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
+            {
+                dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].setDiamondsMission();
+            }
+            else if (HasChair && dialogueTrigger.dialogues[CHAIR].Finished)
+            {
+                finishBerryMission(); //TODO Implements if took chair then teletransport
+            }
         }
     }
 
@@ -95,10 +118,10 @@ public class WoodsmithNPC : NPCController
 		chair.SetActive(true);
         HasChair = false;
         missionsGame.setFinished(BLUEBERRY_MISSION);
-        //gameController.BlueberryMissionFinished = true; TODO, I DONT KNOW IF ITS NECESSARY YET
-        //gameController.Next = true;
+        gameController.BlueberryMissionFinished = true;
+        gameController.Next = true;
         //TODO: MAYBE CAN BE A METHOD ON PLAYERCONTROLLER
-        //teletransportPlayer();
+        teletransportPlayer();
     }
 
     void teletransportPlayer()
@@ -108,6 +131,12 @@ public class WoodsmithNPC : NPCController
         characterController.enabled = true;
         house.setObjects();
         positionController.cleanText();
+    }
+
+    private void setPlayerVariables()
+    {
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
     }
 
     public override void setName()
