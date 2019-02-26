@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip stickBow;
     public int isWalkingHash = Animator.StringToHash("IsWalking");
     public int canRun = Animator.StringToHash("CanRun");
+    public int activeDialogue = Animator.StringToHash("activeDialogue");
     public float health;
     public float speed;
     public float acceleration;
@@ -45,7 +46,9 @@ public class PlayerController : MonoBehaviour
     
     
     private Vector3 moveDirection = Vector3.zero;
-    private CharacterController controller;
+    public CharacterController controller;
+    
+    public Vector3 dontMove = new Vector3(0,0,0);
 
     
     
@@ -124,6 +127,8 @@ public class PlayerController : MonoBehaviour
 
         if (dialogueManager.isActive == false)
         {
+            animator.SetBool(activeDialogue, false);
+            controller.enabled = true;
 
             float translation = Input.GetAxis("Vertical") * speed;
             float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
@@ -162,10 +167,17 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                
                 speed = 2.0f;
                 animator.SetBool(isWalkingHash, false);
             }
         }
+        else if (dialogueManager.isActive)
+        {
+            animator.SetBool(isWalkingHash, false);
+            controller.enabled = false;
+        }
+
 
 
         //SETEAR EN TRUE QUE SE COMIO LAS MANZANAS. MIENTRAS TANTO JAJA
