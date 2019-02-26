@@ -17,25 +17,18 @@ public class WoodsmithNPC : NPCController
     private PlayerController pc;
     private CharacterController characterController;
     private bool debug = true;
-    private bool HasJam {get; set;} = true; //TODO Implementar que tenga jam
-
-    public GameObject player;
+    private bool HasJam { get; set; } = true; //TODO Implementar que tenga jam
     // Update is called once per frameaw
-
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
 
     void Update()
     {
-        if(CanTalk) //actives in position of npc
+        if (CanTalk) //actives in position of npc
         {
             CanTalk = false;
             transform.LookAt(targetPosition);
-          /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
-            gameController.objects[1].SetActive(true); //FOR DEBUG
-            gameController.objects[5].SetActive(true); //FOR DEBUG*/
+            /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
+              gameController.objects[1].SetActive(true); //FOR DEBUG
+              gameController.objects[5].SetActive(true); //FOR DEBUG*/
 
             if (missionsGame.isFinished(CANDLE_MISSION))
             {
@@ -50,16 +43,18 @@ public class WoodsmithNPC : NPCController
                     {
                         dialogueTrigger.TriggerDialogue(CHAIR);
                         finishBerryMission();
-                    } else
+                    }
+                    else
                     {
                         dialogueTrigger.TriggerDialogue(NO_JAM);
                     }
                 }
-            } else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
+            }
+            else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
             {
                 dialogueTrigger.TriggerDialogue(notInMission);
             }
-            else if (missionsGame.isFinished(APPLE_MISSION) && player.GetComponent<InventoryController>().hasNAmountOfItem("Apple",5)) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
+            else if (missionsGame.isFinished(APPLE_MISSION) && player.GetComponent<InventoryController>().hasNAmountOfItem("Apple", 5)) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
             {
                 debug = false;
                 dialogueTrigger.TriggerDialogue(RIGHT);
@@ -76,8 +71,9 @@ public class WoodsmithNPC : NPCController
 
         if (HasCandle && dialogueTrigger.dialogues[RIGHT].Finished)
         {
-            finishCandleMission();  
-        } else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
+            finishCandleMission();
+        }
+        else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
         {
             dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].setDiamondsMission();
         }
