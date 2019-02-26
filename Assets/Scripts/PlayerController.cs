@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static Animator animator;
+    public Animator animator;
     private AudioSource audioSource;
     public AudioClip hit;
     public AudioClip stickBow;
