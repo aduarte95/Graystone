@@ -18,8 +18,15 @@ public class WoodsmithNPC : NPCController
     private CharacterController characterController;
     private bool debug = true;
     private bool HasJam {get; set;} = true; //TODO Implementar que tenga jam
-   
+
+    public GameObject player;
     // Update is called once per frameaw
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
         if(CanTalk) //actives in position of npc
@@ -52,7 +59,7 @@ public class WoodsmithNPC : NPCController
             {
                 dialogueTrigger.TriggerDialogue(notInMission);
             }
-            else if (missionsGame.isFinished(APPLE_MISSION) && true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
+            else if (missionsGame.isFinished(APPLE_MISSION) && player.GetComponent<InventoryController>().hasNAmountOfItem("Apple",5)) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
             {
                 debug = false;
                 dialogueTrigger.TriggerDialogue(RIGHT);

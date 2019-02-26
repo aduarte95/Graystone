@@ -116,7 +116,7 @@ public class InventoryController : MonoBehaviour
             {
                 Debug.Log("Player picked up "+item.name+".");
                 isFull[i] = true;
-				slots[i].GetComponent<Slot>().item = item.name;
+				slots[i].GetComponent<Slot>().item = item.tag;
                 inventoryLength++;
                 Instantiate(item.GetComponent<Pickup>().itemButton, slots[i].transform, false);
                 //Destroy(gameObject);
@@ -179,6 +179,6 @@ public class InventoryController : MonoBehaviour
 			slot = slots[i];
 			if(slot.GetComponent<Slot>().item == item)	count++;
 		}
-		return count <= n;
+		return count == n;
 	}
 }

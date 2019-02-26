@@ -31,10 +31,10 @@ public class Pickup : MonoBehaviour
             {
                 if (!inventory.isFull[i])
                 {
-                    Debug.Log("Player picked up an item.");
+                    Debug.Log("Player picked up an " + tag);
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
-					inventory.slots[i].GetComponent<Slot>().item = gameObject.tag;
+					inventory.slots[i].GetComponent<Slot>().item = tag;
 
                     if(gameObject.GetComponent<Candle>() != null)
                     {
