@@ -42,7 +42,7 @@ public class WoodsmithNPC : NPCController
                     if (HasJam)
                     {
                         dialogueTrigger.TriggerDialogue(CHAIR);
-                        finishBerryMission();
+                        setPlayerVariables();
                     }
                     else
                     {
@@ -58,8 +58,7 @@ public class WoodsmithNPC : NPCController
             {
                 debug = false;
                 dialogueTrigger.TriggerDialogue(RIGHT);
-                pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-                characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+                setPlayerVariables();
                 pc.emptyInventory();
                 candle.SetActive(true);
             }
@@ -76,6 +75,11 @@ public class WoodsmithNPC : NPCController
         else if (dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].Finished)
         {
             dialogueTrigger.dialogues[FAVOR_FOR_CHAIR].setDiamondsMission();
+        }
+        else if (HasChair && dialogueTrigger.dialogues[CHAIR].Finished)
+        {
+            Debug.Log("finishing mission");
+            finishBerryMission(); //TODO Implements if took chair then teletransport
         }
     }
 
@@ -106,6 +110,12 @@ public class WoodsmithNPC : NPCController
         characterController.enabled = true;
         house.setObjects();
         positionController.cleanText();
+    }
+
+    private void setPlayerVariables()
+    {
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        characterController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
     }
 
     public override void setName()
