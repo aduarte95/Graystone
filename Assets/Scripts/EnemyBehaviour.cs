@@ -22,6 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
     int attack2Hash = Animator.StringToHash("Attack2");
 
     bool ableToMove;
+    bool isDead;
     public float speed = 2.0f;
     public int direction = 1;
     public float MaxDistS = 15;
@@ -49,6 +50,7 @@ public class EnemyBehaviour : MonoBehaviour
         currentHealth = maxHealth;
 
         ableToMove = true;
+        isDead = false;
         turn = false;
     }
 
@@ -188,21 +190,25 @@ public class EnemyBehaviour : MonoBehaviour
     // Reduce the health in "damageValue" points
     IEnumerator dealDamage(float damageValue)
     {
-        currentHealth -= damageValue;
-        // if health gets negative passes to 0
-        if (currentHealth > 0)
+        if (!isDead)
         {
-            animator.SetBool(getHitHash, true);
-            yield return new WaitForSeconds(0.5f);
-            animator.SetBool(getHitHash, false);
-        }
-        else
-        {
-            currentHealth = 0;
-            ableToMove = false;
-            animator.SetBool(dieHash, true);
-            berryNpc.is_berry_alien_dead = true; //Tells that the alien is dead
-            gameObject.SetActive(false);
+            currentHealth -= damageValue;
+            // if health gets negative passes to 0
+            if (currentHealth > 0)
+            {
+                animator.SetBool(getHitHash, true);
+                yield return new WaitForSeconds(0.5f);
+                animator.SetBool(getHitHash, false);
+            }
+            else
+            {
+                currentHealth = 0;
+                ableToMove = false;
+                animator.SetBool(dieHash, true);
+                berryNpc.is_berry_alien_dead = true; //Tells that the alien is dead
+                //gameObject.SetActive(false);
+                isDead = true;
+            }
         }
     }
 
