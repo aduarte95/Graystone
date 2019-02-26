@@ -55,16 +55,16 @@ public class WoodsmithNPC : NPCController
                     }
                     else
                     {
-			    if (pc.GetComponent<InventoryController>().hasItem("Jar"))
-			    {
+						if (pc.GetComponent<InventoryController>().hasItem("Jar"))
+						{
+							chair.SetActive(true);
 							pc.GetComponent<InventoryController>().removeItem("Jar");
-				dialogueTrigger.TriggerDialogue(CHAIR);
-				finishBerryMission();
-			    }
-			    else
-			    {
-				dialogueTrigger.TriggerDialogue(NO_JAM);
-			    }
+							dialogueTrigger.TriggerDialogue(CHAIR);
+						}
+						else
+						{
+						dialogueTrigger.TriggerDialogue(NO_JAM);
+						}
                     }
                 }
                 else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
@@ -115,7 +115,6 @@ public class WoodsmithNPC : NPCController
 
     void finishBerryMission()
     {
-		chair.SetActive(true);
         HasChair = false;
         missionsGame.setFinished(BLUEBERRY_MISSION);
         gameController.BlueberryMissionFinished = true;
