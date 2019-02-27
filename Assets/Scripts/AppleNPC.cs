@@ -13,7 +13,7 @@ public class AppleNPC : NPCController
     private int isWalkingHash = Animator.StringToHash("IsWalking");
     private int currentDialogue = 0;
     private bool StillMad { get; set; } = true; //Avoid npc seacrhes for player if eat another apple
-
+    private bool firstTime = true;
     public Transform Sphere; //Set limits
 
     // Update is called once per frame
@@ -34,8 +34,9 @@ public class AppleNPC : NPCController
              
         } else
         {
-            if (dialogueTrigger.dialogues[currentDialogue].Finished)
+            if (dialogueTrigger.dialogues[currentDialogue].Finished && firstTime)
             {
+                firstTime = false;
                 dialogueTrigger.dialogues[currentDialogue].setDiamondsMission();
                 //dialogueTrigger.dialogues[currentDialogue].cleanDiamonds(); // For first mission :o
                 if (currentDialogue < dialogueTrigger.dialogues.Length - 1)
