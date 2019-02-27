@@ -43331,7 +43331,7 @@ GameObject:
   - component: {fileID: 1427644319}
   - component: {fileID: 1427644318}
   m_Layer: 5
-  m_Name: GameOverBackground
+  m_Name: DarkBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52608,7 +52608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1402130231}
   restartDelay: 5
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 1427644316}
 --- !u!1001 &1769474985
 PrefabInstance:
   m_ObjectHideFlags: 0
