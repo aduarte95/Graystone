@@ -75,11 +75,11 @@ public class WoodsmithNPC : NPCController
     {
         if (gameController.Debug)
         {
-            if (HasChair)// && dialogueTrigger.dialogues[CHAIR].Finished)
+            if (HasChair && dialogueTrigger.dialogues[CHAIR].Finished)
             {
                 missionsGame.setFinished(BLUEBERRY_MISSION);
                 HasChair = false;
-                //   finishBerryMission(); //Comment if you don't want to be teletransported
+                finishBerryMission(); //Comment if you don't want to be teletransported
             }
         }
         else

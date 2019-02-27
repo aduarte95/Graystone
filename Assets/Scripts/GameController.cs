@@ -101,15 +101,15 @@ public class GameController : MonoBehaviour
                     Next = false;
                     PieMissionFinished = false;
                     dialogueController.win();
-                }
-                /*if (BlueberryMissionFinished)
+                } 
+                if (BlueberryMissionFinished)
                 {
                     Next = false;
                     BlueberryMissionFinished = false;
                     dialogueController.pieMission();
                     objects[BAKERY_DIAMOND].SetActive(true); //shows next mission
                     objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
-                }*/
+                }
             }
         }
         /*
