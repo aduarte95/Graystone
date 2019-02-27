@@ -9,6 +9,7 @@ public class NPCController : MonoBehaviour
     protected const int BLUEBERRY_MISSION = 2;
     protected const int ASK_CHAIR_MISSION = 3;
     protected const int BERRY_ALIEN_DEAD = 4;
+    protected const int ASK_BED_MISSION = 5;
     protected int notInMission;
     public Animator animator;
     public DialogueTrigger dialogueTrigger;
@@ -26,6 +27,28 @@ public class NPCController : MonoBehaviour
         notInMission = dialogueTrigger.dialogues.Length - 1;
         animator = GetComponent<Animator>();
         setName();
+    }
+
+    private void Update()
+    {
+        if (CanTalk) //actives in position of npc
+        {
+            CanTalk = false;
+            transform.LookAt(targetPosition);
+            talk();
+        }
+
+        checkMission();
+    }
+
+    virtual public void talk()
+    {
+
+    }
+
+    virtual public void checkMission()
+    {
+
     }
 
     virtual public void setName()

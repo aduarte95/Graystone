@@ -3397,7 +3397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6595,19 +6595,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1530978119361648, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_Name
-      value: Sugar Daddy
+      value: Sugar Daddy NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530978119361648, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9
+      value: -1.56
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: -1.19
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6653,8 +6657,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5000023
       objectReference: {fileID: 0}
+    - target: {fileID: 4621142262997162, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527743453445082, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527743453445082, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
+--- !u!95 &222649539 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95238694061281862, guid: dbbdea10d9741a147b25b3d4dbcb2b7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 222649538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &232870534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9777,6 +9799,9 @@ MonoBehaviour:
   missionsGame: {fileID: 854675706}
   positionController: {fileID: 545868429}
   gameController: {fileID: 138790278}
+  pc: {fileID: 1402130225}
+  characterController: {fileID: 1402130228}
+  house: {fileID: 1918537558}
 --- !u!114 &318067589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18912,6 +18937,10 @@ MonoBehaviour:
   - name: 'A voice in your mind: '
     sentences:
     - Pie
+    diamondsMission: []
+  - name: 'A voice in your mind: '
+    sentences:
+    - WIN
     diamondsMission: []
   cont: 0
 --- !u!1001 &592915433
@@ -28289,12 +28318,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 222649538}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &908186697 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b,
-    type: 3}
-  m_PrefabInstance: {fileID: 222649538}
+--- !u!114 &908186698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908186696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c95933561bcd0b4dabab5665b4b8fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: 'Sugar Daddy:'
+    sentences:
+    - Yeah sure, kill aliens
+    diamondsMission:
+    - {fileID: 1152271396}
+  - name: 'Sugar Daddy:'
+    sentences:
+    - Thanks, take sugar.
+    diamondsMission: []
+  - name: 'Sugar Daddy:'
+    sentences:
+    - You alredy got what you need
+    diamondsMission: []
+  - name: 'Sugar Daddy:'
+    sentences:
+    - Sorry, cant help
+    diamondsMission: []
+  cont: 0
 --- !u!114 &908186699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28307,13 +28361,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11a942332ed1074cb8fd1e2a0450836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  dialogueTrigger: {fileID: 0}
-  player: {fileID: 0}
-  targetPosition: {fileID: 0}
-  missionsGame: {fileID: 0}
-  positionController: {fileID: 0}
-  gameController: {fileID: 0}
+  animator: {fileID: 222649539}
+  dialogueTrigger: {fileID: 908186698}
+  player: {fileID: 1402130225}
+  targetPosition: {fileID: 1402130229}
+  missionsGame: {fileID: 854675706}
+  positionController: {fileID: 2030001840}
+  gameController: {fileID: 138790278}
+--- !u!64 &908186700
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908186696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 58cdb76c3fee9cc4a8fa3043a27cba7c, type: 3}
 --- !u!1001 &908285839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37849,6 +37917,7 @@ MonoBehaviour:
   missionsGame: {fileID: 854675706}
   positionController: {fileID: 1249558339}
   gameController: {fileID: 138790278}
+  jam: {fileID: 0}
   is_berry_alien_dead: 0
 --- !u!114 &1267025989
 MonoBehaviour:
@@ -60577,12 +60646,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030001838}
-  m_LocalRotation: {x: -0.000000014915713, y: -1, z: -0, w: 0.00040347356}
-  m_LocalPosition: {x: 145.2598, y: 0.8999914, z: -17.29664}
-  m_LocalScale: {x: 0.20382664, y: 0.79999995, z: 0.13424654}
+  m_LocalRotation: {x: 0.00028516268, y: -0.7071067, z: -0.7071068, w: 0.00028516262}
+  m_LocalPosition: {x: -1.42, y: -1.06, z: 0.61}
+  m_LocalScale: {x: 0.30574062, y: 1.2, z: 0.20137022}
   m_Children: []
-  m_Father: {fileID: 908186697}
-  m_RootOrder: 2
+  m_Father: {fileID: 1791226680}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2030001840
 MonoBehaviour:
@@ -62257,7 +62326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69
+      value: 248.2
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62265,7 +62334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 159
+      value: 133.9
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalRotation.x

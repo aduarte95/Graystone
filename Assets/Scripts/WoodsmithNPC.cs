@@ -13,80 +13,76 @@ public class WoodsmithNPC : NPCController
 	public GameObject chair;
     public HouseSceneController house;
     public bool HasCandle { get; protected set; } = false;
-    private bool HasChair { get; set; } = false; //TODO Implementar que tenga silla para volver a casa 
+    private bool HasChair { get; set; } = true; //TODO Implementar que tenga silla para volver a casa 
     private bool playerTransported = false;
     private PlayerController pc;
     private CharacterController characterController;
-    private bool debug = false;
-    // Update is called once per frameaw
 
-    void Update()
+    public override void talk()
     {
-        if (debug)
+        if (gameController.Debug)
         {
-            if (CanTalk) //actives in position of npc
-            {
-                CanTalk = false;
-                HasChair = true;
-                dialogueTrigger.TriggerDialogue(CHAIR);
-                setPlayerVariables();
-            }
-                if (HasChair && dialogueTrigger.dialogues[CHAIR].Finished)
-            {
-                finishBerryMission(); //TODO Implements if took chair then teletransport
-            }
+            HasChair = true;
+            dialogueTrigger.TriggerDialogue(CHAIR);
+            setPlayerVariables();
         }
         else
         {
-            if (CanTalk) //actives in position of npc
-            {
-                CanTalk = false;
-                transform.LookAt(targetPosition);
-                /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
-                  gameController.objects[1].SetActive(true); //FOR DEBUG
-                  gameController.objects[5].SetActive(true); //FOR DEBUG*/
+            /* missionsGame.setFinished(CANDLE_MISSION); //FOR DEBUG
+              gameController.objects[1].SetActive(true); //FOR DEBUG
+              gameController.objects[5].SetActive(true); //FOR DEBUG*/
 
-                if (missionsGame.isFinished(CANDLE_MISSION))
+            if (missionsGame.isFinished(CANDLE_MISSION))
+            {
+                if (!missionsGame.isFinished(BERRY_ALIEN_DEAD)) //First dialogue asking for favor
                 {
-                    if (!missionsGame.isFinished(BERRY_ALIEN_DEAD)) //First dialogue asking for favor
-                    {
-                        dialogueTrigger.TriggerDialogue(FAVOR_FOR_CHAIR);
-                        missionsGame.setFinished(ASK_CHAIR_MISSION);
-                    }
-                    else
-                    {
-						if (pc.GetComponent<InventoryController>().hasItem("Jar"))
-						{
-							chair.SetActive(true);
-							pc.GetComponent<InventoryController>().removeItem("Jar");
-							dialogueTrigger.TriggerDialogue(CHAIR);
-						}
-						else
-						{
-						dialogueTrigger.TriggerDialogue(NO_JAM);
-						}
-                    }
-                }
-                else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
-                {
-                    dialogueTrigger.TriggerDialogue(notInMission);
-                }
-                else if (missionsGame.isFinished(APPLE_MISSION) && true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
-                {
-                    debug = false;
-                    dialogueTrigger.TriggerDialogue(RIGHT);
-                    setPlayerVariables();
-                    pc.emptyInventory();
-                    candle.SetActive(true);
+                    dialogueTrigger.TriggerDialogue(FAVOR_FOR_CHAIR);
+                    missionsGame.setFinished(ASK_CHAIR_MISSION);
                 }
                 else
                 {
-                    dialogueTrigger.TriggerDialogue(WRONG);
+                    if (pc.GetComponent<InventoryController>().hasItem("Jar"))
+                    {
+                        chair.SetActive(true);
+                        pc.GetComponent<InventoryController>().removeItem("Jar");
+                        dialogueTrigger.TriggerDialogue(CHAIR);
+                    }
+                    else
+                    {
+                        dialogueTrigger.TriggerDialogue(NO_JAM);
+                    }
                 }
             }
+            else if (!missionsGame.isFinished(APPLE_MISSION)) //If the mission has not completed
+            {
+                dialogueTrigger.TriggerDialogue(notInMission);
+            }
+            else if (missionsGame.isFinished(APPLE_MISSION) && true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
+            {
+                dialogueTrigger.TriggerDialogue(RIGHT);
+                setPlayerVariables();
+                pc.emptyInventory();
+                candle.SetActive(true);
+            }
+            else
+            {
+                dialogueTrigger.TriggerDialogue(WRONG);
+            }
         }
+    }
 
-        if (!debug)
+    public override void checkMission()
+    {
+        if (gameController.Debug)
+        {
+            if (HasChair)// && dialogueTrigger.dialogues[CHAIR].Finished)
+            {
+                missionsGame.setFinished(BLUEBERRY_MISSION);
+                HasChair = false;
+                //   finishBerryMission(); //Comment if you don't want to be teletransported
+            }
+        }
+        else
         {
             if (HasCandle && dialogueTrigger.dialogues[RIGHT].Finished)
             {
@@ -120,7 +116,7 @@ public class WoodsmithNPC : NPCController
         gameController.BlueberryMissionFinished = true;
         gameController.Next = true;
         //TODO: MAYBE CAN BE A METHOD ON PLAYERCONTROLLER
-        teletransportPlayer();
+       // teletransportPlayer();
     }
 
     void teletransportPlayer()

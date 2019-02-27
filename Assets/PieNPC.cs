@@ -7,34 +7,36 @@ public class PieNPC : NPCController
     private const int ASK_FOR_OBJECTS = 0;
     private const int COMPLETE = 1;
     private bool firstTime = true;
+    public PlayerController pc;
+    public CharacterController characterController;
+    public HouseSceneController house;
     public bool HasWater { get; set; } = false;
     public bool HasBerries { get; set; } = false;
     public bool HasSugar { get; set; } = false;
+    public bool HasBed { get; set; } = true;
     
-    // Update is called once per frame
-    void Update()
+    public override void talk()
     {
-        if (CanTalk) //actives in position of npc
+        if (missionsGame.isFinished(BLUEBERRY_MISSION)) //Mission 2 has finished
         {
-            CanTalk = false;
-            transform.LookAt(targetPosition);
-
-            if (missionsGame.isFinished(BLUEBERRY_MISSION)) //Mission 2 has finished
+            if (HasWater && HasBerries && HasSugar)
             {
-                if (HasWater && HasBerries && HasSugar)
-                {
-                    dialogueTrigger.TriggerDialogue(COMPLETE);
-                } else
-                {
-                    dialogueTrigger.TriggerDialogue(ASK_FOR_OBJECTS);
-                }
+                dialogueTrigger.TriggerDialogue(COMPLETE);
             }
-            else //If jumps the mission order
+            else
             {
-                dialogueTrigger.TriggerDialogue(notInMission);
+                dialogueTrigger.TriggerDialogue(ASK_FOR_OBJECTS);
+                missionsGame.setFinished(ASK_BED_MISSION);
             }
         }
+        else //If jumps the mission order
+        {
+            dialogueTrigger.TriggerDialogue(notInMission);
+        }
+    }
 
+    public override void checkMission()
+    {
         if (dialogueTrigger.dialogues[ASK_FOR_OBJECTS].Finished && firstTime)
         {
             firstTime = false;
@@ -42,7 +44,31 @@ public class PieNPC : NPCController
             dialogueTrigger.dialogues[ASK_FOR_OBJECTS].setDiamondsMission();
             dialogueTrigger.dialogues[COMPLETE].setDiamondsMission();
             dialogueTrigger.dialogues[notInMission].setDiamondsMission();
+        } else if (dialogueTrigger.dialogues[COMPLETE].Finished && HasBed) {
+            finishMission();
+        } else if(dialogueTrigger.dialogues[ASK_FOR_OBJECTS].Finished)
+        {
+            HasBerries = true;
+            HasSugar = true;
+            HasWater = true;
         }
+    }
+
+    public void finishMission()
+    {
+        HasBed = false;
+        gameController.PieMissionFinished = true;
+        gameController.Next = true;
+        teletransportPlayer();
+    }
+
+    void teletransportPlayer()
+    {
+        characterController.enabled = false;
+        pc.gameObject.transform.position = house.scenePosition;
+        characterController.enabled = true;
+        house.setObjects();
+        positionController.cleanText();
     }
 
     public override void setName()
