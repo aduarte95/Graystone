@@ -1,6 +1,8 @@
 https://opengameart.org/content/battle-sound-effects
 https://opengameart.org/content/rpg-sound-package
 https://opengameart.org/content/medieval-the-old-tower-inn
+https://free3d.com/3d-model/masonjarofjam-v1--520844.html
+https://moziru.com/images/rapsberry-clipart-simple-10.jpg
 
 Unity Assets Store:
 Cherry Tree
@@ -18,4 +20,3 @@ Tree_Textures
 Character_Elf
 EasyRoads3D
 FREE Foosteps System
-Space Worm
