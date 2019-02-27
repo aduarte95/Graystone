@@ -5662,7 +5662,7 @@ MonoBehaviour:
   dialogues:
   - name: 'A voice in your mind:'
     sentences:
-    - You need a jug to take water... i think you have one in your house
+    - You need a jug to take water... I think you have one in your house
     diamondsMission: []
   - name: 'A voice in your mind:'
     sentences:
@@ -18964,14 +18964,14 @@ MonoBehaviour:
     diamondsMission: []
   - name: 'A voice in your mind: '
     sentences:
-    - Well.... that went way better than I espected, not bad at all..
+    - Well.... that went way better than I expected, not bad at all...
     - 'But that thing touched you... so you''re poisoned now :O '
-    - Easy easy, don't panic, is not serious, you just need to eat an apple :D
-    - I know I know, you don't have those kind of things, you just got here.
-    - There's a village not very far from here, to the west... may be you can find
-      something there
-    - 'But I would go fast if I were you.... you know, poison is not a thing you humans
-      can stand for a very long time.. D:'
+    - Easy easy, don't panic, it's not serious, you just need to eat an apple :D
+    - I know I know, you don't have those kinds of things, you just got here.
+    - There's a village not far from here, to the west... may be you can find something
+      there
+    - 'But I would go fast if I were you... you know, poison is not a thing you humans
+      can stand for a very long time... D:'
     - "\rGood luck ;)"
     diamondsMission: []
   - name: 'A voice in your mind: '
@@ -28233,12 +28233,12 @@ MonoBehaviour:
     - Ahh you're the new guy who lives on the outskirts of the village... I see
     - Yeah, those monsters are such a pain
     - Anyway, poisoned or not, that doesn't change the fact that you should've asked
-      for those apples before eat them >:(
-    - But I'm on a great mood now, i'll forgive you if you do something for me
+      for those apples before eating them >:(
+    - But I'm in a great mood now, I'll forgive you if you do something for me
     - Take five apples to the carpenter, he is north from here... do that for me and
-      i will not charge you for the apples you just ate
+      I will not charge you for the apples you just ate
     - You may also find some things for your house there
-    - "Now, go away..\r\n"
+    - "Now, go away..\r.\n"
     diamondsMission:
     - {fileID: 504626162}
     - {fileID: 1370399412}
@@ -44259,20 +44259,20 @@ MonoBehaviour:
   dialogues:
   - name: 'Sugar Daddy:'
     sentences:
-    - Yeah sure, kill aliens
+    - Yeah sure, kill aliens...
     diamondsMission:
     - {fileID: 0}
   - name: 'Sugar Daddy:'
     sentences:
-    - Thanks, take sugar.
+    - Thanks, take some sugar.
     diamondsMission: []
   - name: 'Sugar Daddy:'
     sentences:
-    - You alredy got what you need
+    - You already have what you need...
     diamondsMission: []
   - name: 'Sugar Daddy:'
     sentences:
-    - Sorry, cant help
+    - Sorry, can't help...
     diamondsMission: []
   cont: 0
 --- !u!95 &1469687309 stripped
