@@ -23,13 +23,13 @@ public class GameController : MonoBehaviour
     public bool CandleMissionFinished { get; set; } = false;
     public bool BlueberryMissionFinished { get; set; } = false;
     public bool PieMissionFinished { get; set; } = false;
-    public bool Debug { get; set; } = false;
+    public bool Debugg { get; set; } = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        if(Debug)
+        if(Debugg)
         {
             dialogueController.FinishedHouse = true;
         }
@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Debug)
+        if (!Debugg)
         {
             if (Begin) //Initial Dialogue
             {
@@ -112,16 +112,33 @@ public class GameController : MonoBehaviour
                 }
             }
         }
-        /*
+         /*
         if (Next)
         {
             if (CandleMissionFinished)
             {
                 Next = false;
+                Debug.Log("Candle");
                 CandleMissionFinished = false;
                 dialogueController.BlueberryMission();
                 objects[WOOD_DIAMOND].SetActive(true); //shows next mission
                 objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+            }
+            if (BlueberryMissionFinished)
+            {
+                Next = false;
+                Debug.Log("Blueberry");
+                BlueberryMissionFinished = false;
+                dialogueController.pieMission();
+                objects[BAKERY_DIAMOND].SetActive(true); //shows next mission
+                objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+            }
+            if (PieMissionFinished)
+            {
+                Next = false;
+                Debug.Log("Pie");
+                PieMissionFinished = false;
+                dialogueController.win();
             }
         }*/
     }
