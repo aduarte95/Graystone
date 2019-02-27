@@ -23,7 +23,6 @@ public class EnemyBehaviourProto : MonoBehaviour
     public int MinDist = 1;
     public bool didHit = false;
     public DialogueManager dialogueManager;
-
     float random;
     public float chanceOfCurrency = 0.005f;
 
@@ -35,7 +34,7 @@ public class EnemyBehaviourProto : MonoBehaviour
     public PoisonLevel poisonLevel;
 
     public PlayerController player;
-    
+    public Transform target ;
     
 
     public DialogueController dialogueController; //Tells the dialogue that the alien is dead
@@ -48,7 +47,7 @@ public class EnemyBehaviourProto : MonoBehaviour
 
         maxHealth = 30f;
         currentHealth = maxHealth;
-
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         ableToMove = true;
     }
 
@@ -85,6 +84,22 @@ public class EnemyBehaviourProto : MonoBehaviour
                 }
             }
             */
+            
+            if (Input.GetKeyDown(KeyCode.J)) {
+         
+                float dist   = Vector3.Distance(transform.position, target.position);
+                Vector3 toTarget = (target.position - transform.position).normalized;
+             
+                if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2) {
+                    Debug.Log("Target is in front of this game object.");
+                } else {
+                    Debug.Log("Target is not in front of this game object.");
+                }
+            }
+            
+            
+            
+            
             //follow movement
             if (dialogueManager.isActive == false)
             {
@@ -94,6 +109,12 @@ public class EnemyBehaviourProto : MonoBehaviour
                 {
                     animator.SetBool(isWalkingHash, true);
                     transform.position += transform.forward * speed * Time.deltaTime;
+                    float dist   = Vector3.Distance(transform.position, target.position);
+                    Vector3 toTarget = (target.position - transform.position).normalized;
+                    if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2)
+                    {
+                        StartCoroutine(doAttack1());
+                    }
                     //didHit = false;
                 }
                 else
@@ -101,7 +122,13 @@ public class EnemyBehaviourProto : MonoBehaviour
                     animator.SetBool(isWalkingHash, false);
                     if (!didHit)
                     {
-                        playerHealth.dealDamage(10);
+                        float dist   = Vector3.Distance(transform.position, target.position);
+                        Vector3 toTarget = (target.position - transform.position).normalized;
+                        if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2)
+                        {
+                            StartCoroutine(doAttack2());
+                        }
+                        //playerHealth.dealDamage(10);
                         poisonLevel.getPoison(1);
                         player.isPoisoned = true;
                         didHit = true;
@@ -115,23 +142,6 @@ public class EnemyBehaviourProto : MonoBehaviour
             }
            
         }
-        
-        /*
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            StartCoroutine(doAttack1());
-        }
-
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            StartCoroutine(doAttack2());
-        }
-
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            StartCoroutine(dealDamage(10));
-        }
-        */
     }
 
     public bool Front()
@@ -162,7 +172,7 @@ public class EnemyBehaviourProto : MonoBehaviour
     }
 
     // Reduce the health in "damageValue" points
-    IEnumerator dealDamage(float damageValue)
+   public  IEnumerator dealDamage(float damageValue)
     {
         Debug.Log("Perdio vida");
         currentHealth -= damageValue;
@@ -196,7 +206,7 @@ public class EnemyBehaviourProto : MonoBehaviour
     {
         animator.SetBool(attack2Hash, true);
         playerHealth.dealDamage(10);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         animator.SetBool(attack2Hash, false);
-    }
+    }  
 }

@@ -249,7 +249,7 @@ public class PlayerController : MonoBehaviour
             if (enemy.gameObject.activeSelf && inventory.hasWeapon()
             )
             {
-                enemy.getHit(10);
+                StartCoroutine(enemy.dealDamage(10));
             }
         }
 
