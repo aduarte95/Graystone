@@ -18,6 +18,10 @@ public class ObjectVisibilityController : ObjectInteraction
 					objectToHide.GetComponent<Renderer>().enabled = true;
 				}
 				objectToHide.SetActive(true);
+				if (objectToHide.name.Equals("camaGotica"))
+				{
+					GameObject.Find("CamaSacos").SetActive(false);
+				}
 				gameObject.SetActive(false);
 			} else {Debug.Log("Player doesn't have that item");}
 		}
