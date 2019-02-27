@@ -189,7 +189,6 @@
             </e>
           </e>
         </e>
-        <e p="Apple.cs" t="Include" />
         <e p="Gems Ultimate Pack" t="Include">
           <e p="Scripts" t="Include">
             <e p="AnimationScript.cs" t="Include" />
@@ -203,7 +202,6 @@
         <e p="MedievalTownExteriors" t="Include">
           <e p="Readme.txt" t="Include" />
         </e>
-        <e p="PieNPC.cs" t="Include" />
         <e p="Room" t="Include">
           <e p="Settings" t="Include">
             <e p="Note.txt" t="Include" />
@@ -252,6 +250,7 @@
           <e p="Bonfire.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Apple.cs" t="Include" />
           <e p="AppleController.cs" t="Include" />
           <e p="AppleNPC.cs" t="Include" />
           <e p="AppleTree.cs" t="Include" />
@@ -282,6 +281,7 @@
           <e p="ObjectVisibilityController.cs" t="Include" />
           <e p="OutsideCamera.cs" t="Include" />
           <e p="Pickup.cs" t="Include" />
+          <e p="PieNPC.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
           <e p="PoisonLevel.cs" t="Include" />
@@ -289,6 +289,7 @@
           <e p="SceneController.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
           <e p="Spawn.cs" t="Include" />
+          <e p="SugarNPC.cs" t="Include" />
           <e p="WaterCollisionController.cs" t="Include" />
           <e p="WeaponSlot.cs" t="Include" />
           <e p="WoodsmithNPC.cs" t="Include" />
@@ -534,7 +535,6 @@
             </e>
           </e>
         </e>
-        <e p="SugarNPC.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
