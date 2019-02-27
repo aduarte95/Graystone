@@ -1113,38 +1113,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950c0a0cf14577549b026c95956a3c99, type: 3}
---- !u!1 &36712202
+--- !u!1 &36712202 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 100014, guid: c3701783ee3206b4492deed733703204,
     type: 3}
   m_PrefabInstance: {fileID: 2069795515}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 36712203}
-  - component: {fileID: 36712205}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &36712203
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 2069795515}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36712202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1537607222}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &36712205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2629,7 +2603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_RootOrder
-      value: 64
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 4193388381816650, guid: dbbdea10d9741a147b25b3d4dbcb2b7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4283,7 +4257,7 @@ Transform:
   m_Children:
   - {fileID: 854675707}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &138790280
 AudioSource:
@@ -5199,7 +5173,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &172013403
 PrefabInstance:
@@ -5688,7 +5662,7 @@ MonoBehaviour:
   dialogues:
   - name: 'A voice in your mind:'
     sentences:
-    - You need a jug to take water... i think you have one in your house
+    - You need a jug to take water... I think you have one in your house
     diamondsMission: []
   - name: 'A voice in your mind:'
     sentences:
@@ -6428,7 +6402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7726,7 +7700,7 @@ Transform:
   m_LocalScale: {x: 24.375267, y: 7.7489076, z: 13.447615}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &252715509
 PrefabInstance:
@@ -10982,7 +10956,7 @@ Transform:
   m_LocalScale: {x: 98.981255, y: 7.7489076, z: 10.347866}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 5.6610003, z: 0}
 --- !u!1001 &346413406
 PrefabInstance:
@@ -12741,7 +12715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13753,7 +13727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14773,7 +14747,7 @@ Transform:
   m_LocalScale: {x: 40, y: 10, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &483923785
 PrefabInstance:
@@ -15354,7 +15328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &490970041
 PrefabInstance:
@@ -16156,37 +16130,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efdb3ed10ba9c6b418a492aa30ba0edd, type: 3}
---- !u!1 &518793269
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1280768785}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 518793270}
-  m_Layer: 0
-  m_Name: Worm Green (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &518793270
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1280768785}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518793269}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1832301705}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523390358
 GameObject:
   m_ObjectHideFlags: 0
@@ -19021,14 +18964,14 @@ MonoBehaviour:
     diamondsMission: []
   - name: 'A voice in your mind: '
     sentences:
-    - Well.... that went way better than I espected, not bad at all..
+    - Well.... that went way better than I expected, not bad at all...
     - 'But that thing touched you... so you''re poisoned now :O '
-    - Easy easy, don't panic, is not serious, you just need to eat an apple :D
-    - I know I know, you don't have those kind of things, you just got here.
-    - There's a village not very far from here, to the west... may be you can find
-      something there
-    - 'But I would go fast if I were you.... you know, poison is not a thing you humans
-      can stand for a very long time.. D:'
+    - Easy easy, don't panic, it's not serious, you just need to eat an apple :D
+    - I know I know, you don't have those kinds of things, you just got here.
+    - There's a village not far from here, to the west... may be you can find something
+      there
+    - 'But I would go fast if I were you... you know, poison is not a thing you humans
+      can stand for a very long time... D:'
     - "\rGood luck ;)"
     diamondsMission: []
   - name: 'A voice in your mind: '
@@ -20229,7 +20172,7 @@ Transform:
   m_LocalScale: {x: 24.015474, y: 7.7489076, z: 10.388169}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 21.842001, z: 0}
 --- !u!1001 &627388247
 PrefabInstance:
@@ -21484,7 +21427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22541,7 +22484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464962, guid: 950c0a0cf14577549b026c95956a3c99, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 464962, guid: 950c0a0cf14577549b026c95956a3c99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -25851,7 +25794,7 @@ Transform:
   m_LocalScale: {x: 1.5000001, y: 1.430001, z: 1.5000018}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &815349516
 PrefabInstance:
@@ -26676,7 +26619,7 @@ Transform:
   m_LocalScale: {x: 98.94873, y: 7.7489076, z: 10.344461}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: -1.1340001, z: 0}
 --- !u!1001 &836022897
 PrefabInstance:
@@ -28290,12 +28233,12 @@ MonoBehaviour:
     - Ahh you're the new guy who lives on the outskirts of the village... I see
     - Yeah, those monsters are such a pain
     - Anyway, poisoned or not, that doesn't change the fact that you should've asked
-      for those apples before eat them >:(
-    - But I'm on a great mood now, i'll forgive you if you do something for me
+      for those apples before eating them >:(
+    - But I'm in a great mood now, I'll forgive you if you do something for me
     - Take five apples to the carpenter, he is north from here... do that for me and
-      i will not charge you for the apples you just ate
+      I will not charge you for the apples you just ate
     - You may also find some things for your house there
-    - "Now, go away..\r\n"
+    - "Now, go away..\r.\n"
     diamondsMission:
     - {fileID: 504626162}
     - {fileID: 1370399412}
@@ -29472,7 +29415,7 @@ Transform:
   m_LocalScale: {x: 6.1859455, y: 3.55916, z: 22.699778}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &964947597
 PrefabInstance:
@@ -33074,7 +33017,7 @@ Transform:
   m_LocalScale: {x: 76.19528, y: 7.7489076, z: 10.370027}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 15.965001, z: 0}
 --- !u!1 &1092597478 stripped
 GameObject:
@@ -33153,7 +33096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33768,7 +33711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -34568,7 +34511,7 @@ Transform:
   m_LocalScale: {x: 99.31877, y: 7.7489076, z: 10.383151}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: -20.27, z: 0}
 --- !u!1001 &1146050413
 PrefabInstance:
@@ -38292,7 +38235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -44316,20 +44259,20 @@ MonoBehaviour:
   dialogues:
   - name: 'Sugar Daddy:'
     sentences:
-    - Yeah sure, kill aliens
+    - Yeah sure, kill aliens...
     diamondsMission:
     - {fileID: 0}
   - name: 'Sugar Daddy:'
     sentences:
-    - Thanks, take sugar.
+    - Thanks, take some sugar.
     diamondsMission: []
   - name: 'Sugar Daddy:'
     sentences:
-    - You alredy got what you need
+    - You already have what you need...
     diamondsMission: []
   - name: 'Sugar Daddy:'
     sentences:
-    - Sorry, cant help
+    - Sorry, can't help...
     diamondsMission: []
   cont: 0
 --- !u!95 &1469687309 stripped
@@ -46649,37 +46592,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1535386814}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1537607221
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 2069795515}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1537607222}
-  m_Layer: 0
-  m_Name: Worm Blue (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1537607222
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 2069795515}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537607221}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 36712203}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1537674828 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 112464, guid: 950c0a0cf14577549b026c95956a3c99,
@@ -46837,6 +46749,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2e876bb6e0ba0a42b628002c60efe3b, type: 3}
+--- !u!1001 &1546527372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1791226680}
+    m_Modifications:
+    - target: {fileID: 4082650592381678648, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_Name
+      value: Sugar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7297083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.743598
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -7.1054274e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000008940697
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000016292068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.10000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645583367779742785, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.10000004
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6de4feac160266b49aae44ec84ceff63, type: 3}
 --- !u!1001 &1547338059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49617,7 +49608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50791,7 +50782,7 @@ Transform:
   m_LocalScale: {x: 24.117146, y: 7.7489076, z: 10.432146}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 51.087, z: 0}
 --- !u!1001 &1688395333
 PrefabInstance:
@@ -52118,7 +52109,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1750954640
 GameObject:
@@ -52636,7 +52627,7 @@ RectTransform:
   - {fileID: 1583637223}
   - {fileID: 1463241273}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -54789,38 +54780,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950c0a0cf14577549b026c95956a3c99, type: 3}
---- !u!1 &1832301704
+--- !u!1 &1832301704 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 100014, guid: c3701783ee3206b4492deed733703204,
     type: 3}
   m_PrefabInstance: {fileID: 1280768785}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1832301705}
-  - component: {fileID: 1832301707}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1832301705
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1280768785}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832301704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 518793270}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1832301707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55571,7 +55536,7 @@ Transform:
   m_LocalScale: {x: 11.619296, y: 7.7489076, z: 46.11253}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1851085666
 GameObject:
@@ -57775,7 +57740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4450394805621702, guid: 977bc03e54089ef45874db256471f61f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -61562,7 +61527,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2046114607
 MonoBehaviour:
@@ -62295,7 +62260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: c3701783ee3206b4492deed733703204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -63102,7 +63067,7 @@ Transform:
   - {fileID: 518404312}
   - {fileID: 1852296684}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2108331266
 PrefabInstance:
