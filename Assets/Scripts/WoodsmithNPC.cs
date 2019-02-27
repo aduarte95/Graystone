@@ -57,7 +57,7 @@ public class WoodsmithNPC : NPCController
             {
                 dialogueTrigger.TriggerDialogue(notInMission);
             }
-            else if (missionsGame.isFinished(APPLE_MISSION) && true) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
+            else if (missionsGame.isFinished(APPLE_MISSION) && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Apple",5)) //NPC DEBUG quitar el true cuando player tenga el seteo de HASAPPLES 
             {
                 dialogueTrigger.TriggerDialogue(RIGHT);
                 setPlayerVariables();

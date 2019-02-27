@@ -210,4 +210,9 @@ public class InventoryController : MonoBehaviour
 		}
 		return count == n;
 	}
+	
+	public bool hasWeapon()
+	{
+		return stick.activeSelf;
+	}
 }

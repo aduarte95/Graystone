@@ -210,34 +210,11 @@ public class PlayerController : MonoBehaviour
                             setFirstHit(2);
                         }
                     }
-
-
                     StartCoroutine(Attack());
-
-                    Debug.Log("Pegó");
                 }
                 
             }
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                if (GetComponent<InventoryController>().hasNAmountOfItem("Apple",5))
-                {
-                    Debug.Log("Si tiene 5 manzanas");   
-                }
-                else
-                {
-                    Debug.Log("No tiene 5 manzanas");
-                }
-            }
-            
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-
-    }
-
 
     public bool Front()
     {
@@ -260,23 +237,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-    void OnTriggerEnter(Collider collision)
-    {
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-
-    }
-
-
-    private void OnTriggerExit(Collider col)
-    {
-
-    }
-
     IEnumerator Attack()
     {
 
@@ -286,7 +246,8 @@ public class PlayerController : MonoBehaviour
         if ((Vector3.Distance(transform.position, Enemy.position) >= 0) &&
             (Vector3.Distance(transform.position, Enemy.position) <= 2))
         {
-            if (enemy.gameObject.activeSelf)
+            if (enemy.gameObject.activeSelf && inventory.hasWeapon()
+            )
             {
                 enemy.getHit(10);
             }
