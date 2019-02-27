@@ -55647,8 +55647,15 @@ MonoBehaviour:
     diamondsMission: []
   - name: 'Abeto Carpenter:'
     sentences:
-    - Need a favor
-    - blueberry
+    - "Oh hello good sir, how's the road to Tinue?\r\n"
+    - "Oh I see.... may be I can give you something... how about a chair? to read
+      at night with that new candle of yours ;)\r\n"
+    - "I'm willing to give it to you for free if you do a little thing for me\r\n"
+    - "You know, my wife loooves the blueberry jam, and i'd like to give one to her
+      for breakfast :) \r"
+    - "Bring me a blueberry jam and the chair is yours :D you can get it from my friend
+      Joe Berry, south from here.. \r\n"
+    - Farewell. good sir
     diamondsMission:
     - {fileID: 145353536}
     - {fileID: 509565274}
