@@ -20,7 +20,7 @@ public class EnemyBehaviourProto : MonoBehaviour
     public float speed = 2.0f;
     public int direction = 1;
     public float MaxDist = 3;
-    public int MinDist = 1;
+    public int MinDist = 2;
     public bool didHit = false;
     public DialogueManager dialogueManager;
     float random;
@@ -105,40 +105,39 @@ public class EnemyBehaviourProto : MonoBehaviour
             {
                 transform.LookAt(Player);
 
-                if ((Vector3.Distance(transform.position, Player.position) >= MinDist) && (!didHit))
+                if (Vector3.Distance(transform.position, Player.position) >= 1)
                 {
                     animator.SetBool(isWalkingHash, true);
                     transform.position += transform.forward * speed * Time.deltaTime;
-                    float dist   = Vector3.Distance(transform.position, target.position);
-                    Vector3 toTarget = (target.position - transform.position).normalized;
-                    if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2)
+                    if (!didHit)
                     {
-                        StartCoroutine(doAttack1());
+                        float dist = Vector3.Distance(transform.position, target.position);
+                        Vector3 toTarget = (target.position - transform.position).normalized;
+                        if (Vector3.Dot(toTarget, transform.forward) > 0 && dist  <2)
+                        {
+                            StartCoroutine(doAttack1());
+                        }
                     }
-                    //didHit = false;
                 }
                 else
                 {
                     animator.SetBool(isWalkingHash, false);
                     if (!didHit)
                     {
-                        float dist   = Vector3.Distance(transform.position, target.position);
+                        float dist = Vector3.Distance(transform.position, target.position);
                         Vector3 toTarget = (target.position - transform.position).normalized;
+                        Debug.Log("Dist " + dist);
+                        Debug.Log("Dot " + Vector3.Dot(toTarget, transform.forward));
                         if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2)
                         {
                             StartCoroutine(doAttack2());
+
                         }
-                        //playerHealth.dealDamage(10);
                         poisonLevel.getPoison(1);
                         player.isPoisoned = true;
-                        didHit = true;
                     }
                 }
 
-                if ((Vector3.Distance(transform.position, Player.position) >= MaxDist) && (didHit))
-                {
-                    didHit = false;
-                }
             }
            
         }
@@ -197,16 +196,21 @@ public class EnemyBehaviourProto : MonoBehaviour
 
     IEnumerator doAttack1()
     {
+        didHit = true;
         animator.SetBool(attack1Hash, true);
-        yield return new WaitForSeconds(0.5f);
+        playerHealth.dealDamage(10);
+        yield return new WaitForSeconds(1.5f);
         animator.SetBool(attack1Hash, false);
+        didHit = false;
     }
 
     IEnumerator doAttack2()
     {
+        didHit = true;
         animator.SetBool(attack2Hash, true);
         playerHealth.dealDamage(10);
         yield return new WaitForSeconds(1.5f);
         animator.SetBool(attack2Hash, false);
+        didHit = false;
     }  
 }
