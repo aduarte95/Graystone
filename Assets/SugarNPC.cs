@@ -47,6 +47,6 @@ public class SugarNPC : NPCController
 
     public override void setName()
     {
-        Name = "Tao Piepie";
+        Name = "Sugar Daddy";
     }
 }
