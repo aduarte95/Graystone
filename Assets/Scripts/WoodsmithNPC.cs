@@ -122,7 +122,6 @@ public class WoodsmithNPC : NPCController
         missionsGame.setFinished(BLUEBERRY_MISSION);
         gameController.BlueberryMissionFinished = true;
         gameController.Next = true;
-        dialogueTrigger.dialogues[]
         teletransportPlayer();
     }
 
