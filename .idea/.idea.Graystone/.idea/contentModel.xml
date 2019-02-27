@@ -203,6 +203,7 @@
         <e p="MedievalTownExteriors" t="Include">
           <e p="Readme.txt" t="Include" />
         </e>
+        <e p="PieNPC.cs" t="Include" />
         <e p="Room" t="Include">
           <e p="Settings" t="Include">
             <e p="Note.txt" t="Include" />
@@ -534,6 +535,7 @@
             </e>
           </e>
         </e>
+        <e p="SugarNPC.cs" t="Include" />
       </e>
       <e p="Graystone.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

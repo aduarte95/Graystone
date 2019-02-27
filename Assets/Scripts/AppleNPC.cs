@@ -36,8 +36,8 @@ public class AppleNPC : NPCController
         {
             if (dialogueTrigger.dialogues[currentDialogue].Finished)
             {
-                //dialogueTrigger.dialogues[currentDialogue].setDiamondsMission();
-                dialogueTrigger.dialogues[currentDialogue].cleanDiamonds(); // For first mission :o
+                dialogueTrigger.dialogues[currentDialogue].setDiamondsMission();
+                //dialogueTrigger.dialogues[currentDialogue].cleanDiamonds(); // For first mission :o
                 if (currentDialogue < dialogueTrigger.dialogues.Length - 1)
                 {
                     ++currentDialogue;
