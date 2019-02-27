@@ -12,14 +12,14 @@ public class PieNPC : NPCController
     public HouseSceneController house;
     public bool HasWater { get; set; } = false;
     public bool HasBerries { get; set; } = false;
-    public bool HasSugar { get; set; } = false;
+    public bool HasSugar { get; set; } = true;
     public bool HasBed { get; set; } = true;
     
     public override void talk()
     {
         if (missionsGame.isFinished(BLUEBERRY_MISSION)) //Mission 2 has finished
         {
-            if (HasWater && HasBerries && HasSugar)
+            if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && HasSugar)
             {
                 dialogueTrigger.TriggerDialogue(COMPLETE);
             }
@@ -46,11 +46,6 @@ public class PieNPC : NPCController
             dialogueTrigger.dialogues[notInMission].setDiamondsMission();
         } else if (dialogueTrigger.dialogues[COMPLETE].Finished && HasBed) {
             finishMission();
-        } else if(dialogueTrigger.dialogues[ASK_FOR_OBJECTS].Finished)
-        {
-            HasBerries = true;
-            HasSugar = true;
-            HasWater = true;
         }
     }
 

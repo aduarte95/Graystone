@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     public bool CandleMissionFinished { get; set; } = false;
     public bool BlueberryMissionFinished { get; set; } = false;
     public bool PieMissionFinished { get; set; } = false;
-    public bool Debugg { get; set; } = false;
+    public bool Debugg { get; set; } = false; //Cambiar Has Chair a falso si se va a debuggear
 
 
     // Start is called before the first frame update
@@ -83,6 +83,7 @@ public class GameController : MonoBehaviour
                     Next = false;
                     BlueberryMissionFinished = false;
                     dialogueController.pieMission();
+                    objects[WOOD_DIAMOND].SetActive(false);
                     objects[BAKERY_DIAMOND].SetActive(true); //shows next mission
                     objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
                 } else if (PieMissionFinished)
@@ -109,6 +110,13 @@ public class GameController : MonoBehaviour
                     dialogueController.pieMission();
                     objects[BAKERY_DIAMOND].SetActive(true); //shows next mission
                     objects[LAKE_DIAMOND].SetActive(true); //shows next mission lake
+                }
+                if (PieMissionFinished)
+                {
+                    Next = false;
+                    Debug.Log("Pie");
+                    PieMissionFinished = false;
+                    dialogueController.win();
                 }
             }
         }
