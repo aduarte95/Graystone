@@ -15,6 +15,7 @@ TagManager:
   - Chair
   - Jar
   - Sugar
+  - Bed
   layers:
   - Default
   - TransparentFX
