@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip hit;
     public AudioClip stickBow;
     public AudioClip footstep_wood_2;
+    public AudioClip grassSound;
     public int isWalkingHash = Animator.StringToHash("IsWalking");
     public int canRun = Animator.StringToHash("CanRun");
     public int activeDialogue = Animator.StringToHash("activeDialogue");
@@ -178,7 +179,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (!isWalkSoundOn)
                     {
-                        StartCoroutine(insideStepSound());   
+                        StartCoroutine(StepSound());   
                     }
                 }
                 else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
@@ -365,18 +366,29 @@ public class PlayerController : MonoBehaviour
         }
     }*/
 
-    IEnumerator insideStepSound()
+    IEnumerator StepSound()
     {
-        isWalkSoundOn = true;
-        audioSource.PlayOneShot(footstep_wood_2);
-        yield return new WaitForSeconds(0.5f);
-        isWalkSoundOn = false;
+        if (onTheHouse)
+        {
+            isWalkSoundOn = true;
+            audioSource.PlayOneShot(footstep_wood_2);
+            yield return new WaitForSeconds(0.5f);
+            isWalkSoundOn = false;
+        }
+        else
+        {
+            isWalkSoundOn = true;
+            audioSource.PlayOneShot(grassSound);
+            yield return new WaitForSeconds(0.5f);
+            isWalkSoundOn = false;
+        }
+
     }
     
     IEnumerator runSound()
     {
         isWalkSoundOn = true;
-        audioSource.PlayOneShot(footstep_wood_2);
+        audioSource.PlayOneShot(grassSound);
         yield return new WaitForSeconds(0.2f);
         isWalkSoundOn = false;
     }
