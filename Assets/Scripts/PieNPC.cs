@@ -13,7 +13,7 @@ public class PieNPC : NPCController
     public bool HasWater { get; set; } = false;
     public bool HasBerries { get; set; } = false;
     public bool HasSugar { get; set; } = false;
-    public bool HasBed { get; set; } = true;
+    public bool HasBed { get; set; } = false;
     
     public override void talk()
     {
@@ -21,7 +21,8 @@ public class PieNPC : NPCController
         {
             if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasItem("Sugar"))
             {
-                dialogueTrigger.TriggerDialogue(COMPLETE);
+				GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().takeItem("Sugar");
+                dialogueTrigger.TriggerDialogue(COMPLETE);			
             }
             else
             {
