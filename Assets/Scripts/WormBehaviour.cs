@@ -86,6 +86,11 @@ public class WormBehaviour : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            StartCoroutine(dealDamage(10));
+        }
     }
 
     public void getHit(int damage)
