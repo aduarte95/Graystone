@@ -10,6 +10,7 @@ public class PieNPC : NPCController
     public PlayerController pc;
     public CharacterController characterController;
     public HouseSceneController house;
+	public GameObject bed;
     public bool HasWater { get; set; } = false;
     public bool HasBerries { get; set; } = false;
     public bool HasSugar { get; set; } = false;
@@ -22,6 +23,7 @@ public class PieNPC : NPCController
             if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasItem("Sugar"))
             {
 				GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().removeItem("Sugar");
+				bed.SetActive(true);
                 dialogueTrigger.TriggerDialogue(COMPLETE);			
             }
             else
