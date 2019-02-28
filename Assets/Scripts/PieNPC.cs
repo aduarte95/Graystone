@@ -12,14 +12,14 @@ public class PieNPC : NPCController
     public HouseSceneController house;
     public bool HasWater { get; set; } = false;
     public bool HasBerries { get; set; } = false;
-    public bool HasSugar { get; set; } = true;
+    public bool HasSugar { get; set; } = false;
     public bool HasBed { get; set; } = true;
     
     public override void talk()
     {
         if (missionsGame.isFinished(BLUEBERRY_MISSION)) //Mission 2 has finished
         {
-            if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && HasSugar)
+            if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasItem("Sugar"))
             {
                 dialogueTrigger.TriggerDialogue(COMPLETE);
             }
@@ -44,8 +44,22 @@ public class PieNPC : NPCController
             dialogueTrigger.dialogues[ASK_FOR_OBJECTS].setDiamondsMission();
             dialogueTrigger.dialogues[COMPLETE].setDiamondsMission();
             dialogueTrigger.dialogues[notInMission].setDiamondsMission();
-        } else if (dialogueTrigger.dialogues[COMPLETE].Finished && HasBed) {
+        }
+        else if (dialogueTrigger.dialogues[COMPLETE].Finished && HasBed)
+        {
             finishMission();
+        }
+        else if (!dialogueTrigger.dialogues[COMPLETE].Finished)
+        {
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3))
+            {
+                dialogueTrigger.dialogues[COMPLETE].cleanDiamonds(); //Has the berries diamond
+                Debug.Log("clean berry");
+            }
+            if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull)
+            {
+                GameObject.Find("River's Diamond").SetActive(false);
+            }
         }
     }
 
