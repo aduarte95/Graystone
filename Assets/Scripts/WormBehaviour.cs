@@ -37,6 +37,8 @@ public class WormBehaviour : MonoBehaviour
 
     float random;
     public float chanceOfCurrency = 0.025f;
+
+    public SugarNPC sugar;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,7 @@ public class WormBehaviour : MonoBehaviour
         currentHealth = maxHealth;
 
         ableToMove = true;
-        isDead = true;
+        isDead = false;
         turn = false;
     }
 
@@ -86,10 +88,9 @@ public class WormBehaviour : MonoBehaviour
                 }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.M))
+        else
         {
-            StartCoroutine(dealDamage(10));
+            animator.SetBool(isWalkingHash, false);
         }
     }
 
@@ -116,7 +117,7 @@ public class WormBehaviour : MonoBehaviour
                 currentHealth = 0;
                 ableToMove = false;
                 animator.SetBool(dieHash, true);
-                //berryNpc.is_berry_alien_dead = true; //Tells that the alien is dead
+                sugar.AliensAreDead ++; //Tells that the alien is dead
                 gameObject.SetActive(false);
                 isDead = true;
             }

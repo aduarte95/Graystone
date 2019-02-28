@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip hit;
     public AudioClip stickBow;
+    public AudioClip footstep_wood_2;
+    public AudioClip grassSound;
     public int isWalkingHash = Animator.StringToHash("IsWalking");
     public int canRun = Animator.StringToHash("CanRun");
     public int activeDialogue = Animator.StringToHash("activeDialogue");
@@ -27,9 +29,8 @@ public class PlayerController : MonoBehaviour
     public bool isPoisoned = false;
     public PlayerHealth healthBar;
     public bool hasJug = false; // to control if player has jug equiped
-    
-    
-
+    private bool isWalkSoundOn = false;
+    private int whereIsSound = 0;
     public EnemyBehaviourProto enemy;
     public Transform Enemy; // to use the transform.position of enemy after Attack
 
@@ -172,6 +173,23 @@ public class PlayerController : MonoBehaviour
             if (translation != 0 || moveDirection != Vector3.zero)
             {
                 animator.SetBool(isWalkingHash, true);
+
+
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+                {
+                    if (!isWalkSoundOn)
+                    {
+                        StartCoroutine(StepSound());   
+                    }
+                }
+                else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+                {
+                    if (!isWalkSoundOn)
+                    {
+                        StartCoroutine(runSound());   
+                    }
+                }
+                
                 if (speed < maxSpeed)
                 {
                     speed += acceleration * Time.deltaTime;
@@ -347,6 +365,33 @@ public class PlayerController : MonoBehaviour
                 
         }
     }*/
+
+    IEnumerator StepSound()
+    {
+        if (onTheHouse)
+        {
+            isWalkSoundOn = true;
+            audioSource.PlayOneShot(footstep_wood_2);
+            yield return new WaitForSeconds(0.5f);
+            isWalkSoundOn = false;
+        }
+        else
+        {
+            isWalkSoundOn = true;
+            audioSource.PlayOneShot(grassSound);
+            yield return new WaitForSeconds(0.5f);
+            isWalkSoundOn = false;
+        }
+
+    }
+    
+    IEnumerator runSound()
+    {
+        isWalkSoundOn = true;
+        audioSource.PlayOneShot(grassSound);
+        yield return new WaitForSeconds(0.2f);
+        isWalkSoundOn = false;
+    }
 
     public void emptyInventory()
     {

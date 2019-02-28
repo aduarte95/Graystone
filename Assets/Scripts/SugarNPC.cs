@@ -9,7 +9,7 @@ public class SugarNPC : NPCController
     private const int HAVE_OBJECTS = 2;
     private bool HasSugar { get; set; } = false;
     public GameObject sugar;
-    public bool AliensAreDead { get; set; } = false;
+    public int AliensAreDead { get; set; } = 0;
 
 
     private bool firstTime = true;
@@ -20,7 +20,7 @@ public class SugarNPC : NPCController
     {
         if(missionsGame.isFinished(ASK_BED_MISSION)) //If already talked with baker 
         {
-            if (!AliensAreDead) //Aliens are not dead
+            if (AliensAreDead < 6) //Aliens are not dead
             {
                 dialogueTrigger.TriggerDialogue(KILL_ALIENS); //Ask for kill aliens
             } else
