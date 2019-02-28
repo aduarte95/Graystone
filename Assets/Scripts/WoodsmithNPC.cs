@@ -128,12 +128,12 @@ public class WoodsmithNPC : NPCController
 
     void finishBerryMission()
     {
-        HasChair = true;
+        //HasChair = true;
         missionsGame.setFinished(BLUEBERRY_MISSION);
         gameController.BlueberryMissionFinished = true;
         gameController.Next = true;
-        teletransportPlayer();
-        darkBackground.SetActive(false);
+        //teletransportPlayer();
+        //darkBackground.SetActive(false);
     }
 
     void teletransportPlayer()

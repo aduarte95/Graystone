@@ -7,13 +7,14 @@ public class SugarNPC : NPCController
     private const int KILL_ALIENS = 0;
     private const int COMPLETE = 1;
     private const int HAVE_OBJECTS = 2;
+    private bool HasSugar { get; set; } = false;
+    public GameObject sugar;
     public bool AliensAreDead { get; set; } = false;
 
 
     private bool firstTime = true;
     
     public bool HasBerries { get; set; } = false;
-    public bool HasSugar { get; set; } = false;
 
     public override void talk()
     {
@@ -29,9 +30,10 @@ public class SugarNPC : NPCController
                     dialogueTrigger.TriggerDialogue(COMPLETE); //Gives sugar
                                                                //TODO: ALL SUGAR INTERACTION
                     dialogueTrigger.dialogues[COMPLETE].cleanDiamonds(); //Removes diamond from mission
+                    sugar.SetActive(true);
                 } else
                 {
-                    dialogueTrigger.TriggerDialogue(HAVE_OBJECTS); //Have objects so can take more.
+                    dialogueTrigger.TriggerDialogue(HAVE_OBJECTS); //Have objects so can't take more.
                 }
             }
         } else //not in turn >:(
@@ -42,7 +44,6 @@ public class SugarNPC : NPCController
 
     public override void checkMission()
     {
-        base.checkMission();
     }
 
     public override void setName()
