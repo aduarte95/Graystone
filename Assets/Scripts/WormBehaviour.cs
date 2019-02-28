@@ -22,6 +22,7 @@ public class WormBehaviour : MonoBehaviour
     int attack2Hash = Animator.StringToHash("Attack2");
 
     bool ableToMove;
+    bool isDead;
     public float speed = 2.0f;
     public int direction = 1;
     public float MaxDistS = 15;
@@ -46,6 +47,7 @@ public class WormBehaviour : MonoBehaviour
         currentHealth = maxHealth;
 
         ableToMove = true;
+        isDead = true;
         turn = false;
     }
 
@@ -55,7 +57,7 @@ public class WormBehaviour : MonoBehaviour
         if (ableToMove)
         {
 
-            if ((Vector3.Distance(transform.position, Sphere.position) <= MaxDistS) || (turn))
+            if ((Vector3.Distance(transform.position, Sphere.position) < MaxDistS) || (turn))
             {
                 animator.SetBool(isWalkingHash, true);
                 transform.position += transform.forward * speed * Time.deltaTime * -1;
@@ -82,6 +84,36 @@ public class WormBehaviour : MonoBehaviour
                     transform.Rotate(0, 90, 0);
                     MaxTime = 10;
                 }
+            }
+        }
+    }
+
+    public void getHit(int damage)
+    {
+        StartCoroutine(dealDamage(damage));
+    }
+
+    // Reduce the health in "damageValue" points
+    IEnumerator dealDamage(float damageValue)
+    {
+        if (!isDead)
+        {
+            currentHealth -= damageValue;
+            // if health gets negative passes to 0
+            if (currentHealth > 0)
+            {
+                animator.SetBool(getHitHash, true);
+                yield return new WaitForSeconds(0.5f);
+                animator.SetBool(getHitHash, false);
+            }
+            else
+            {
+                currentHealth = 0;
+                ableToMove = false;
+                animator.SetBool(dieHash, true);
+                //berryNpc.is_berry_alien_dead = true; //Tells that the alien is dead
+                gameObject.SetActive(false);
+                isDead = true;
             }
         }
     }
