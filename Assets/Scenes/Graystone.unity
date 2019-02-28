@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8587,6 +8587,12 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.025
+--- !u!4 &261334509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 1604457779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &263622530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47634,18 +47640,18 @@ MonoBehaviour:
   Enemy: {fileID: 539000744}
   enemyBerry: {fileID: 136794229}
   EnemyBerry: {fileID: 136794233}
-  wormG1: {fileID: 0}
-  WormG1: {fileID: 0}
-  wormG2: {fileID: 0}
-  WormG2: {fileID: 0}
-  wormG3: {fileID: 0}
-  WormG3: {fileID: 0}
-  wormB1: {fileID: 0}
-  WormB1: {fileID: 0}
-  wormB2: {fileID: 0}
-  WormB2: {fileID: 0}
-  wormB3: {fileID: 0}
-  WormB3: {fileID: 0}
+  wormG1: {fileID: 1781044303}
+  WormG1: {fileID: 1781044305}
+  wormG2: {fileID: 2108212235}
+  WormG2: {fileID: 2108212236}
+  wormG3: {fileID: 261334508}
+  WormG3: {fileID: 261334509}
+  wormB1: {fileID: 1936774839}
+  WormB1: {fileID: 1936774841}
+  wormB2: {fileID: 2059266270}
+  WormB2: {fileID: 2059266271}
+  wormB3: {fileID: 1779092568}
+  WormB3: {fileID: 1779092569}
   dialogueManager: {fileID: 490440689}
   HasEaten: 0
   HasApples: 0
@@ -59473,6 +59479,12 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.025
+--- !u!4 &1779092569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 1064438793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1781044302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100014, guid: c3701783ee3206b4492deed733703204,
@@ -59506,6 +59518,12 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.025
+--- !u!4 &1781044305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 1280768785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1781681736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65224,6 +65242,12 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.025
+--- !u!4 &1936774841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 1814177821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1937887531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69297,6 +69321,12 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.025
+--- !u!4 &2059266271 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 719565020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2069706124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70240,6 +70270,12 @@ MonoBehaviour:
   turn: 0
   didHit: 0
   chanceOfCurrency: 0.025
+--- !u!4 &2108212236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: c3701783ee3206b4492deed733703204,
+    type: 3}
+  m_PrefabInstance: {fileID: 1175945598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2108331266
 PrefabInstance:
   m_ObjectHideFlags: 0
