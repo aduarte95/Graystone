@@ -11,10 +11,12 @@ public class PieNPC : NPCController
     public CharacterController characterController;
     public HouseSceneController house;
 	public GameObject bed;
+    public GameObject diamond;
     public bool HasWater { get; set; } = false;
     public bool HasBerries { get; set; } = false;
     public bool HasSugar { get; set; } = false;
     public bool HasBed { get; set; } = false;
+    public bool Finished { get; set; } = false;
     
     public override void talk()
     {
@@ -22,8 +24,9 @@ public class PieNPC : NPCController
         {
             if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasItem("Sugar"))
             {
-				GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().removeItem("Sugar");
-				bed.SetActive(true);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().removeItem("Sugar");
+                GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().removeItem("Berry");
+                bed.SetActive(true);
                 dialogueTrigger.TriggerDialogue(COMPLETE);			
             }
             else
@@ -48,7 +51,7 @@ public class PieNPC : NPCController
             dialogueTrigger.dialogues[COMPLETE].setDiamondsMission();
             dialogueTrigger.dialogues[notInMission].setDiamondsMission();
         }
-        else if (dialogueTrigger.dialogues[COMPLETE].Finished && HasBed)
+        else if (dialogueTrigger.dialogues[COMPLETE].Finished && HasBed && !Finished)
         {
             finishMission();
         }
@@ -57,18 +60,18 @@ public class PieNPC : NPCController
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3))
             {
                 dialogueTrigger.dialogues[COMPLETE].cleanDiamonds(); //Has the berries diamond
-                Debug.Log("clean berry");
+                
             }
             if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull)
             {
-                GameObject.Find("River's Diamond").SetActive(false);
+                diamond.SetActive(false);
             }
         }
     }
 
     public void finishMission()
     {
-        HasBed = false;
+        Finished = true;
         gameController.PieMissionFinished = true;
         gameController.Next = true;
         teletransportPlayer();
