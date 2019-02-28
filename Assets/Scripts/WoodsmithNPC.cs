@@ -18,6 +18,15 @@ public class WoodsmithNPC : NPCController
     private PlayerController pc;
     private CharacterController characterController;
 
+    public Animator animatorTransport;
+
+    public GameObject darkBackground;
+
+    public void Awake()
+    {
+        animatorTransport = GetComponent<Animator>();
+    }
+
     public override void talk()
     {
         if (gameController.Debugg)
@@ -114,6 +123,7 @@ public class WoodsmithNPC : NPCController
         gameController.CandleMissionFinished = true;
         gameController.Next = true;
         teletransportPlayer();
+        darkBackground.SetActive(false);
     }
 
     void finishBerryMission()
@@ -123,11 +133,14 @@ public class WoodsmithNPC : NPCController
         gameController.BlueberryMissionFinished = true;
         gameController.Next = true;
         teletransportPlayer();
+        darkBackground.SetActive(false);
     }
 
     void teletransportPlayer()
     {
         characterController.enabled = false;
+        darkBackground.SetActive(true); // enable the background image in canvas
+        animatorTransport.SetTrigger("PlayerTransported");// active transport animaton trigger
         pc.gameObject.transform.position = house.scenePosition;
         characterController.enabled = true;
         house.setObjects();

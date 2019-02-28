@@ -21,6 +21,14 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         
     }
+    
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Entro con enter");
+            DisplayNextSentence();
+        }    
+    }
 
     public void StartDialogue(Dialogue dialogue)
     {
