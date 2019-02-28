@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2882,10 +2882,11 @@ MonoBehaviour:
   missionsGame: {fileID: 854675706}
   positionController: {fileID: 552813963}
   gameController: {fileID: 138790278}
-  pc: {fileID: 0}
-  characterController: {fileID: 0}
-  house: {fileID: 0}
+  pc: {fileID: 1402130225}
+  characterController: {fileID: 1402130228}
+  house: {fileID: 1918537558}
   bed: {fileID: 574725767}
+  diamond: {fileID: 515121757}
 --- !u!114 &87655769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3724,6 +3725,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950c0a0cf14577549b026c95956a3c99, type: 3}
+--- !u!1 &104668070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3054616831797760238, guid: 6de4feac160266b49aae44ec84ceff63,
+    type: 3}
+  m_PrefabInstance: {fileID: 3054616832438186959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &108803189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10221,6 +10228,10 @@ PrefabInstance:
     - target: {fileID: 1000013931470818, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013931470818, guid: 5c02591794acece409986647ed6329a7, type: 3}
+      propertyPath: m_TagString
+      value: Diamond River
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20927,7 +20938,11 @@ MonoBehaviour:
     diamondsMission: []
   - name: 'A voice in your mind: '
     sentences:
-    - Go bed
+    - go bed
+    diamondsMission: []
+  - name: 'A voice in your mind: '
+    sentences:
+    - win
     diamondsMission: []
   cont: 0
 --- !u!1 &592502222 stripped
@@ -49362,7 +49377,7 @@ MonoBehaviour:
   missionsGame: {fileID: 854675706}
   positionController: {fileID: 399697090}
   gameController: {fileID: 138790278}
-  sugar: {fileID: 0}
+  sugar: {fileID: 104668070}
 --- !u!114 &1469687308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49380,7 +49395,7 @@ MonoBehaviour:
     sentences:
     - Yeah sure, kill aliens...
     diamondsMission:
-    - {fileID: 0}
+    - {fileID: 1469687305}
   - name: 'Sugar Daddy:'
     sentences:
     - Thanks, take some sugar.
@@ -69515,7 +69530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49.6
+      value: -49.4
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.y
@@ -69523,7 +69538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 27.4
+      value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 4081129071478060, guid: ffa08167d28cfd24dba0151a4c80f384, type: 3}
       propertyPath: m_LocalRotation.x
@@ -71571,6 +71586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sugar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3054616831797760238, guid: 6de4feac160266b49aae44ec84ceff63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3054616831797760237, guid: 6de4feac160266b49aae44ec84ceff63,
         type: 3}
