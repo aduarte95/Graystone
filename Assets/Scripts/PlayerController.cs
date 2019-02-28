@@ -36,6 +36,24 @@ public class PlayerController : MonoBehaviour
     public EnemyBehaviour enemyBerry;
     public Transform EnemyBerry; // to use the transform.position of enemy after Attack
 
+    public WormBehaviour wormG1;
+    public Transform WormG1;
+
+    public WormBehaviour wormG2;
+    public Transform WormG2;
+
+    public WormBehaviour wormG3;
+    public Transform WormG3;
+
+    public WormBehaviour wormB1;
+    public Transform WormB1;
+
+    public WormBehaviour wormB2;
+    public Transform WormB2;
+
+    public WormBehaviour wormB3;
+    public Transform WormB3;
+
     public DialogueManager dialogueManager;
     //DEBUG APPLE NPC 
     public bool HasEaten = false;
@@ -259,6 +277,60 @@ public class PlayerController : MonoBehaviour
             if (enemyBerry.gameObject.activeSelf)
             {
                 enemyBerry.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, WormG1.position) >= 0) &&
+            (Vector3.Distance(transform.position, WormG1.position) <= 2))
+        {
+            if (wormG1.gameObject.activeSelf)
+            {
+                wormG1.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, WormG2.position) >= 0) &&
+            (Vector3.Distance(transform.position, WormG2.position) <= 2))
+        {
+            if (wormG2.gameObject.activeSelf)
+            {
+                wormG2.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, WormG3.position) >= 0) &&
+            (Vector3.Distance(transform.position, WormG3.position) <= 2))
+        {
+            if (wormG3.gameObject.activeSelf)
+            {
+                wormG3.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, WormB1.position) >= 0) &&
+            (Vector3.Distance(transform.position, WormB1.position) <= 2))
+        {
+            if (wormB1.gameObject.activeSelf)
+            {
+                wormB1.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, WormB2.position) >= 0) &&
+            (Vector3.Distance(transform.position, WormB2.position) <= 2))
+        {
+            if (wormB2.gameObject.activeSelf)
+            {
+                wormB2.getHit(10);
+            }
+        }
+
+        if ((Vector3.Distance(transform.position, WormB3.position) >= 0) &&
+            (Vector3.Distance(transform.position, WormB3.position) <= 2))
+        {
+            if (wormB3.gameObject.activeSelf)
+            {
+                wormB3.getHit(10);
             }
         }
 
