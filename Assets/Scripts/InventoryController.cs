@@ -45,23 +45,48 @@ public class InventoryController : MonoBehaviour
         //drop items
         if (Input.GetKey("1"))
         {
-            slots[0].GetComponent<Slot>().DropItem();
+			if(slots[0].GetComponent<Slot>().item == "Apple")	
+				slots[0].GetComponent<Slot>().Heal();
+			else if(slots[0].GetComponent<Slot>().item == "Berry")	
+				slots[0].GetComponent<Slot>().Poison();
+			else
+				slots[0].GetComponent<Slot>().DropItem();
         }
         else if (Input.GetKey("2"))
         {
-            slots[1].GetComponent<Slot>().DropItem();
+            if(slots[1].GetComponent<Slot>().item == "Apple")	
+				slots[1].GetComponent<Slot>().Heal();
+			else if(slots[1].GetComponent<Slot>().item == "Berry")	
+				slots[0].GetComponent<Slot>().Poison();
+			else
+				slots[1].GetComponent<Slot>().DropItem();
         }
         if (Input.GetKey("3"))
         {
-            slots[2].GetComponent<Slot>().DropItem();
+            if(slots[2].GetComponent<Slot>().item == "Apple")	
+				slots[2].GetComponent<Slot>().Heal();
+			else if(slots[2].GetComponent<Slot>().item == "Berry")	
+				slots[0].GetComponent<Slot>().Poison();
+			else
+				slots[2].GetComponent<Slot>().DropItem();
         }
         if (Input.GetKey("4"))
         {
-            slots[3].GetComponent<Slot>().DropItem();
+            if(slots[3].GetComponent<Slot>().item == "Apple")	
+				slots[3].GetComponent<Slot>().Heal();
+			else if(slots[3].GetComponent<Slot>().item == "Berry")	
+				slots[0].GetComponent<Slot>().Poison();
+			else
+				slots[3].GetComponent<Slot>().DropItem();
         }
         if (Input.GetKey("5"))
         {
-            slots[4].GetComponent<Slot>().DropItem();
+            if(slots[4].GetComponent<Slot>().item == "Apple")	
+				slots[4].GetComponent<Slot>().Heal();
+			else if(slots[4].GetComponent<Slot>().item == "Berry")	
+				slots[4].GetComponent<Slot>().Poison();
+			else
+				slots[4].GetComponent<Slot>().DropItem();
         }
         
         

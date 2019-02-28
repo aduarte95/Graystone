@@ -161,7 +161,8 @@ public class PlayerController : MonoBehaviour
 
                 if (isPoisoned)
                 {
-                    healthBar.dealDamage(0.02f);
+					//Debug.Log("Damage: "+gameObject.GetComponent<PoisonLevel>().currentPoison/100);
+                    healthBar.dealDamage(gameObject.GetComponent<PoisonLevel>().currentPoison/100;
                 }
 
             }
