@@ -116,6 +116,7 @@ public class GameController : MonoBehaviour
                     Next = false;
                     Debug.Log("Pie");
                     PieMissionFinished = false;
+                    objects[LAKE_DIAMOND].SetActive(false);
                     dialogueController.win();
                 }
             }

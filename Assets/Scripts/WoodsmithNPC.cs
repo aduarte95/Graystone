@@ -75,7 +75,7 @@ public class WoodsmithNPC : NPCController
                     pc.emptyInventory();
                     candle.SetActive(true);
                 }
-                else
+                else if(!dialogueTrigger.dialogues[RIGHT].Finished)
                 {
                     dialogueTrigger.TriggerDialogue(WRONG);
                 }
