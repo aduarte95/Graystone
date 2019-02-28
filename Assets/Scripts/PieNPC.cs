@@ -21,7 +21,7 @@ public class PieNPC : NPCController
         {
             if (GameObject.FindGameObjectWithTag("Jug").GetComponent<JugController>().isFull && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasNAmountOfItem("Berry", 3) && GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().hasItem("Sugar"))
             {
-				GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().takeItem("Sugar");
+				GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>().removeItem("Sugar");
                 dialogueTrigger.TriggerDialogue(COMPLETE);			
             }
             else

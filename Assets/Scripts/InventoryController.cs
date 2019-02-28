@@ -169,6 +169,8 @@ public class InventoryController : MonoBehaviour
             }
         }
 	}
+	
+	
 
 	public bool hasItem(string item){
 		foreach(GameObject slot in slots){
