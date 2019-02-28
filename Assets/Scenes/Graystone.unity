@@ -1194,7 +1194,7 @@ BoxCollider:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100014, guid: c3701783ee3206b4492deed733703204,
     type: 3}
-  m_PrefabInstance: {fileID: 2069795515}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &36712205
 MonoBehaviour:
