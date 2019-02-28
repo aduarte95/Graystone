@@ -246,15 +246,14 @@
             <e p="Skybox-Procedural.shader" t="Include" />
           </e>
         </e>
-        <e p="Script" t="Include">
-          <e p="Bonfire.cs" t="Include" />
-        </e>
         <e p="Scripts" t="Include">
           <e p="Apple.cs" t="Include" />
           <e p="AppleController.cs" t="Include" />
           <e p="AppleNPC.cs" t="Include" />
           <e p="AppleTree.cs" t="Include" />
+          <e p="Bed.cs" t="Include" />
           <e p="BerryNPC.cs" t="Include" />
+          <e p="Bonfire.cs" t="Include" />
           <e p="BoundaryHouseController.cs" t="Include" />
           <e p="Candle.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />

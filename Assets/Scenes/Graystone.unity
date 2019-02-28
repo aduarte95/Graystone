@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2902,18 +2902,25 @@ MonoBehaviour:
   dialogues:
   - name: 'Tao Piepie:'
     sentences:
-    - Water, sugar and berries
+    - '....'
+    - "........\r\n"
+    - "..........\r\n"
+    - You need something?... bed?
+    - Have one I don't use anymore
+    - '...'
+    - Bring me pie ingredients...I can't leave this place
+    - Water, 3 blueberries and sugar
     diamondsMission:
     - {fileID: 515121757}
     - {fileID: 365283410}
   - name: 'Tao Piepie:'
     sentences:
-    - sure, take bed
+    - Thanks.......... Here's your bed
     diamondsMission:
     - {fileID: 2007781326}
   - name: 'Tao Piepie:'
     sentences:
-    - Sorry can't help
+    - '............'
     diamondsMission:
     - {fileID: 1571751354}
   cont: 0
@@ -4625,7 +4632,7 @@ Transform:
   m_Children:
   - {fileID: 854675707}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &138790280
 AudioSource:
@@ -5631,7 +5638,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &172013403
 PrefabInstance:
@@ -8410,7 +8417,7 @@ Transform:
   m_LocalScale: {x: 24.375267, y: 7.7489076, z: 13.447615}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &252715509
 PrefabInstance:
@@ -11949,7 +11956,7 @@ Transform:
   m_LocalScale: {x: 98.981255, y: 7.7489076, z: 10.347866}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 5.6610003, z: 0}
 --- !u!1001 &346413406
 PrefabInstance:
@@ -16158,7 +16165,7 @@ Transform:
   m_LocalScale: {x: 40, y: 10, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483889221 stripped
 GameObject:
@@ -16789,7 +16796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &490970041
 PrefabInstance:
@@ -20938,7 +20945,14 @@ MonoBehaviour:
     diamondsMission: []
   - name: 'A voice in your mind: '
     sentences:
-    - go bed
+    - And now, we have a chair!
+    - "It's quite an improvement... you can confortably read with this and the candle
+      \r\n"
+    - "But know you need something to sleep well D: sleep is very important for you
+      humans!!\r\n"
+    - "You can check with other peasants to see if they have something you can use,
+      little guy\r\n"
+    - Good luck ;)
     diamondsMission: []
   - name: 'A voice in your mind: '
     sentences:
@@ -22211,7 +22225,7 @@ Transform:
   m_LocalScale: {x: 24.015474, y: 7.7489076, z: 10.388169}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 21.842001, z: 0}
 --- !u!1 &623011823 stripped
 GameObject:
@@ -28676,7 +28690,7 @@ Transform:
   m_LocalScale: {x: 1.5000001, y: 1.430001, z: 1.5000018}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &813654863 stripped
 GameObject:
@@ -32930,7 +32944,7 @@ Transform:
   m_LocalScale: {x: 6.1859455, y: 3.55916, z: 22.699778}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964798227 stripped
 GameObject:
@@ -37062,7 +37076,7 @@ Transform:
   m_LocalScale: {x: 76.19528, y: 7.7489076, z: 10.370027}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 15.965001, z: 0}
 --- !u!1 &1092597478 stripped
 GameObject:
@@ -49393,20 +49407,29 @@ MonoBehaviour:
   dialogues:
   - name: 'Sugar Daddy:'
     sentences:
-    - Yeah sure, kill aliens...
+    - "Well well, what do we have here? ;) how can I help you? young boy\r\n"
+    - "Oh, you need some of my sugar for Tao....\r\n"
+    - "That guy creeps me out, I don't know why he is always so tense, may be he is
+      shy... or may be he is hiding something \r\n"
+    - "Anyway, you can have some of my sugar if you kill that plague of worms overthere,
+      those disgusting worms\r\n"
+    - "Do that well and may be I can do other things for you in the future... in exchange
+      of your services, of course\r\n"
     diamondsMission:
     - {fileID: 1469687305}
   - name: 'Sugar Daddy:'
     sentences:
-    - Thanks, take some sugar.
+    - "Nice job! I'm very pleased...\r\n"
+    - "Here's the sugar... take care, and be careful with that Tao \r\n"
+    - "Remember what I told you, I can help you if you help me with some things ;)\r\n"
     diamondsMission: []
   - name: 'Sugar Daddy:'
     sentences:
-    - You already have what you need...
+    - You already have what you need... for other things come at night
     diamondsMission: []
   - name: 'Sugar Daddy:'
     sentences:
-    - Sorry, can't help...
+    - I'm a little busy now boy, sorry
     diamondsMission: []
   cont: 0
 --- !u!95 &1469687309 stripped
@@ -56634,7 +56657,7 @@ Transform:
   m_LocalScale: {x: 24.117146, y: 7.7489076, z: 10.432146}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 51.087, z: 0}
 --- !u!1001 &1688395333
 PrefabInstance:
@@ -58121,7 +58144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749642043 stripped
 GameObject:
@@ -58689,7 +58712,7 @@ RectTransform:
   - {fileID: 1583637223}
   - {fileID: 1463241273}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -61965,7 +61988,7 @@ Transform:
   m_LocalScale: {x: 11.619296, y: 7.7489076, z: 46.11253}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1851085666
 GameObject:
@@ -62331,16 +62354,20 @@ MonoBehaviour:
     - {fileID: 504626162}
   - name: 'Abeto Carpenter:'
     sentences:
-    - Thanks
-    - Take chair
+    - "Oh hello there, did you bring the jam?\r\n"
+    - "My wife will DIE of joy! \r\n"
+    - "The chair is yours good sir, thank you very much \r\n"
+    - "Also, be careful with those nasty creatures... they posion everything they
+      touch\r\n"
+    - Farewell
     diamondsMission: []
   - name: 'Abeto Carpenter:'
     sentences:
-    - Forgot chair.
+    - You forgot something.....
     diamondsMission: []
   - name: 'Abeto Carpenter:'
     sentences:
-    - Sorry, I can't help
+    - Excuse me, I'm a little busy right now
     diamondsMission: []
   cont: 0
 --- !u!64 &1860940227
@@ -68534,7 +68561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2049933810
 PrefabInstance:
@@ -70198,7 +70225,7 @@ Transform:
   - {fileID: 518404312}
   - {fileID: 1852296684}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108212233 stripped
 GameObject:
