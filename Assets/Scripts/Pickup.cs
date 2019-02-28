@@ -43,6 +43,10 @@ public class Pickup : MonoBehaviour
                         npc = GameObject.FindGameObjectWithTag("Woodsmith").GetComponent<NPCController>();
                         npc.setHasObject(CANDLE);
                     }
+					else if(gameObject.GetComponent<Bed>() != null)
+                    {
+                        GameObject.Find("Tao Piepie NPC").GetComponent<PieNPC>().HasBed = true;
+                    }
 
                     Destroy(gameObject);
                     break;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5624,7 +5624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &172013403
 PrefabInstance:
@@ -16165,7 +16165,7 @@ Transform:
   m_LocalScale: {x: 40, y: 10, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483889221 stripped
 GameObject:
@@ -20078,6 +20078,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1028300741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &574725768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574725767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f7584bf9c6858429d8fde1e1086c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &574725769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22202,7 +22214,7 @@ Transform:
   m_LocalScale: {x: 24.015474, y: 7.7489076, z: 10.388169}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 21.842001, z: 0}
 --- !u!1 &623011823 stripped
 GameObject:
@@ -28324,7 +28336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1933050718119278, guid: 6ebcf73f55c8b42429dd1e4efb9d30d4, type: 3}
       propertyPath: m_Name
-      value: camaGotica
+      value: Bed
       objectReference: {fileID: 0}
     - target: {fileID: 1933050718119278, guid: 6ebcf73f55c8b42429dd1e4efb9d30d4, type: 3}
       propertyPath: m_IsActive
@@ -32921,7 +32933,7 @@ Transform:
   m_LocalScale: {x: 6.1859455, y: 3.55916, z: 22.699778}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964798227 stripped
 GameObject:
@@ -42427,19 +42439,28 @@ MonoBehaviour:
   dialogues:
   - name: 'Joe Berry:'
     sentences:
-    - Yeah Sure, kill aliens.
+    - Oh Hey! how can I help you?
+    - "Ah, you want some of my legendary jam... you have a good taste kido\r"
+    - "It will cost you 1 piece of gold, the best jam with the best price ;)\r\n"
+    - "Oh :( you don't have the money... I see\r\n"
+    - "Don't be sad, uncle Joe will give you an offert \r\n"
+    - "If you kill the annoying creature that is infecting my blueberries I'll give
+      you a bottle\r"
+    - My blueberries are very close, next to the house
     diamondsMission:
     - {fileID: 2007781326}
     - {fileID: 145353536}
   - name: 'Joe Berry:'
     sentences:
-    - Thanks, here's your jam.
+    - "Well this is good, I appreciate your services... very much\r\n"
+    - "Here is your bottle kido\r\n"
+    - Have a good day!
     diamondsMission:
     - {fileID: 0}
     - {fileID: 0}
   - name: 'Joe Berry:'
     sentences:
-    - Sorry, can't help.
+    - Sorry kido I'm busy
     diamondsMission:
     - {fileID: 0}
     - {fileID: 0}
@@ -68652,7 +68673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2049933810
 PrefabInstance:
@@ -70235,7 +70256,7 @@ Transform:
   - {fileID: 518404312}
   - {fileID: 1852296684}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108212233 stripped
 GameObject:
