@@ -76,7 +76,27 @@ public class WormBehaviour : MonoBehaviour
                 }
             }
 
-            
+            if ((Vector3.Distance(transform.position, Player.position) < MinDist) && (!didHit))
+            {
+                playerHealth.dealDamage(10);
+                poisonLevel.getPoison(1);
+                player.isPoisoned = true;
+                didHit = true;
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, Player.position) >= 3)
+                {
+                    didHit = false;
+                }
+            }
+
+            if ((Vector3.Distance(transform.position, Player.position) >= MaxDist) && (didHit))
+            {
+                didHit = false;
+            }
+
+
             MaxTime -= Time.deltaTime;
             if (MaxTime <= 0)
             {
