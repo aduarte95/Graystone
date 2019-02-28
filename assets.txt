@@ -1,22 +1,28 @@
-https://opengameart.org/content/battle-sound-effects
-https://opengameart.org/content/rpg-sound-package
-https://opengameart.org/content/medieval-the-old-tower-inn
-https://free3d.com/3d-model/masonjarofjam-v1--520844.html
-https://moziru.com/images/rapsberry-clipart-simple-10.jpg
+Non-unity source:
+Sounds/ hit.wav, stick-bow.wav, stick-hit.wav -> https://opengameart.org/content/battle-sound-effects
+Sounds/ Loop_TheOld_Tower_Inn.wav -> https://opengameart.org/content/medieval-the-old-tower-inn
+Inventory/jarofjam https://free3d.com/3d-model/masonjarofjam-v1--520844.html
+Inventory/ raspberries.png, blackberries.png https://moziru.com/images/rapsberry-clipart-simple-10.jpg
+Inventory/jug.png -> https://cdn2.iconfinder.com/data/icons/museum-cartoon/512/a2023-512.png
+Inventory/stick.png -> https://oldschool.runescape.wiki/w/Skewer_stick
+Inventory/candle.png -> https://mx.depositphotos.com/101933822/stock-illustration-cartoon-candle-burning.html
+Inventory/chair.png -> https://picsart.com/i/sticker-chair-276456576051211?hl=es
+Inventory/sugar.png -> http://cialis888.com/sugar-clipart/0857c629d637fa8-on-sugar-clipart/
 
 Unity Assets Store:
-Cherry Tree
-DLD (stick)
-Fruits_Pack - 3D_Models
-Insect (Alien)
-Gems Ultimate Pack
-Modular Fantasy Bridges
-Medieval House
-Medieval Tavern Pack
-RPG Food & Drinks Pack
-DarkFantasyKit [Free] (house interior design)
-Snowed Fence
-Tree_Textures
-Character_Elf
-EasyRoads3D
-FREE Foosteps System
+Character_Elf -> https://assetstore.unity.com/packages/3d/characters/humanoids/character-elf-114445
+Cherry Tree -> https://assetstore.unity.com/packages/3d/vegetation/trees/cherry-tree-88129
+DLD (stick) -> https://assetstore.unity.com/packages/3d/props/weapons/arnis-sticks-85423
+Fruits_Pack - 3D_Models -> https://assetstore.unity.com/packages/3d/props/food/fruits-pack-3d-models-91669
+Gems Ultimate Pack -> https://assetstore.unity.com/packages/3d/props/simple-gems-ultimate-animated-customizable-pack-73764
+Insect (Alien) -> https://assetstore.unity.com/packages/3d/characters/creatures/alien-insect-character-16469
+Julien Tonsuso/Modular Fantasy Bridges -> https://assetstore.unity.com/packages/3d/environments/fantasy/modular-fantasy-bridges-99940
+Medieval House -> https://assetstore.unity.com/packages/3d/environments/fantasy/medieval-house-24040
+MedievalTavernPack -> https://assetstore.unity.com/packages/3d/props/furniture/medieval-tavern-pack-112546
+MedievalTownExteriors -> https://assetstore.unity.com/packages/3d/environments/fantasy/medieval-town-exteriors-free-27026
+Polytope Studio (Peasants) -> https://assetstore.unity.com/packages/3d/characters/lowpoly-medieval-world-lowpoly-medieval-peasant-122225
+Room -> https://assetstore.unity.com/packages/3d/environments/free-medieval-room-131004
+RPG Food & Drinks Pack -> https://assetstore.unity.com/packages/3d/props/food/rpg-food-drinks-pack-121067
+RunemarkStudios/DarkFantasyKit [Free] (house interior design) -> https://assetstore.unity.com/packages/3d/environments/fantasy/dark-fantasy-kit-free-127925
+Sand Brick 1 -> https://assetstore.unity.com/packages/2d/textures-materials/brick/sand-brick-texture-115071
+Space Worm -> https://opengameart.org/content/space-worm
