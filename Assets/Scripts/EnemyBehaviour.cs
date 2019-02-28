@@ -89,6 +89,7 @@ public class EnemyBehaviour : MonoBehaviour
             if ((Vector3.Distance(Player.position, Sphere.position) <= MaxDistS))
             {
                 transform.LookAt(Player);
+                /*
                 if ((Vector3.Distance(transform.position, Player.position) >= MinDist) && (!didHit))
                 {
                     animator.SetBool(isWalkingHash, true);
@@ -110,6 +111,39 @@ public class EnemyBehaviour : MonoBehaviour
                 if ((Vector3.Distance(transform.position, Player.position) >= MaxDist) && (didHit))
                 {
                     didHit = false;
+                }
+                */
+                if (Vector3.Distance(transform.position, Player.position) >= 1)
+                {
+                    animator.SetBool(isWalkingHash, true);
+                    transform.position += transform.forward * speed * Time.deltaTime;
+                    if (!didHit)
+                    {
+                        float dist = Vector3.Distance(transform.position, Player.position);
+                        Vector3 toTarget = (Player.position - transform.position).normalized;
+                        if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2)
+                        {
+                            StartCoroutine(doAttack1());
+                        }
+                    }
+                }
+                else
+                {
+                    animator.SetBool(isWalkingHash, false);
+                    if (!didHit)
+                    {
+                        float dist = Vector3.Distance(transform.position, Player.position);
+                        Vector3 toTarget = (Player.position - transform.position).normalized;
+                        Debug.Log("Dist " + dist);
+                        Debug.Log("Dot " + Vector3.Dot(toTarget, transform.forward));
+                        if (Vector3.Dot(toTarget, transform.forward) > 0 && dist < 2)
+                        {
+                            StartCoroutine(doAttack2());
+
+                        }
+                        poisonLevel.getPoison(1);
+                        player.isPoisoned = true;
+                    }
                 }
             }
             else
